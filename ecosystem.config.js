@@ -1,7 +1,7 @@
 module.exports = {
   apps: [
     {
-      name: 'My Game',
+      name: 'My Games',
       script: 'npx next start -p 2323',
       instances: 1,
       autorestart: true,
