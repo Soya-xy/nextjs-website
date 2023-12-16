@@ -8,7 +8,7 @@ export function Video() {
         />
         Your browser does not support the video tag.
       </video>
-      <div className="absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%] bg-transparent font-serif text-[64px] border-text">
+      <div className="absolute left-[50%] top-[50%] translate-x-[-50%] translate-y-[-60%] bg-transparent font-serif text-[64px] border-text">
         <p>Myrlie SLOTS</p>
         <p>Let players enjoy it endlessly</p>
       </div>

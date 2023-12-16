@@ -7,7 +7,7 @@ import { useIsDark } from '~/hooks/common/use-is-dark'
 import { getColorScheme, stringToHue } from '~/lib/color'
 import { clsxm } from '~/lib/helper'
 
-import { FlexText } from '../text'
+// import { FlexText } from '../text'
 
 interface AvatarProps {
   url?: string
@@ -113,7 +113,8 @@ export const Avatar: FC<
           </div>
         ) : text ? (
           <div className="relative flex h-full w-full flex-grow select-none items-center justify-center">
-            <FlexText scale={0.5} text={text} />
+            {/* <FlexText scale={0.5} text={text} /> */}
+            {text}
           </div>
         ) : null,
       )}

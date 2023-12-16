@@ -3,7 +3,7 @@ import { forwardRef } from 'react'
 import { m } from 'framer-motion'
 
 export const DialogOverlay = forwardRef(
-  ({ onClick, zIndex }: { onClick?: () => void; zIndex?: number }) => {
+  ({ onClick, zIndex }: { onClick?: () => void; zIndex?: number }, ref) => {
     return (
       <Dialog.Overlay asChild>
         <m.div
