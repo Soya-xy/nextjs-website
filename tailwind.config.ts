@@ -11,7 +11,7 @@ import typography from '@tailwindcss/typography'
 const twConfig: Config = {
   content: [
     './src/**/*.{js,jsx,ts,tsx}',
-    './node_modules/@nextui-org/theme/dist/components/navbar.js',
+    './node_modules/@nextui-org/theme/dist/components/(navbar|input).js',
   ],
   darkMode: ['class', '[data-theme="dark"]'],
   safelist: [],

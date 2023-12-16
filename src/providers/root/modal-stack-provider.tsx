@@ -205,6 +205,7 @@ const Modal: Component<{
     return (
       <PresentSheet
         open
+        title={title}
         zIndex={1000 + drawerLength}
         onOpenChange={onClose}
         content={createElement(content, ModalProps)}

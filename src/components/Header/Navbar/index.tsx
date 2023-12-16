@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -11,21 +13,30 @@ import {
   NavbarMenuToggle,
 } from '@nextui-org/navbar'
 
-export function Menu() {
-  const menuItems = [
-    'Profile',
-    'Dashboard',
-    'Activity',
-    'Analytics',
-    'System',
-    'Deployments',
-    'My Settings',
-    'Team Settings',
-    'Help & Feedback',
-    'Log Out',
-  ]
+import { useIsClient } from '~/hooks/common/use-is-client'
+import { useModalStack } from '~/providers/root/modal-stack-provider'
+
+import { Search } from './Search'
+
+export const Menu = () => {
+  const menuItems = ['菜单1', '菜单2', '菜单3', '菜单4', '菜单5']
+
+  const isClient = useIsClient()
+  const { present } = useModalStack()
+
+  if (!isClient) return null
+
   return (
-    <Navbar shouldHideOnScroll isBordered>
+    <Navbar
+      shouldHideOnScroll
+      isBordered
+      classNames={{
+        item: [
+          'data-[active=true]:text-[#7B52D7]',
+          'data-[active=true]:dark:text-[#52A499]',
+        ],
+      }}
+    >
       <NavbarContent className="md:hidden" justify="start">
         <NavbarMenuToggle />
       </NavbarContent>
@@ -40,28 +51,33 @@ export function Menu() {
         />
       </NavbarBrand>
       <NavbarContent className="hidden gap-4 md:flex" justify="center">
-        <NavbarItem>
-          <Link color="foreground" href="#">
-            Features
-          </Link>
-        </NavbarItem>
-        <NavbarItem isActive>
-          <Link href="#" aria-current="page">
-            Customers
-          </Link>
-        </NavbarItem>
-        <NavbarItem>
-          <Link color="foreground" href="#">
-            Integrations
-          </Link>
-        </NavbarItem>
+        {menuItems.map((item, idx) => {
+          return (
+            <NavbarItem isActive={idx === 2} key={`${item}-${index}`}>
+              <Link color="foreground" href="#">
+                {item}
+              </Link>
+            </NavbarItem>
+          )
+        })}
       </NavbarContent>
       <NavbarContent justify="end">
-        <NavbarItem className="hidden lg:flex">
-          <Link href="#">Login</Link>
+        <NavbarItem className="lg:flex">
+          <span
+            className="icon-[mingcute--search-line] cursor-pointer text-2xl"
+            onClick={() => {
+              present({
+                title: '请输入搜索内容',
+                clickOutsideToDismiss: true,
+                content: () => <Search />,
+              })
+            }}
+          />
         </NavbarItem>
         <NavbarItem>
-          <button className="p4 bg-red-500">Sign Up</button>
+          <button className="rounded-xl bg-[#D5E2FA] px-4 py-2 dark:bg-[#202022]">
+            Now Play!
+          </button>
         </NavbarItem>
       </NavbarContent>
 

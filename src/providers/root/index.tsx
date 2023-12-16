@@ -1,6 +1,7 @@
 'use client'
 
 import { ReactQueryProvider } from './react-query-provider'
+import { LazyMotion } from 'framer-motion'
 import { ThemeProvider } from 'next-themes'
 import type { PropsWithChildren } from 'react'
 
@@ -13,15 +14,14 @@ import { JotaiStoreProvider } from './jotai-provider'
 import { ModalStackProvider } from './modal-stack-provider'
 import { PageScrollInfoProvider } from './page-scroll-info-provider'
 
-// const loadFeatures = () =>
-//   import('./framer-lazy-feature').then((res) => res.default)
-
+const loadFeatures = () =>
+  import('./framer-lazy-feature').then((res) => res.default)
 const contexts: JSX.Element[] = [
   <ThemeProvider key="themeProvider" />,
   <ReactQueryProvider key="reactQueryProvider" />,
   <JotaiStoreProvider key="jotaiStoreProvider" />,
 
-  // <LazyMotion features={loadFeatures} strict key="framer" />,
+  <LazyMotion features={loadFeatures} key="framer" />,
 ]
 export function Providers({ children }: PropsWithChildren) {
   return (
