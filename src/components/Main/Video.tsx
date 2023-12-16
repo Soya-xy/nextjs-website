@@ -2,9 +2,10 @@
 
 import { useEffect, useState } from 'react'
 
+import { isClientSide } from '~/lib/env'
+
 export function Video() {
   const [navbarHeight, setNavbarHeight] = useState(0)
-  const [isLargeScreen, setIsLargeScreen] = useState(window.innerWidth >= 768)
 
   useEffect(() => {
     const navRef = document.getElementById('navbar')
@@ -12,11 +13,12 @@ export function Video() {
       setNavbarHeight(navRef.offsetHeight)
     }
   }, [])
+
   return (
     <>
       <div
         style={{
-          ...(isLargeScreen
+          ...(isClientSide && window.innerWidth >= 768
             ? { height: `calc(100vh - ${navbarHeight}px)` }
             : undefined),
         }}
