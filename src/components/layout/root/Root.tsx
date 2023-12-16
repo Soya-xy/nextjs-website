@@ -1,3 +1,5 @@
+'use client'
+
 import { ClientOnly } from '~/components/common/ClientOnly'
 import { Menu } from '~/components/Header/Navbar'
 import { ThemeSwitcher } from '~/components/ui/theme-switcher'

@@ -75,11 +75,11 @@
   --length: 0
 }
 
-.dark,
-[data-theme="dark"] .menu--2_invert path {
+.menu--2_invert path {
   stroke: #000;
 }
-
+.dark,
+[data-theme="dark"] 
 .menu--2_invert path {
   stroke: #fff
 }

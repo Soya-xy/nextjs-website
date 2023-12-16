@@ -1,5 +1,29 @@
 'use client'
 
-import { MouseFollower } from 'react-mouse-follower'
+import { MouseFollower as MF, UpdateFollower } from 'react-mouse-follower'
+import type { PropsWithChildren, ReactElement } from 'react'
 
-export default MouseFollower
+import { useIsDark } from '~/hooks/common/use-is-dark'
+
+export const MouseFollower = ({
+  children,
+}: PropsWithChildren): ReactElement => {
+  const isDark = useIsDark()
+  return (
+    <>
+      <MF />
+      <UpdateFollower
+        mouseOptions={{
+          zIndex: 1,
+          backgroundColor: isDark ? 'white' : 'black',
+        }}
+        style={{
+          height: '100vh',
+          width: '100vw',
+        }}
+      >
+        {children}
+      </UpdateFollower>
+    </>
+  )
+}
