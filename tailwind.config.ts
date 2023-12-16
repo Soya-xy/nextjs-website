@@ -9,7 +9,10 @@ import radxiColors from '@radix-ui/colors'
 import typography from '@tailwindcss/typography'
 
 const twConfig: Config = {
-  content: ['./src/**/*.{js,jsx,ts,tsx}'],
+  content: [
+    './src/**/*.{js,jsx,ts,tsx}',
+    './node_modules/@nextui-org/theme/dist/components/navbar.js',
+  ],
   darkMode: ['class', '[data-theme="dark"]'],
   safelist: [],
   theme: {
