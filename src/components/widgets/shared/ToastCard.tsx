@@ -1,7 +1,7 @@
 'use client'
 
 import clsx from 'clsx'
-import { m } from 'framer-motion'
+import { motion } from 'framer-motion'
 import type { FC } from 'react'
 import type { ToastProps, TypeOptions } from 'react-toastify/dist/types'
 
@@ -24,7 +24,7 @@ export const ToastCard: FC<{
 }> = (props) => {
   const { iconElement, message, closeToast, onClick } = props
 
-  const MotionTag = onClick ? m.button : m.div
+  const MotionTag = onClick ? motion.button : motion.div
 
   return (
     <MotionTag

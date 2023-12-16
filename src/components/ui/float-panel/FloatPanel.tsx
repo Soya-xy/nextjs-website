@@ -1,6 +1,6 @@
 import { flip, offset, shift, useFloating } from '@floating-ui/react-dom'
 import { cloneElement, useMemo, useRef, useState } from 'react'
-import { AnimatePresence, m } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import type { Placement, Strategy } from '@floating-ui/react-dom'
 import type { FC, PropsWithChildren } from 'react'
 
@@ -55,7 +55,7 @@ export const FloatPanel: FC<FloatPanelProps & PropsWithChildren> = (props) => {
       <RootPortal>
         <AnimatePresence>
           {panelOpen && (
-            <m.div
+            <motion.div
               initial={{ opacity: 0.02, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0.02, y: 10 }}
@@ -75,7 +75,7 @@ export const FloatPanel: FC<FloatPanelProps & PropsWithChildren> = (props) => {
               }}
             >
               {children}
-            </m.div>
+            </motion.div>
           )}
         </AnimatePresence>
       </RootPortal>

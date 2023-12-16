@@ -10,7 +10,7 @@ import {
   useMemo,
   useRef,
 } from 'react'
-import { AnimatePresence, m, useAnimationControls } from 'framer-motion'
+import { AnimatePresence, motion, useAnimationControls } from 'framer-motion'
 import { atom, useAtomValue, useSetAtom } from 'jotai'
 import { usePathname } from 'next/navigation'
 import type { Target, Transition } from 'framer-motion'
@@ -249,7 +249,7 @@ const Modal: Component<{
             )}
             onClick={clickOutsideToDismiss ? dismiss : noticeModal}
           >
-            <m.div
+            <motion.div
               style={modalStyle}
               exit={initialStyle}
               initial={initialStyle}
@@ -280,7 +280,7 @@ const Modal: Component<{
               >
                 <CloseIcon />
               </Dialog.DialogClose>
-            </m.div>
+            </motion.div>
           </div>
         </Dialog.Content>
       </Dialog.Portal>

@@ -2,7 +2,7 @@
 
 import { flip, offset, shift, useFloating } from '@floating-ui/react-dom'
 import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react'
-import { AnimatePresence, m } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import type { UseFloatingOptions } from '@floating-ui/react-dom'
 import type { FC, PropsWithChildren } from 'react'
 
@@ -154,7 +154,7 @@ export const FloatPopover = function FloatPopover<T extends {}>(
       <AnimatePresence>
         {open && (
           <RootPortal>
-            <m.div
+            <motion.div
               className={clsxm(
                 'float-popover',
                 'relative z-[99]',
@@ -163,7 +163,7 @@ export const FloatPopover = function FloatPopover<T extends {}>(
               {...(trigger === 'hover' || trigger === 'both' ? listener : {})}
               ref={containerRef}
             >
-              <m.div
+              <motion.div
                 tabIndex={-1}
                 role={type === 'tooltip' ? 'tooltip' : 'dialog'}
                 className={clsxm(
@@ -193,8 +193,8 @@ export const FloatPopover = function FloatPopover<T extends {}>(
                 }}
               >
                 {props.children}
-              </m.div>
-            </m.div>
+              </motion.div>
+            </motion.div>
           </RootPortal>
         )}
       </AnimatePresence>

@@ -1,7 +1,7 @@
 'use client'
 
 import * as React from 'react'
-import { AnimatePresence, m } from 'framer-motion'
+import { AnimatePresence, motion } from 'framer-motion'
 import type { Variants } from 'framer-motion'
 
 import { microReboundPreset } from '~/constants/spring'
@@ -44,7 +44,7 @@ export const Collapse: Component<{
     <>
       <AnimatePresence initial={false}>
         {isOpened && (
-          <m.div
+          <motion.div
             key="content"
             initial="collapsed"
             animate="open"
@@ -53,7 +53,7 @@ export const Collapse: Component<{
             className={clsxm(withBackground && 'rounded-lg', className)}
           >
             {withBackground ? <div className="p-4">{children}</div> : children}
-          </m.div>
+          </motion.div>
         )}
       </AnimatePresence>
     </>

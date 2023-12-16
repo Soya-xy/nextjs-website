@@ -3,103 +3,50 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import {
-  Navbar,
-  NavbarBrand,
-  NavbarContent,
-  NavbarItem,
-  NavbarMenu,
-  NavbarMenuItem,
-  NavbarMenuToggle,
-} from '@nextui-org/navbar'
-
-import { useIsClient } from '~/hooks/common/use-is-client'
-import { useModalStack } from '~/providers/root/modal-stack-provider'
-
-import { Search } from './Search'
+import './style.css'
 
 export const Menu = () => {
-  const menuItems = ['菜单1', '菜单2', '菜单3', '菜单4', '菜单5']
-
-  const isClient = useIsClient()
-  const { present } = useModalStack()
-
-  if (!isClient) return null
-
+  const menuList = ['菜单1', '菜单2', '菜单3', '菜单4', '菜单5']
   return (
-    <Navbar
-      shouldHideOnScroll
-      isBordered
-      classNames={{
-        item: [
-          'data-[active=true]:text-[#7B52D7]',
-          'data-[active=true]:dark:text-[#52A499]',
-        ],
-      }}
-    >
-      <NavbarContent className="md:hidden" justify="start">
-        <NavbarMenuToggle />
-      </NavbarContent>
-
-      <NavbarBrand>
-        <Image
-          src="/images/logo.png"
-          width={120}
-          height={60}
-          alt="logo"
-          className="md:px-4"
-        />
-      </NavbarBrand>
-      <NavbarContent className="hidden gap-4 md:flex" justify="center">
-        {menuItems.map((item, idx) => {
-          return (
-            <NavbarItem isActive={idx === 2} key={`${item}-${idx}`}>
-              <Link color="foreground" href="#">
-                {item}
-              </Link>
-            </NavbarItem>
-          )
-        })}
-      </NavbarContent>
-      <NavbarContent justify="end">
-        <NavbarItem className="lg:flex">
-          <span
-            className="icon-[mingcute--search-line] cursor-pointer text-2xl"
-            onClick={() => {
-              present({
-                title: '请输入搜索内容',
-                clickOutsideToDismiss: true,
-                content: () => <Search />,
-              })
-            }}
+    <div className="min-h-20 flex items-center justify-between gap-3 py-6 pl-14 sm:pl-7">
+      <Link href="/">
+        <button className="cursor-pointer">
+          <Image
+            width={1980}
+            height={1980}
+            className="w-20 text-black sm:w-14"
+            style={{ color: 'transparent' }}
+            src="/images/logo.png"
+            alt="logo"
           />
-        </NavbarItem>
-        <NavbarItem>
-          <button className="rounded-xl bg-[#D5E2FA] px-4 py-2 dark:bg-[#202022]">
-            Now Play!
-          </button>
-        </NavbarItem>
-      </NavbarContent>
+        </button>
+      </Link>
 
-      <NavbarMenu>
-        {menuItems.map((item, index) => (
-          <NavbarMenuItem key={`${item}-${index}`}>
-            <Link
-              className="w-full"
-              color={
-                index === 2
-                  ? 'warning'
-                  : index === menuItems.length - 1
-                    ? 'danger'
-                    : 'foreground'
-              }
-              href="#"
-            >
-              {item}
-            </Link>
-          </NavbarMenuItem>
+      {/* LINK */}
+      <div className="ml-10 hidden flex-1 items-center justify-start md:flex">
+        {menuList.map((item, idx) => (
+          <div
+            className="mr-5 flex items-center gap-12 font-sans text-xl font-medium sm:gap-0"
+            key={idx}
+          >
+            <button className="cursor-pointer">{item}</button>
+          </div>
         ))}
-      </NavbarMenu>
-    </Navbar>
+      </div>
+
+      {/* MENU */}
+      <div className="menu_container">
+        <div className="menu cross menu--2">
+          <label>
+            <input type="checkbox" />
+            <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <path className="line--1" d="M0 70l28-28c2-2 2-2 7-2h64" />
+              <path className="line--2" d="M0 50h99" />
+              <path className="line--3" d="M0 30l28 28c2 2 2 2 7 2h64" />
+            </svg>
+          </label>
+        </div>
+      </div>
+    </div>
   )
 }

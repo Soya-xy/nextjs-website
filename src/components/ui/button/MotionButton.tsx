@@ -1,7 +1,7 @@
 'use client'
 
 import { forwardRef, memo } from 'react'
-import { m } from 'framer-motion'
+import { motion } from 'framer-motion'
 import type { ForwardRefComponent, HTMLMotionProps } from 'framer-motion'
 
 export const MotionButtonBase: ForwardRefComponent<
@@ -10,7 +10,7 @@ export const MotionButtonBase: ForwardRefComponent<
 > = memo(
   forwardRef(({ children, ...rest }, ref) => {
     return (
-      <m.button
+      <motion.button
         initial={true}
         whileFocus={{ scale: 1.02 }}
         whileHover={{ scale: 1.02 }}
@@ -19,7 +19,7 @@ export const MotionButtonBase: ForwardRefComponent<
         ref={ref}
       >
         {children}
-      </m.button>
+      </motion.button>
     )
   }),
 )

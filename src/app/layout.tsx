@@ -30,17 +30,17 @@ export function generateViewport(): Viewport {
 
 export const generateMetadata = async () => {
   const url = {
-    webUrl: 'https://innei.in',
-    apiUrl: 'https://innei.ren',
+    webUrl: 'https://MyGame.in',
+    apiUrl: 'https://MyGame.ren',
   }
   const seo = {
-    title: 'Innei',
-    description: 'Innei',
-    keywords: ['Innei', 'innei', '博客', 'blog', 'nextjs', 'react'],
+    title: 'My Game',
+    description: 'My Game',
+    keywords: ['My Game', 'My Game', '博客', 'blog', 'nextjs', 'react'],
   }
   const user = {
-    username: 'innei',
-    name: 'Innei',
+    username: 'My Game',
+    name: 'My Game',
     avatar: '',
   }
   return {
