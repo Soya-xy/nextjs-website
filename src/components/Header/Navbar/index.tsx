@@ -53,7 +53,7 @@ export const Menu = () => {
       <NavbarContent className="hidden gap-4 md:flex" justify="center">
         {menuItems.map((item, idx) => {
           return (
-            <NavbarItem isActive={idx === 2} key={`${item}-${index}`}>
+            <NavbarItem isActive={idx === 2} key={`${item}-${idx}`}>
               <Link color="foreground" href="#">
                 {item}
               </Link>

@@ -1,3 +1,9 @@
+import { Video } from '~/components/Main/Video'
+
 export default function Home() {
-  return 123
+  return (
+    <>
+      <Video />
+    </>
+  )
 }

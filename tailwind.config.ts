@@ -118,6 +118,18 @@ function addShortcutPlugin({ addUtilities }: PluginAPI) {
     '.fill-content': {
       'min-height': `calc(100vh - 17.5rem)`,
     },
+    '.clip': {
+      '-webkit-background-clip': 'text',
+      'background-clip': 'text',
+      '-webkit-text-fill-color': 'transparent',
+    },
+    '.border-text': {
+      '-webkit-background-clip': 'text',
+      color: 'transparent',
+      '-webkit-text-fill-color':
+        'transparent' /* 需要这个来支持某些旧版浏览器 */,
+      '-webkit-text-stroke': '1px #fff' /* 文本边框 */,
+    },
   }
   addUtilities(styles)
 }
