@@ -32,6 +32,7 @@ const SelectItem = forwardRef(
 
 export function Menu() {
   const containerRef = useRef(null)
+  const [showSearch, setShowSearch] = useState(false)
   const [isOpen, setIsOpen] = useState(false)
   const { present } = useDrawerStack()
   const { play } = useAudioPlayer('/music/click.wav')
@@ -65,10 +66,16 @@ export function Menu() {
 
   return (
     <div className="flex items-center">
-      <MusicButton once>
+      <MusicButton once={true} onClick={() => setShowSearch(!showSearch)}>
         <i className="icon-[mingcute--search-2-line] text-3xl" />
-        <Search />
       </MusicButton>
+      <Search
+        active={showSearch}
+        onClose={() => {
+          setShowSearch(false)
+          removePlay()
+        }}
+      />
       {/* i18n */}
       <Select.Root
         defaultValue={param.locale as string}

@@ -5,6 +5,7 @@
 /*=============================
 	1. Search Popup
 ===============================*/
+
 .search__popup-wrap {
   position: fixed;
   left: 0;
@@ -23,6 +24,7 @@
   -o-transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
   transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
 }
+
 .search__popup-wrap::after {
   content: "";
   position: absolute;
@@ -30,12 +32,13 @@
   top: 100%;
   width: 100%;
   height: 370px;
-  background-image: url(/imgages/search_wave.png);
+  background-image: url(/images/search_wave.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   margin-top: 0px;
 }
+
 .search__layer {
   content: "";
   position: absolute;
@@ -54,6 +57,7 @@
   transition-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
   z-index: -1;
 }
+
 .search__close {
   position: absolute;
   top: 5%;
@@ -62,6 +66,7 @@
   color: #45f882;
   cursor: pointer;
 }
+
 .search__wrap {
   position: absolute;
   left: 0;
@@ -73,6 +78,7 @@
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+
 .search__wrap .title {
   font-size: 47px;
   margin: 0 0 70px 0;
@@ -81,18 +87,22 @@
   color: #45f882;
   letter-spacing: -1px;
 }
+
 .search__wrap .title span {
   color: #fff;
   text-shadow: -2px 2.5px 0px rgba(69, 248, 130, 0.66);
   letter-spacing: 5px;
 }
+
 .search__form {
   position: relative;
 }
-.search__form form input {
+
+.search__form input {
   display: block;
   width: 100%;
   border: none;
+  outline: none;
   padding: 10px 50px 20px;
   text-align: center;
   font-weight: 500;
@@ -100,11 +110,13 @@
   background: transparent;
   color: #fff;
 }
-.search__form form input::placeholder {
+
+.search__form input::placeholder {
   font-size: 30px;
   opacity: 0.5;
 }
-.search__form form button {
+
+.search__form button {
   position: absolute;
   right: 20px;
   background: transparent;
@@ -118,6 +130,7 @@
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
 }
+
 .search__form::after {
   content: "";
   position: absolute;
@@ -132,6 +145,7 @@
   -o-transition: all 600ms ease;
   transition: all 600ms ease;
 }
+
 .search__active .search__popup-wrap {
   -webkit-transform: translateY(0%);
   -moz-transform: translateY(0%);
@@ -140,6 +154,7 @@
   transform: translateY(0%);
   margin-top: 0;
 }
+
 .search__active .search__form::after {
   width: 100%;
   -webkit-transition-delay: 1200ms;

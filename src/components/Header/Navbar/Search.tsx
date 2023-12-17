@@ -1,18 +1,25 @@
 // import { Input } from '@nextui-org/input'
 
-export function Search() {
+import clsx from 'clsx'
+
+export function Search({ active, onClose }: any) {
   return (
     <>
-      <div className="search__active">
+      <div className={clsx(`${active && 'search__active'}`)}>
         <div className="search__popup-wrap">
           <div className="search__layer" />
-          <div className="search__close">
+          <div
+            className="search__close"
+            onClick={() => {
+              if (onClose) onClose()
+            }}
+          >
             <span>
-              <i className="flaticon-swords-in-cross-arrangement" />
+              <i className="icon-[mingcute--close-fill] " />
             </span>
           </div>
           <div className="search__wrap text-center">
-            <div className="container">
+            <div className="container mx-auto">
               <div className="row">
                 <div className="col-12">
                   <h2 className="title">
@@ -23,10 +30,11 @@ export function Search() {
                       className="search-input-field"
                       type="text"
                       name="s"
-                      value=""
                       placeholder="Type keywords here"
                     />
-                    <button className="search-btn">123</button>
+                    <button className="search-btn">
+                      <i className="icon-[mingcute--search-2-line]" />
+                    </button>
                   </div>
                 </div>
               </div>
