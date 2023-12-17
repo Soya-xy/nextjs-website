@@ -269,7 +269,9 @@ const Modal: Component<{
                 'p-2 shadow-2xl shadow-stone-300 backdrop-blur-sm dark:shadow-stone-800',
                 'max-h-[70vh] min-w-[300px] max-w-[90vw] lg:max-h-[calc(100vh-20rem)] lg:max-w-[70vw]',
                 'border border-slate-200 dark:border-neutral-800',
-                position === 'right' && ['!h-[100vh] !max-h-[100vh]'],
+                position === 'right' && [
+                  '!h-[100vh] !max-h-[100vh] !min-w-[unset]',
+                ],
                 modalClassName,
               )}
               onClick={stopPropagation}

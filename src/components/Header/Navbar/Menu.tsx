@@ -10,6 +10,7 @@ import { useAudioPlayer } from '~/hooks/shared/use-audio'
 import { usePathname, useRouter } from '~/i18n'
 import { useDrawerStack } from '~/providers/root/drawer-stack-provider'
 
+import { Canvas } from './Canvas'
 import { Logo } from './Logo'
 import { Search } from './Search'
 
@@ -134,14 +135,15 @@ export function Menu() {
               title: () => {
                 return (
                   <>
-                    <div className="flex items-center">
+                    <div className="ml-[20px] flex items-center py-4">
                       <Logo />
                       <p className="ml-2">My Game</p>
                     </div>
                   </>
                 )
               },
-              content: () => '测试菜单',
+              modalClassName: 'w-[485px]',
+              content: () => <Canvas />,
               position: 'right',
               onClose: () => {
                 setIsOpen(false)
