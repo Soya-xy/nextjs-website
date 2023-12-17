@@ -3,10 +3,13 @@ import type { Viewport } from 'next'
 import '~/styles/index.css'
 
 import { ToastContainer } from 'react-toastify'
+import { NextIntlClientProvider } from 'next-intl'
+import { notFound } from 'next/navigation'
 
 import { HydrationEndDetector } from '~/components/common/HydrationEndDetector'
 import { ScrollTop } from '~/components/common/ScrollTop'
 import { Root } from '~/components/layout/root/Root'
+import { locales } from '~/i18n'
 import { attachUAAndRealIp } from '~/lib/attach-ua'
 import { sansFont, serifFont } from '~/lib/fonts'
 
@@ -90,15 +93,25 @@ export const generateMetadata = async () => {
 
 export default async function RootLayout({
   children,
+  params: { locale },
 }: {
   children: React.ReactNode
+  params: any
 }) {
   attachUAAndRealIp()
+
+  let messages
+  try {
+    messages = (await import(`../../../messages/${locale}.json`)).default
+  } catch (error) {
+    notFound()
+  }
+  if (!locales.includes(locale as any)) notFound()
 
   return (
     <>
       <ClientInit />
-      <html lang="zh-CN" suppressHydrationWarning>
+      <html lang={locale} suppressHydrationWarning>
         <head>
           <HydrationEndDetector />
         </head>
@@ -106,9 +119,11 @@ export default async function RootLayout({
           className={`${sansFont.variable} ${serifFont.variable} m-0 h-full p-0 font-sans`}
         >
           <Providers>
-            <div data-theme>
-              <Root>{children}</Root>
-            </div>
+            <NextIntlClientProvider messages={messages}>
+              <div data-theme>
+                <Root>{children}</Root>
+              </div>
+            </NextIntlClientProvider>
           </Providers>
           <ToastContainer />
           <ScrollTop />

@@ -25,7 +25,6 @@ export const Navbar = () => {
             <Logo />
           </button>
         </Link>
-
         {/* LINK */}
         <div className="ml-20 hidden flex-1 items-center justify-center md:flex">
           <Item menuList={menuList} />

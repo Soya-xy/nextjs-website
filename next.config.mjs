@@ -1,7 +1,7 @@
 import { config } from 'dotenv'
 
 import NextBundleAnalyzer from '@next/bundle-analyzer'
-// import withNextIntl from "next-intl/plugin"
+import withNextIntl from "next-intl/plugin"
 
 process.title = 'Hero (NextJS)'
 
@@ -64,4 +64,5 @@ if (process.env.ANALYZE === 'true') {
   })(nextConfig)
 }
 
-export default nextConfig
+const nextIntl = withNextIntl('./src/i18n.ts')
+export default nextIntl(nextConfig)

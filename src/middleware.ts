@@ -1,4 +1,4 @@
-import { NextResponse } from 'next/server'
+import createMiddleware from 'next-intl/middleware'
 import type { NextRequest } from 'next/server'
 
 import {
@@ -8,8 +8,20 @@ import {
   REQUEST_PATHNAME,
   REQUEST_QUERY,
 } from './constants/system'
+import { locales } from './i18n'
+
+const i18nMiddleware = createMiddleware({
+  // A list of all locales that are supported
+  locales,
+
+  // Used when no locale matches
+  defaultLocale: 'en',
+})
 
 export default async function middleware(req: NextRequest) {
+  // i18n
+  const response = i18nMiddleware(req)
+
   const { pathname, search } = req.nextUrl
   let { geo } = req
   const { headers } = req
@@ -37,22 +49,20 @@ export default async function middleware(req: NextRequest) {
     pathname === '/sw.js' ||
     pathname === '/sw.js.map'
   ) {
-    return NextResponse.next()
+    return response
   }
 
   // https://github.com/vercel/next.js/issues/46618#issuecomment-1450416633
-  const requestHeaders = new Headers(req.headers)
-  requestHeaders.set(REQUEST_PATHNAME, pathname)
-  requestHeaders.set(REQUEST_QUERY, search)
-  requestHeaders.set(REQUEST_GEO, geo?.country || 'unknown')
-  requestHeaders.set(REQUEST_IP, ip || '')
-  requestHeaders.set(REQUEST_HOST, headers.get('host') || '')
+  response.headers.set(REQUEST_PATHNAME, pathname)
+  response.headers.set(REQUEST_QUERY, search)
+  response.headers.set(REQUEST_GEO, geo?.country || 'unknown')
+  response.headers.set(REQUEST_IP, ip || '')
+  response.headers.set(REQUEST_HOST, headers.get('host') || '')
 
   const isApi = pathname.startsWith('/api/')
 
-  return NextResponse.next({
-    request: {
-      headers: requestHeaders,
-    },
-  })
+  return response
+}
+export const config = {
+  matcher: ['/((?!_next|.*\\..*).*)'],
 }

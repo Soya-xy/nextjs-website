@@ -5,6 +5,7 @@ import { forwardRef, useEffect, useRef, useState } from 'react'
 import clsx from 'clsx'
 
 import { useAudioPlayer } from '~/hooks/shared/use-audio'
+import { usePathname, useRouter } from '~/i18n'
 import { useDrawerStack } from '~/providers/root/drawer-stack-provider'
 
 import { Logo } from './Logo'
@@ -30,12 +31,15 @@ export function Menu() {
   const containerRef = useRef(null)
   const [isOpen, setIsOpen] = useState(false)
   const { present } = useDrawerStack()
-
   const { play } = useAudioPlayer('/music/click.wav')
   const { play: removePlay } = useAudioPlayer('/music/remove.wav')
 
+  const router = useRouter()
+  const pathname = usePathname()
+
   const language = [
     'EN',
+    'de',
     '简中',
     '繁中',
     'ไทย',
@@ -59,7 +63,12 @@ export function Menu() {
     <div className="flex items-center">
       <i className="icon-[mingcute--search-2-line] text-3xl" />
       {/* i18n */}
-      <Select.Root defaultValue="EN">
+      <Select.Root
+        defaultValue="EN"
+        onValueChange={(e) => {
+          router.push(pathname, { locale: e })
+        }}
+      >
         <Select.Trigger
           className="relative mx-4 flex items-center justify-between rounded border px-2 py-1"
           aria-label="Food"

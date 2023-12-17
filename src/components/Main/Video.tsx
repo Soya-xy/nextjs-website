@@ -1,28 +1,23 @@
 'use client'
 
-import { useRef, useState } from 'react'
-import clsx from 'clsx'
-import { motion, useMotionValueEvent, useScroll } from 'framer-motion'
+// import { useRef, useState } from 'react'
+// import clsx from 'clsx'
+// import { motion, useMotionValueEvent, useScroll } from 'framer-motion'
 
 export function Video() {
-  const ref = useRef(null)
-  const { scrollY } = useScroll({
-    target: ref,
-    offset: ['end end', 'start start'],
-  })
+  // const ref = useRef(null)
+  // const { scrollY } = useScroll({
+  //   target: ref,
+  //   offset: ['end end', 'start start'],
+  // })
 
-  const [rotateX, setRotateX] = useState(0)
+  // const [rotateX, setRotateX] = useState(0)
 
-  useMotionValueEvent(scrollY, 'change', (latest) => {
-    console.log(
-      '🚀 ~ file: Video.tsx:23 ~ useMotionValueEvent ~ latest:',
-      latest,
-    )
-
-    if (latest > 450) {
-      return setRotateX(90)
-    } else setRotateX(0)
-  })
+  // useMotionValueEvent(scrollY, 'change', (latest) => {
+  //   if (latest > 450) {
+  //     return setRotateX(90)
+  //   } else setRotateX(0)
+  // })
   return (
     <>
       <div>
@@ -35,7 +30,7 @@ export function Video() {
             Your browser does not support the video tag.
           </video>
         </div>
-        <motion.div
+        {/* <motion.div
           className={clsx(`absolute
           bottom-0 left-[50%] flex h-[50px]
             w-[90vw] origin-bottom flex-col items-center justify-center rounded-tl-xl rounded-tr-xl bg-black text-center`)}
@@ -53,7 +48,7 @@ export function Video() {
             {rotateX}
             MYRLIE SLOTS LET PLAYERS ENJOY IT ENDLESSLY
           </p>
-        </motion.div>
+        </motion.div> */}
       </div>
     </>
   )
