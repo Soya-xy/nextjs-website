@@ -6,6 +6,7 @@ import { ThemeProvider } from 'next-themes'
 
 import { ProviderComposer } from '../../components/common/ProviderComposer'
 import { DebugProvider } from './debug-provider'
+import { DrawerStackProvider } from './drawer-stack-provider'
 import { EventProvider } from './event-provider'
 import { JotaiStoreProvider } from './jotai-provider'
 import { ModalStackProvider } from './modal-stack-provider'
@@ -24,6 +25,7 @@ export function Providers({ children }: PropsWithChildren) {
       <ProviderComposer contexts={contexts}>
         {children}
         <ModalStackProvider key="modalStackProvider" />
+        <DrawerStackProvider key="DrawerStackProvider" />
         <EventProvider key="viewportProvider" />
         <PageScrollInfoProvider key="PageScrollInfoProvider" />
         <DebugProvider key="debugProvider" />

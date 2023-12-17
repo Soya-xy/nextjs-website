@@ -7,7 +7,7 @@ export interface PresentSheetProps {
   content: JSX.Element | FC
   open?: boolean
   onOpenChange?: (value: boolean) => void
-  title?: string
+  title?: JSX.Element | FC | string
   zIndex?: number
   dismissible?: boolean
 }
@@ -66,7 +66,15 @@ export const PresentSheet: FC<PropsWithChildren<PresentSheetProps>> = (
             <div className="mx-auto mb-8 h-1.5 w-12 flex-shrink-0 rounded-full bg-zinc-300 dark:bg-neutral-800" />
           )}
 
-          {title && <Drawer.Title>{title}</Drawer.Title>}
+          {title && (
+            <Drawer.Title>
+              {React.isValidElement(title)
+                ? title
+                : typeof title === 'function'
+                  ? React.createElement(title)
+                  : title}
+            </Drawer.Title>
+          )}
 
           {React.isValidElement(content)
             ? content
