@@ -3,7 +3,9 @@ import { CheckIcon, ChevronDownIcon } from '@radix-ui/react-icons'
 import * as Select from '@radix-ui/react-select'
 import { forwardRef, useEffect, useRef, useState } from 'react'
 import clsx from 'clsx'
+import { useParams } from 'next/navigation'
 
+import { MusicButton } from '~/components/common/MusicButton'
 import { useAudioPlayer } from '~/hooks/shared/use-audio'
 import { usePathname, useRouter } from '~/i18n'
 import { useDrawerStack } from '~/providers/root/drawer-stack-provider'
@@ -35,20 +37,21 @@ export function Menu() {
   const { play: removePlay } = useAudioPlayer('/music/remove.wav')
 
   const router = useRouter()
+  const param = useParams()
   const pathname = usePathname()
 
   const language = [
-    'EN',
-    'de',
-    '简中',
-    '繁中',
-    'ไทย',
-    'Melayu',
-    'Indonesia',
-    'Tiếng Việt',
-    '한국어',
-    '日本語',
-    'РУССКИЙ',
+    { value: 'en', label: 'EN' },
+    { value: 'de', label: 'de' },
+    { value: '简', label: '简中' },
+    { value: '繁', label: '繁中' },
+    { value: 'ไท', label: 'ไทย' },
+    { value: 'Me', label: 'Melayu' },
+    { value: 'In', label: 'Indonesia' },
+    { value: 'Ti', label: 'Tiếng Việt' },
+    { value: '한', label: '한국어' },
+    { value: '日', label: '日本語' },
+    { value: 'РУ', label: 'РУССКИЙ' },
   ]
 
   useEffect(() => {
@@ -61,12 +64,21 @@ export function Menu() {
 
   return (
     <div className="flex items-center">
-      <i className="icon-[mingcute--search-2-line] text-3xl" />
+      <MusicButton once>
+        <i className="icon-[mingcute--search-2-line] text-3xl" />
+      </MusicButton>
       {/* i18n */}
       <Select.Root
-        defaultValue="EN"
+        defaultValue={param.locale as string}
         onValueChange={(e) => {
           router.push(pathname, { locale: e })
+        }}
+        onOpenChange={(e) => {
+          if (e) {
+            play()
+          } else {
+            removePlay()
+          }
         }}
       >
         <Select.Trigger
@@ -90,11 +102,11 @@ export function Menu() {
                 {language.map((v, k) => {
                   return (
                     <SelectItem
-                      value={v}
+                      value={v.value}
                       key={k}
                       className="p-2 text-white hover:bg-[#ffffff1f]"
                     >
-                      {v}
+                      {v.label}
                     </SelectItem>
                   )
                 })}

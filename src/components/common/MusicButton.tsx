@@ -9,7 +9,8 @@ export const MusicButton: FC<{
   children: ReactNode
   className?: string
   onClick?: () => void
-}> = ({ children, className, onClick }) => {
+  once?: boolean
+}> = ({ children, className, once = false, onClick }) => {
   const [show, setShow] = useState(false)
   const { play } = useAudioPlayer('/music/click.wav')
   const { play: removePlay } = useAudioPlayer('/music/remove.wav')
@@ -27,7 +28,11 @@ export const MusicButton: FC<{
         if (onClick) {
           onClick()
         }
-        setShow(!show)
+        if (once) {
+          play()
+        } else {
+          setShow(!show)
+        }
       }}
     >
       {children}
