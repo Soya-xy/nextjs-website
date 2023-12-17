@@ -2,13 +2,38 @@
 
 export function Search() {
   return (
-    <input
-      type="text"
-      placeholder="请输入搜索内容"
-      // labelPlacement="outside"
-      // startContent={
-      //   <span className="icon-[mingcute--search-2-fill] pointer-events-none flex-shrink-0 text-2xl text-default-400" />
-      // }
-    />
+    <>
+      <div className="search__active">
+        <div className="search__popup-wrap">
+          <div className="search__layer" />
+          <div className="search__close">
+            <span>
+              <i className="flaticon-swords-in-cross-arrangement" />
+            </span>
+          </div>
+          <div className="search__wrap text-center">
+            <div className="container">
+              <div className="row">
+                <div className="col-12">
+                  <h2 className="title">
+                    ... <span>Search Here</span> ...
+                  </h2>
+                  <div className="search__form">
+                    <input
+                      className="search-input-field"
+                      type="text"
+                      name="s"
+                      value=""
+                      placeholder="Type keywords here"
+                    />
+                    <button className="search-btn">123</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
   )
 }

@@ -11,6 +11,7 @@ import { usePathname, useRouter } from '~/i18n'
 import { useDrawerStack } from '~/providers/root/drawer-stack-provider'
 
 import { Logo } from './Logo'
+import { Search } from './Search'
 
 const SelectItem = forwardRef(
   ({ children, className, ...props }: any, forwardedRef) => {
@@ -66,6 +67,7 @@ export function Menu() {
     <div className="flex items-center">
       <MusicButton once>
         <i className="icon-[mingcute--search-2-line] text-3xl" />
+        <Search />
       </MusicButton>
       {/* i18n */}
       <Select.Root
