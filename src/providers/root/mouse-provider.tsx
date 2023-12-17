@@ -19,7 +19,7 @@ export const MouseFollower = ({
         }}
         style={{
           height: '100vh',
-          width: '100vw',
+          width: 'calc(100vw - 20px)',
         }}
       >
         {children}
