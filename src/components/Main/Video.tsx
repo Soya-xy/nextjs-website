@@ -1,13 +1,8 @@
 'use client'
 
-import { useRef } from 'react'
+import { useRef, useState } from 'react'
 import clsx from 'clsx'
-import {
-  motion,
-  useMotionValue,
-  useMotionValueEvent,
-  useScroll,
-} from 'framer-motion'
+import { motion, useMotionValueEvent, useScroll } from 'framer-motion'
 
 export function Video() {
   const ref = useRef(null)
@@ -16,12 +11,17 @@ export function Video() {
     offset: ['end end', 'start start'],
   })
 
-  const rotateX = useMotionValue(0)
+  const [rotateX, setRotateX] = useState(0)
 
   useMotionValueEvent(scrollY, 'change', (latest) => {
+    console.log(
+      '🚀 ~ file: Video.tsx:23 ~ useMotionValueEvent ~ latest:',
+      latest,
+    )
+
     if (latest > 450) {
-      return rotateX.set(90)
-    } else rotateX.set(latest / 5)
+      return setRotateX(90)
+    } else setRotateX(0)
   })
   return (
     <>
@@ -36,16 +36,21 @@ export function Video() {
           </video>
         </div>
         <motion.div
-          className={clsx(`navbar absolute
-          bottom-0 left-[50%] flex h-[100px]
-            w-[80vw] origin-bottom flex-col items-center justify-center rounded-tl-full rounded-tr-full text-center`)}
-          style={{
-            x: '-50%',
+          className={clsx(`absolute
+          bottom-0 left-[50%] flex h-[50px]
+            w-[90vw] origin-bottom flex-col items-center justify-center rounded-tl-xl rounded-tr-xl bg-black text-center`)}
+          animate={{
             rotateX,
           }}
+          style={{
+            x: '-50%',
+            ...(rotateX > 450 && { rotateX }),
+          }}
+          transition={{ duration: 0.6 }}
           ref={ref}
         >
           <p className="text-3xl">
+            {rotateX}
             MYRLIE SLOTS LET PLAYERS ENJOY IT ENDLESSLY
           </p>
         </motion.div>

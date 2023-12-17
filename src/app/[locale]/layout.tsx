@@ -10,10 +10,10 @@ import { Root } from '~/components/layout/root/Root'
 import { attachUAAndRealIp } from '~/lib/attach-ua'
 import { sansFont, serifFont } from '~/lib/fonts'
 
-import { Providers } from '../providers/root'
-import { ClientInit } from './ClientInit'
-import { init } from './init'
-import { InitInClient } from './InitInClient'
+import { Providers } from '../../providers/root'
+import { ClientInit } from '../ClientInit'
+import { init } from '../init'
+import { InitInClient } from '../InitInClient'
 
 init()
 

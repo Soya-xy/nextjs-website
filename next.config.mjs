@@ -1,6 +1,7 @@
 import { config } from 'dotenv'
 
 import NextBundleAnalyzer from '@next/bundle-analyzer'
+// import withNextIntl from "next-intl/plugin"
 
 process.title = 'Hero (NextJS)'
 
