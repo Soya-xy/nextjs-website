@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .animation-pause {
+    animation-play-state: paused;
+  }
+}
+
 @font-face {
   font-family: "Barlow";
   src: url("/fonts/barlow.woff2") format("woff2");

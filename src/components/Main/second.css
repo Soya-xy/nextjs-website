@@ -151,3 +151,14 @@
   background-size: contain;
   background-repeat: no-repeat;
 }
+
+.rotats{
+  animation: mykdRotation 12s linear infinite;
+  animation-play-state: running;
+}
+
+@keyframes mykdRotation {
+  100% {
+    transform: rotate(360deg);
+  }
+}

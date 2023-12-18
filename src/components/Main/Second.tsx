@@ -1,8 +1,14 @@
+'use client'
+
 import Image from 'next/image'
 
 import './second.css'
 
+import { motion, useAnimation } from 'framer-motion'
+
 export const Second = () => {
+  const controls = useAnimation()
+
   return (
     <>
       <div className="second">
@@ -43,7 +49,7 @@ export const Second = () => {
                   </div>
                   <div className="mt-10 flex items-center justify-start">
                     <div className="relative h-full  min-w-[158px] text-center text-[14px]  font-bold leading-[48px]">
-                      <div className="absolute left-0 top-0 ">
+                      <div className="absolute left-0 top-0">
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           preserveAspectRatio="none"
@@ -55,28 +61,43 @@ export const Second = () => {
                             fillRule: 'evenodd',
                           }}
                         >
-                          <path
+                          <motion.path
                             d="M874,554.154L893.08,524h146.67L1060,552.843,1039.75,583H893.08Z"
                             transform="translate(-873 -523)"
+                            animate={controls}
+                            initial={{
+                              strokeDashoffset: 0,
+                            }}
+                            onHoverStart={() => {
+                              controls.set({
+                                strokeDashoffset: 438,
+                              })
+                              controls.start({
+                                strokeDashoffset: 0,
+                              })
+                            }}
                             style={{
                               strokeDasharray: '436, 438',
-                              strokeDashoffset: 0,
                               strokeWidth: '3px',
                             }}
+                            transition={{ duration: 1 }} // 可选：定义动画的持续时间和其他属性
                           />
                         </svg>
                       </div>
                       READ MORE
                     </div>
                     <div className="ml-10 flex items-center gap-4 text-[14px] font-bold">
-                      <div className=" flex h-[46px] w-[46px] items-center justify-center rounded-full border border-solid text-[24px]">
-                        <i className="icon-[mingcute--play-fill] text-green-500" />
+                      <div
+                        className=" flex h-[46px] w-[46px] items-center justify-center rounded-full border border-solid text-[24px] text-green-500 hover:border-green-500 hover:bg-green-500
+                       hover:text-black"
+                      >
+                        <i className="icon-[mingcute--play-fill] " />
                       </div>
                       How It Work
                     </div>
                   </div>
                 </div>
-                <div className="relative h-[137px] w-[137px]">
+                <div className="rotats hover:animation-pause relative h-[137px] w-[137px]">
                   <Image
                     width={137}
                     height={137}
