@@ -1,4 +1,5 @@
-import { Second } from '~/components/Main/Second'
+import { Second } from '~/components/Main/Second/Index'
+import { Third } from '~/components/Main/Third/Index'
 import { Video } from '~/components/Main/Video'
 
 export default function Home() {
@@ -8,6 +9,7 @@ export default function Home() {
         <Video />
       </div>
       <Second />
+      <Third />
     </>
   )
 }
