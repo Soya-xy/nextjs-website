@@ -1,9 +1,10 @@
 .second {
-  background-image: url(https://themedox.com/mykd/wp-content/uploads/2023/10/area_bg02.jpg);
+  /* background-image: url(/images/area_bg02.jpg);
   background-position: top center;
   background-repeat: no-repeat;
-  background-size: cover;
-  height: 1750px;
+  background-size: cover; */
+  background-color: #10181F;
+  min-height: 850px;
 }
 
 .second * {

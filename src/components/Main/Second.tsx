@@ -122,7 +122,7 @@ export const Second = () => {
                 </div>
               </div>
             </div>
-            <div>
+            <div className="lg:w-[620px]">
               <div className="about__funFact-images relative flex max-w-[511px] flex-1 justify-end">
                 <Image
                   src="https://themedox.com/mykd/wp-content/uploads/2023/10/fun_fact_shape.png"
