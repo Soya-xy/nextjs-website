@@ -1,0 +1,153 @@
+.second {
+  background-image: url(https://themedox.com/mykd/wp-content/uploads/2023/10/area_bg02.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1750px;
+}
+
+.second * {
+  box-sizing: border-box;
+}
+
+.nft_site::after {
+  content: "";
+  display: block;
+  -webkit-clip-path: polygon(0% 0%, 100% 0%, 93.846% 100%, 6.154% 100%, 0% 0%);
+  clip-path: polygon(0% 0%, 100% 0%, 93.846% 100%, 6.154% 100%, 0% 0%);
+  width: 65px;
+  height: 5px;
+  margin: 20px 0 0;
+  background: var(--tg-theme-primary);
+}
+
+.sub {
+  color: #ADB0BC;
+  font-family: "Poppins", Sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.75em;
+}
+
+.super {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-33deg);
+  overflow: initial;
+}
+
+.super path {
+  fill: none;
+}
+
+.super text {
+  fill: white;
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 4px;
+}
+
+
+
+.about__funFact-images {
+  position: relative;
+  max-width: 511px;
+  margin: 60px 25px 0 auto;
+  z-index: 1;
+}
+@media (max-width: 991.98px) {
+  .about__funFact-images {
+    max-width: 510px;
+    margin: 60px auto 30px;
+  }
+}
+@media (max-width: 767.98px) {
+  .about__funFact-images {
+    max-width: 400px;
+    margin: 60px 25px 30px 0;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .about__funFact-images {
+    max-width: 480px;
+    margin: 60px 40px 30px 0;
+  }
+}
+.about__funFact-images::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: calc(100% + 15px);
+  background: var(--tg-theme-primary);
+  -webkit-transform: rotate(5deg);
+  -moz-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  -o-transform: rotate(5deg);
+  transform: rotate(5deg);
+  -webkit-transform-origin: bottom right;
+  -ms-transform-origin: bottom right;
+  transform-origin: bottom right;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+  opacity: 0.84;
+  z-index: -1;
+}
+.about__funFact-images .main-img {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-width: 382px;
+  margin: 0 auto;
+}
+@media (max-width: 1199.98px) {
+  .about__funFact-images .main-img {
+    max-width: 315px;
+  }
+}
+@media (max-width: 991.98px) {
+  .about__funFact-images .main-img {
+    max-width: 350px;
+  }
+}
+@media (max-width: 767.98px) {
+  .about__funFact-images .main-img {
+    max-width: 260px;
+  }
+}
+.about__funFact-images:hover::after {
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  height: calc(100% + 0px);
+}
+
+
+.about-icon::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background-image: url(/images/trophy_color.png);
+  width: 95px;
+  height: 96px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
