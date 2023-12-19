@@ -4,9 +4,10 @@ import Image from 'next/image'
 
 import './second.css'
 
-import { motion } from 'framer-motion'
+import { motion, useAnimationControls } from 'framer-motion'
 
 export const Second = () => {
+  const controls = useAnimationControls()
   return (
     <div className="second">
       <div className="container mx-auto lg:max-w-[1300px]">
@@ -94,10 +95,10 @@ export const Second = () => {
                   height={137}
                   className="z-2 relative"
                   decoding="async"
-                  src="https://themedox.com/mykd/wp-content/themes/mykd/assets/img/icons/circle.svg"
+                  src="/images/wheel.png"
                   alt="img"
                 />
-                <svg
+                {/* <svg
                   className="super"
                   xmlns="http://www.w3.org/2000/svg"
                   viewBox="0 0 150 150"
@@ -107,28 +108,42 @@ export const Second = () => {
                   <text>
                     <textPath href="#textPath">super nft Gaming sits</textPath>
                   </text>
-                </svg>
+                </svg> */}
               </div>
             </div>
           </div>
-          <div className="lg:w-[620px]">
-            <div className="about__funFact-images relative flex max-w-[511px] flex-1 justify-end">
-              <Image
-                src="https://themedox.com/mykd/wp-content/uploads/2023/10/fun_fact_shape.png"
-                alt=""
-                className=""
-                width={511}
-                height={443}
-              />
+          <div className="flex flex-col items-end lg:w-[620px]">
+            <div className="relative flex  justify-end">
+              <Image src="/images/ship.png" alt="" width={490} height={490} />
 
-              <Image
-                decoding="async"
-                className="main-img"
-                src="https://themedox.com/mykd/wp-content/uploads/2023/10/fun_fact.png"
-                alt=""
-                width={382}
-                height={557}
-              />
+              <motion.div
+                className="absolute bottom-[-10px] right-[-15px]"
+                initial={{
+                  opacity: 0,
+                  // scale: .5,
+                  // y: -50,
+                  x: -100,
+                }}
+                whileInView={{
+                  opacity: 1,
+                  // scale: 1.2,
+                  // y: 0,
+                  // x: -100
+                }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 1,
+                  ease: 'easeInOut',
+                }}
+              >
+                <Image
+                  decoding="async"
+                  src="/images/people.png"
+                  alt=""
+                  width={690}
+                  height={557}
+                />
+              </motion.div>
             </div>
             <div className="relative mt-5 flex items-center justify-end">
               <div className="mr-2 text-end">

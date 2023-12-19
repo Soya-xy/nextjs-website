@@ -6,13 +6,20 @@ import type { FC, ReactNode } from 'react'
 import { useAudioPlayer } from '~/hooks/shared/use-audio'
 
 export const MusicButton: FC<{
+  src?: string
   children: ReactNode
   className?: string
   onClick?: () => void
   once?: boolean
-}> = ({ children, className, once = false, onClick }) => {
+}> = ({
+  children,
+  className,
+  src = '/music/click.wav',
+  once = false,
+  onClick,
+}) => {
   const [show, setShow] = useState(false)
-  const { play } = useAudioPlayer('/music/click.wav')
+  const { play } = useAudioPlayer(src)
   const { play: removePlay } = useAudioPlayer('/music/remove.wav')
   useEffect(() => {
     if (show) {
