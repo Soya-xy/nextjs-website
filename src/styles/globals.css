@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+*::-webkit-scrollbar{
+  width: 0;
+}
+
 @layer utilities {
   .animation-pause {
     animation-play-state: paused;

@@ -37,7 +37,7 @@ export const Content = () => {
           }}
           className="tab-pane show active"
         >
-          <div className="flex justify-center">
+          <div className="flex flex-col items-center justify-center md:flex-row md:items-start ">
             <div className="w-[60%]">
               <div className="about__img">
                 <img
@@ -47,7 +47,7 @@ export const Content = () => {
                 />
               </div>
             </div>
-            <div className="ml-[4rem] w-full">
+            <div className="w-full px-10 md:ml-[4rem] md:px-0">
               <div className="about__flex-wrap">
                 <div className="about__content-wrap">
                   <div className="about__content">

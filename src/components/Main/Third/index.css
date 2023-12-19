@@ -3,7 +3,7 @@
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
-  --site-margin:0 0;
+  --site-margin: 0 0;
 
   background-color: #10181F;
   min-height: 950px;
@@ -76,7 +76,7 @@
 
 .nav-tabs {
   justify-content: center;
-  padding: 22px 0;
+  padding: 10px 0;
   position: relative;
   gap: 15px 35px;
 }
@@ -156,6 +156,77 @@
   z-index: -1;
 }
 
+.wealthgod {
+  --wealthgod-color: #c77c28;
+  width: 90px;
+  height: 80px;
+}
+
+@keyframes turn {
+  100% {
+    transform: rotateZ(-1turn);
+  }
+}
+
+.semicircle-active {
+  animation: turn 2s linear infinite;
+  transform-origin: 50% 50%;
+}
+.wealthgod-active {
+  --wealthgod-color: #44f881;
+}
+
+.semicircle {
+  border: 5px solid transparent;
+  /* border: 10px solid transparent; */
+  border-left: 5px solid var(--wealthgod-color);
+  border-right: 5px solid var(--wealthgod-color);
+  border-radius: 50%;
+
+
+
+}
+
+.wealthgod:hover {
+  --wealthgod-color: #44f881;
+}
+
+.wealthgod svg circle {
+  stroke: var(--wealthgod-color);
+}
+
+.wealthgod svg circle,
+.wealthgod::before,
+.wealthgod::after {
+  transition: all 0.3s linear 0s;
+}
+
+.wealthgod::before {
+  content: "";
+  position: absolute;
+  width: 82px;
+  height: 82px;
+  left: 8.5px;
+  top: 5.5px;
+  /* transform: translate(-50%, -50%); */
+  border-radius: 50%;
+  border: 2px solid var(--wealthgod-color);
+}
+
+
+.wealthgod::after {
+  content: "";
+  position: absolute;
+  width: 75px;
+  height: 75px;
+  left: 12px;
+  top: 9px;
+  /* transform: translate(-50%, -50%); */
+  border-radius: 50%;
+  border: 2px var(--wealthgod-color);
+  border-style: dashed;
+}
+
 .nav-tabs .nav-item .nav-link .img-shape::before {
   content: "";
   position: absolute;
@@ -163,10 +234,6 @@
   height: 100%;
   left: 0;
   top: 0;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -o-border-radius: 50%;
-  -ms-border-radius: 50%;
   border-radius: 50%;
   background-color: #0c1319;
 }
@@ -223,7 +290,7 @@
 @media (max-width: 767.98px) {
   .tab-content::after {
     width: 100%;
-    opacity: 0.5;
+    opacity: 0;
   }
 }
 

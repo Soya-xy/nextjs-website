@@ -8,7 +8,9 @@
   background-color: #10181F;
   min-height: 850px;
 }
-
+#spine_container canvas{
+  touch-action: auto !important;
+}
 .second * {
   box-sizing: border-box;
 }

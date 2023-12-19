@@ -23,9 +23,9 @@ export const Second = () => {
   })
   return (
     <div className="second">
-      <div className="container mx-auto lg:max-w-[1300px]">
-        <div className="flex flex-col-reverse items-center justify-between pt-[10rem] lg:flex-row">
-          <div className="flex flex-1 flex-col px-[20rem] lg:px-6">
+      <div className="container mx-auto py-20 lg:max-w-[1300px]">
+        <div className="flex flex-col-reverse pt-5 md:flex md:flex-row md:items-center md:justify-between md:pt-[10rem]">
+          <div className="flex flex-1 flex-col px-5 md:px-[20rem] lg:px-6">
             <p className="nft_site mb-[2rem] text-[45px] font-[800]">
               THE JOURNEY OF THE
               <br /> NFT SITES
@@ -36,8 +36,8 @@ export const Second = () => {
               Morbi pharetra mi tellus mollis tincidunt massa venenatis. Etiam
               lacinia ipsumultrices.
             </p>
-            <div className="flex justify-between">
-              <div>
+            <div className="flex flex-col-reverse items-center justify-between md:flex-row">
+              <div className="flex flex-col items-center justify-center md:block">
                 <div className="flex items-center justify-start gap-[3.3rem]">
                   <div>
                     <p className="text-[30px] font-[700]">40K</p>
@@ -111,22 +111,11 @@ export const Second = () => {
                   src="/images/wheel.png"
                   alt="img"
                 />
-                {/* <svg
-                  className="super"
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 150 150"
-                  version="1.1"
-                >
-                  <path id="textPath" d="M 0,75 a 75,75 0 1,1 0,1 z" />
-                  <text>
-                    <textPath href="#textPath">super nft Gaming sits</textPath>
-                  </text>
-                </svg> */}
               </div>
             </div>
           </div>
-          <div className="flex flex-col items-end lg:w-[620px]">
-            <motion.div ref={spineRef} className="relative flex  justify-end">
+          <div className="flex flex-col items-center md:items-end lg:w-[620px]">
+            <motion.div ref={spineRef} className="relative">
               <Animation play={spine} />
             </motion.div>
             {/* <div className="relative mt-5 flex items-center justify-end">

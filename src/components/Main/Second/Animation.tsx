@@ -11,7 +11,8 @@ export const Animation = ({ play }: any) => {
   const [animation, setAnimation] = useState<any>(null)
   useMount(async () => {
     const app = new PIXI.Application({
-      height: 515,
+      width: screen.availWidth > 750 ? 800 : 370,
+      height: screen.availWidth > 750 ? 515 : 300,
       backgroundColor: '#000', // 背景颜色，这里是黑色
       backgroundAlpha: 0, // 背景透明度，0 表示完全透明
     })
@@ -19,7 +20,13 @@ export const Animation = ({ play }: any) => {
       container.current.appendChild(app.view)
       const res = await PIXI.Assets.load('/spine/skeleton.json')
       const sp = new Spine(res.spineData)
-      sp.position.set(450, 505 / 2)
+      if (screen.availWidth < 750) {
+        sp.width = 370
+        sp.height = 300
+        sp.position.set(220, 150)
+      } else {
+        sp.position.set(450, 505 / 2)
+      }
       setAnimation(sp)
       app.stage.addChild(sp)
       setReady(true)
@@ -39,11 +46,11 @@ export const Animation = ({ play }: any) => {
   }, [play, ready])
   return (
     <>
-      <div className="relative h-[500px] w-[500px]">
+      <div className="h-[300px] w-[370px] md:relative md:h-[500px] md:w-[500px]">
         <div
           ref={container}
           id="spine_container"
-          className="absolute right-[-120px] aspect-video"
+          className="right-[-120px] aspect-video md:absolute"
         />
       </div>
     </>

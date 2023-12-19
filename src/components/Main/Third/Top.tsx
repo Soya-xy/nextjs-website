@@ -39,7 +39,7 @@ export const Top = () => {
           })}
         </motion.p>
         <p
-          className="nft_site text-[45px] font-bold tracking-[2px]"
+          className="nft_site text-center text-[45px] font-bold tracking-[2px] md:text-start"
           style={
             {
               '--site-margin': 'auto',
@@ -85,33 +85,43 @@ export const Top = () => {
           </MusicButton>
         </div>
 
-        <div className="w-full  px-[150px]">
-          <div className="nav-tabs relative w-full">
-            <ul
-              className="flex items-center justify-center gap-10"
+        <div className="w-full px-10  md:px-[150px]">
+          <div className="nav-tabs relative w-full items-center">
+            <div
+              className="flex h-[120px] items-center justify-start gap-10 overflow-y-auto overflow-x-scroll  md:justify-center "
               id="myTab"
               role="tablist"
             >
               {[1, 1, 1, 1, 1, 1].map((_v, k) => (
-                <li className="nav-item" role="presentation" key={k}>
-                  <MusicButton
-                    once
-                    src="/music/tab.mp3"
-                    className={`nav-link ${k === active && 'active'}`}
-                    onClick={() => setActive(k)}
+                <MusicButton
+                  once
+                  src="/music/tab.mp3"
+                  className={`nav-link ${k === active ? 'active' : ''}`}
+                  onClick={() => setActive(k)}
+                  key={k}
+                >
+                  <div
+                    className={`wealthgod relative ${
+                      k === active && 'wealthgod-active'
+                    }`}
                   >
-                    <span className="img-shape" />
+                    <span
+                      className={`semicircle absolute left-[4px] top-[2px] h-[90px] w-[90px] ${
+                        k === active && 'semicircle-active'
+                      }`}
+                    />
+
                     <Image
                       decoding="async"
-                      src="https://themedox.com/mykd/wp-content/uploads/2023/10/about_tab01.png"
-                      width={77}
+                      className="relative z-[2]"
+                      src="/images/wealthgod.png"
                       alt="Image"
-                      height={77}
+                      fill
                     />
-                  </MusicButton>
-                </li>
+                  </div>
+                </MusicButton>
               ))}
-            </ul>
+            </div>
           </div>
         </div>
       </div>
