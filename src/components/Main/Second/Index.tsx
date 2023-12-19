@@ -4,11 +4,23 @@ import Image from 'next/image'
 
 import './second.css'
 
-import { motion } from 'framer-motion'
+import { useRef, useState } from 'react'
+import { motion, useMotionValueEvent, useScroll } from 'framer-motion'
 
 import { Animation } from './Animation'
 
 export const Second = () => {
+  const [spine, setSpine] = useState<boolean>(false)
+  const spineRef = useRef<HTMLDivElement>(null)
+  const { scrollYProgress } = useScroll({
+    target: spineRef,
+    offset: ['start end', 'end end'],
+  })
+  useMotionValueEvent(scrollYProgress, 'change', (latest) => {
+    if (latest > 0.7) {
+      setSpine(true)
+    }
+  })
   return (
     <div className="second">
       <div className="container mx-auto lg:max-w-[1300px]">
@@ -114,10 +126,10 @@ export const Second = () => {
             </div>
           </div>
           <div className="flex flex-col items-end lg:w-[620px]">
-            <div className="relative flex  justify-end">
-              <Animation />
-            </div>
-            <div className="relative mt-5 flex items-center justify-end">
+            <motion.div ref={spineRef} className="relative flex  justify-end">
+              <Animation play={spine} />
+            </motion.div>
+            {/* <div className="relative mt-5 flex items-center justify-end">
               <div className="mr-2 text-end">
                 <p className="text-[22px] font-bold text-white">TOURNAMENT</p>
                 <p className="text-[14px] text-[#ADB0BC]">DEVELOPMENT</p>
@@ -133,7 +145,7 @@ export const Second = () => {
                   />
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

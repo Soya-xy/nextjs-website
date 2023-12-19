@@ -1,58 +1,50 @@
-import { motion } from 'framer-motion'
+import 'pixi-spine' // Do this once at the very start of your code. This registers the loader!
 
-export const Animation = () => {
-  function template({ rotate, x = 0, y = 0 }: any) {
-    console.log('🚀 ~ file: Animation.tsx:6 ~ template ~ rotate:', rotate)
-    return `translateX(${x}) translateY(${y}) rotate3d(1,1,1,${rotate})`
-  }
+import { useEffect, useRef, useState } from 'react'
+import { useMount } from 'ahooks'
+import { Spine } from 'pixi-spine'
+import * as PIXI from 'pixi.js'
+
+export const Animation = ({ play }: any) => {
+  const container = useRef<any>(null)
+  const [ready, setReady] = useState<boolean>(false)
+  const [animation, setAnimation] = useState<any>(null)
+  useMount(async () => {
+    const app = new PIXI.Application({
+      height: 515,
+      backgroundColor: '#000', // 背景颜色，这里是黑色
+      backgroundAlpha: 0, // 背景透明度，0 表示完全透明
+    })
+    if (container.current) {
+      container.current.appendChild(app.view)
+      const res = await PIXI.Assets.load('/spine/skeleton.json')
+      const sp = new Spine(res.spineData)
+      sp.position.set(450, 505 / 2)
+      setAnimation(sp)
+      app.stage.addChild(sp)
+      setReady(true)
+    }
+  })
+
+  useEffect(() => {
+    if (play && ready) {
+      if (!animation) return
+      if (animation.state.hasAnimation('animation')) {
+        animation.state.setAnimation(0, 'animation', false)
+        setTimeout(() => {
+          animation.state.tracks[0].animationEnd = 1.8
+        }, 1800)
+      }
+    }
+  }, [play, ready])
   return (
     <>
-      <div className="flex justify-end">
-        <img src="/images/kuang.png" className="h-[490px] w-[490px]" alt="" />
-        <motion.div
-          className="absolute bottom-[-10px] right-[0] h-[440px] w-[690px] origin-bottom-right"
-          transformTemplate={template}
-          initial={{
-            rotate: 10,
-            x: -10,
-            y: -5,
-          }}
-          animate={{
-            x: [-10, -10, -10, -10, -10, -30, -20, -15, -10],
-            // y: [0,0,0,0,-10, -15, -10, -15, -20],
-            rotate: [10, 7, 5, 7, 10],
-          }}
-          transition={{
-            delay: 1,
-            duration: 3,
-            ease: 'linear',
-            // times: [0, .1, .2, .3, .4, .5, .7, .8, .9, 1],
-            repeat: Infinity,
-          }}
-        >
-          <img src="/images/ship.png" alt="" className="h-full w-full" />
-        </motion.div>
-        <motion.div
-          className="absolute bottom-[-20px] right-[-50px] h-[450px] w-[690px]"
-          initial={{
-            // opacity: 0,
-            x: 10,
-            y: -25,
-          }}
-          whileInView={{
-            // opacity: 1,
-            y: [-25, -20, -10, -15, -10, -25],
-          }}
-          // viewport={{ once: true }}
-          transition={{
-            delay: 0.3,
-            duration: 3,
-            ease: 'linear',
-            repeat: Infinity,
-          }}
-        >
-          <img src="/images/people.png" alt="" className="h-full w-full" />
-        </motion.div>
+      <div className="relative h-[500px] w-[500px]">
+        <div
+          ref={container}
+          id="spine_container"
+          className="absolute right-[-120px] aspect-video"
+        />
       </div>
     </>
   )
