@@ -20,6 +20,9 @@ overrides:
   string.prototype.matchall: npm:@nolyfill/string.prototype.matchall@latest
 
 dependencies:
+  '@esotericsoftware/spine-player':
+    specifier: ^4.2.33
+    version: 4.2.33
   '@floating-ui/react-dom':
     specifier: 2.0.4
     version: 2.0.4(react-dom@18.2.0)(react@18.2.0)
@@ -850,6 +853,22 @@ packages:
     resolution: {integrity: sha512-gMsVel9D7f2HLkBma9VbtzZRehRogVRfbr++f06nL2vnCGCNlzOD+/MUov/F4p8myyAHspEhVobgjpX64q5m6A==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
+
+  /@esotericsoftware/spine-core@4.2.33:
+    resolution: {integrity: sha512-p6/2t1/7jVdBpbup35tIsLaWiLYfBq3Rngue86GBU8lXYxCKWT5P9uFXhJF1aKcm8CyileCcoGOAeA+aLht7nw==}
+    dev: false
+
+  /@esotericsoftware/spine-player@4.2.33:
+    resolution: {integrity: sha512-kuTJz89FOSPqXAy6aiTMsGqamMhQgNai8ctSXUC7QQ6R35dVfJNg3tvyl+TpnOr+y2hW/MHlMoYKiFIXaPFqlg==}
+    dependencies:
+      '@esotericsoftware/spine-webgl': 4.2.33
+    dev: false
+
+  /@esotericsoftware/spine-webgl@4.2.33:
+    resolution: {integrity: sha512-o5mc/uK2jiES/dX/nRJ/OVOBq97sFSVeXkUEnjoP415Q3KOL9qAiyRQSB8TEUVq/vR/VpyS0YXhr52MujPk2RA==}
+    dependencies:
+      '@esotericsoftware/spine-core': 4.2.33
+    dev: false
 
   /@floating-ui/core@1.5.2:
     resolution: {integrity: sha512-Ii3MrfY/GAIN3OhXNzpCKaLxHQfJF9qvwq/kEJYdqDxeIHa01K8sldugal6TmeeXl+WMvhv9cnVzUTaFFJF09A==}

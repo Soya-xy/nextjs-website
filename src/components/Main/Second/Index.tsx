@@ -4,10 +4,11 @@ import Image from 'next/image'
 
 import './second.css'
 
-import { motion, useAnimationControls } from 'framer-motion'
+import { motion } from 'framer-motion'
+
+import { Animation } from './Animation'
 
 export const Second = () => {
-  const controls = useAnimationControls()
   return (
     <div className="second">
       <div className="container mx-auto lg:max-w-[1300px]">
@@ -114,36 +115,7 @@ export const Second = () => {
           </div>
           <div className="flex flex-col items-end lg:w-[620px]">
             <div className="relative flex  justify-end">
-              <Image src="/images/ship.png" alt="" width={490} height={490} />
-
-              <motion.div
-                className="absolute bottom-[-10px] right-[-15px]"
-                initial={{
-                  opacity: 0,
-                  // scale: .5,
-                  // y: -50,
-                  x: -100,
-                }}
-                whileInView={{
-                  opacity: 1,
-                  // scale: 1.2,
-                  // y: 0,
-                  // x: -100
-                }}
-                viewport={{ once: true }}
-                transition={{
-                  duration: 1,
-                  ease: 'easeInOut',
-                }}
-              >
-                <Image
-                  decoding="async"
-                  src="/images/people.png"
-                  alt=""
-                  width={690}
-                  height={557}
-                />
-              </motion.div>
+              <Animation />
             </div>
             <div className="relative mt-5 flex items-center justify-end">
               <div className="mr-2 text-end">

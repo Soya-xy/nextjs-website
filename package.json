@@ -32,6 +32,7 @@
     "prod:reload": "pm2 reload ecosystem.config.js"
   },
   "dependencies": {
+    "@esotericsoftware/spine-player": "^4.2.33",
     "@floating-ui/react-dom": "2.0.4",
     "@radix-ui/react-dialog": "1.0.5",
     "@radix-ui/react-dropdown-menu": "^2.0.6",
