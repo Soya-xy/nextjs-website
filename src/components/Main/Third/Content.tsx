@@ -38,7 +38,7 @@ export const Content = () => {
           className="tab-pane show active"
         >
           <div className="flex flex-col items-center justify-center md:flex-row md:items-start ">
-            <div className="w-[60%]">
+            <div className="w-[100%] md:w-[60%]">
               <div className="about__img">
                 <img
                   decoding="async"

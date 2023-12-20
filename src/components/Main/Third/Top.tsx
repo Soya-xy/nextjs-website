@@ -1,10 +1,10 @@
 'use client'
 
-import { motion } from 'framer-motion'
 import { atom, useAtom } from 'jotai'
 import Image from 'next/image'
 
 import { MusicButton } from '~/components/common/MusicButton'
+import { AnimationText } from '~/components/ui/text/AnimationText'
 
 export const tabActive = atom(0)
 
@@ -22,22 +22,7 @@ export const Top = () => {
   return (
     <>
       <div className="flex flex-col items-center justify-center">
-        <motion.p
-          variants={item}
-          initial="hidden"
-          whileInView="show"
-          transition={{ staggerChildren: 0.04 }}
-          viewport={{ once: true }}
-          className="tracking-[2px] text-[#45f882]"
-        >
-          {'KNOW ABOUT US'.split('').map((v, k) => {
-            return (
-              <motion.span variants={item} key={k}>
-                {v}
-              </motion.span>
-            )
-          })}
-        </motion.p>
+        <AnimationText text="KNOW ABOUT US" />
         <p
           className="nft_site text-center text-[45px] font-bold tracking-[2px] md:text-start"
           style={
@@ -88,7 +73,7 @@ export const Top = () => {
         <div className="w-full px-10  md:px-[150px]">
           <div className="nav-tabs relative w-full items-center">
             <div
-              className="flex h-[120px] items-center justify-start gap-10 overflow-y-auto overflow-x-scroll  md:justify-center "
+              className="flex h-[120px] items-center justify-start gap-10 overflow-y-hidden overflow-x-scroll  md:justify-center "
               id="myTab"
               role="tablist"
             >

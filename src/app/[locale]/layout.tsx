@@ -1,6 +1,7 @@
 import type { Viewport } from 'next'
 
 import '~/styles/index.css'
+import '~/styles/scss/main.scss'
 
 import { ToastContainer } from 'react-toastify'
 import { NextIntlClientProvider } from 'next-intl'

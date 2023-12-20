@@ -1,8 +1,8 @@
 'use client'
 
-import { motion } from 'framer-motion'
-
 import './index.css'
+
+import { AnimationText } from '~/components/ui/text/AnimationText'
 
 import Hero from './Hero'
 
@@ -16,31 +16,24 @@ export const Forth = () => {
   }
   return (
     <div className="forth">
-      <div className="w-full py-[130px]">
-        <section className="md:mx-[180px]">
-          <div className="flex min-h-[460px] flex-col md:flex-row">
-            <div className="!ml-[30px] w-[430px] flex-initial flex-shrink-0 text-start">
+      <div className="relative w-full py-[130px]">
+        <section className="md:mx-[180px] ">
+          <div className="flex flex-col md:flex-row">
+            <div className="!ml-[30px] w-[430px] flex-initial flex-shrink-0 text-start md:flex md:flex-col md:justify-center">
               <h2 className="text-[45px]">PROJECTS MYKD</h2>
-              <motion.p
-                variants={item}
-                initial="hidden"
-                whileInView="show"
-                transition={{ staggerChildren: 0.04 }}
-                viewport={{ once: true }}
-                className="tracking-[2px] text-[#45f882]"
-              >
-                {'OUR LATEST GALLERY'.split('').map((v, k) => {
-                  return (
-                    <motion.span variants={item} key={k}>
-                      {v}
-                    </motion.span>
-                  )
-                })}
-              </motion.p>
+              <AnimationText text="OUR LATEST GALLERY" />
+              <div className="mt-3">
+                <button className="rounded-md bg-[#45f882] px-7 py-3 text-start text-black hover:bg-[#C6923D] hover:text-white">
+                  ADD TO
+                </button>
+              </div>
             </div>
             <Hero />
           </div>
         </section>
+        <div className="swiper-scrollbar">
+          <div className="swiper-scrollbar-drag" />
+        </div>
       </div>
     </div>
   )
