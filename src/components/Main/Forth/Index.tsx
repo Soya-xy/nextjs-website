@@ -16,7 +16,7 @@ export const Forth = () => {
   }
   return (
     <div className="forth">
-      <div className="relative w-full py-[130px]">
+      <div className="relative w-full overflow-hidden py-[130px]">
         <section className="md:mx-[180px] ">
           <div className="flex flex-col md:flex-row">
             <div className="!ml-[30px] w-[430px] flex-initial flex-shrink-0 text-start md:flex md:flex-col md:justify-center">
