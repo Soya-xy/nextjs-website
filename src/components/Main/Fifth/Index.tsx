@@ -1,7 +1,5 @@
 'use client'
 
-import React from 'react'
-
 import bg from '~/assets/img/video_bg.jpg'
 
 export const Fifth = () => {
