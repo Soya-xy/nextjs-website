@@ -18,7 +18,7 @@ export const Navbar = () => {
     'CONTACT',
   ]
   return (
-    <div className="min-h-20 navbar relative  z-[2] h-[100px] w-full">
+    <div className="navbar relative z-[2]  h-[100px] min-h-20 w-full">
       <div className="h-100px container mx-auto flex items-center justify-between gap-3 py-6">
         <Link href="/" className="w-[120px]">
           <button className="cursor-pointer">
@@ -26,7 +26,7 @@ export const Navbar = () => {
           </button>
         </Link>
         {/* LINK */}
-        <div className="ml-20 hidden flex-1 items-center justify-center md:flex">
+        <div className="ml-20 hidden flex-1 items-center justify-center lg:flex">
           <Item menuList={menuList} />
         </div>
 

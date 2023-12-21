@@ -87,7 +87,7 @@ const DarkIcon = () => {
 
 export const ThemeSwitcher = () => {
   return (
-    <div className="relative inline-block">
+    <div className="fixed bottom-0 right-0 inline-block">
       <ThemeIndicator />
       <ButtonGroup />
     </div>

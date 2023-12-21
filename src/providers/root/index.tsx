@@ -14,7 +14,7 @@ import { MouseFollower } from './mouse-provider'
 import { PageScrollInfoProvider } from './page-scroll-info-provider'
 
 const contexts: JSX.Element[] = [
-  <ThemeProvider key="themeProvider" />,
+  <ThemeProvider key="themeProvider" defaultTheme="dark" />,
   <ReactQueryProvider key="reactQueryProvider" />,
   <JotaiStoreProvider key="jotaiStoreProvider" />,
   <MouseFollower key="mouseFollowerProvider" />,

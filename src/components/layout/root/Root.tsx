@@ -5,6 +5,7 @@ import { Navbar } from '~/components/Header/Navbar'
 import { ThemeSwitcher } from '~/components/ui/theme-switcher'
 
 import { Content } from '../content/Content'
+import Footer from '../footer/footer'
 
 export const Root: Component = ({ children }) => {
   return (
@@ -12,9 +13,10 @@ export const Root: Component = ({ children }) => {
       <Navbar />
       <Content>{children}</Content>
 
-      <footer className="flex justify-end p-5">
-        <ThemeSwitcher />
-      </footer>
+      {/* <footer className="flex justify-end p-5"> */}
+      <Footer />
+      <ThemeSwitcher />
+      {/* </footer> */}
       <ClientOnly>{/* TODO */}</ClientOnly>
     </>
   )

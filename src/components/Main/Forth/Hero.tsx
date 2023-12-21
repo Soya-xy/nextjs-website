@@ -1,11 +1,11 @@
 import Marquee from 'react-fast-marquee'
 import { motion } from 'framer-motion'
 
-export default () => {
+export default ({ direction = 'left' }: { direction?: any }) => {
   return (
     <>
       <div className="overflow-hidden md:ml-[10px]  ">
-        <Marquee pauseOnHover={true}>
+        <Marquee pauseOnHover={true} direction={direction}>
           {[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1].map((v, k) => (
             <div className="relative mx-5 h-full select-none py-2" key={k}>
               <img

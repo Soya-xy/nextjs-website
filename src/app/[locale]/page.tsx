@@ -1,6 +1,7 @@
 import { Fifth } from '~/components/Main/Fifth/Index'
 import { Forth } from '~/components/Main/Forth/Index'
 import { Second } from '~/components/Main/Second/Index'
+import { Seven } from '~/components/Main/Seven/Index'
 import { Sixth } from '~/components/Main/Sixth'
 import { Third } from '~/components/Main/Third/Index'
 import { Video } from '~/components/Main/Video'
@@ -15,6 +16,8 @@ export default function Home() {
       <Third />
       <Forth />
       <Fifth />
+      <Seven />
+
       <Sixth />
     </>
   )

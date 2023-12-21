@@ -24,8 +24,8 @@ export const Second = () => {
   return (
     <div className="second">
       <div className="container mx-auto py-20 lg:max-w-[1300px]">
-        <div className="flex flex-col-reverse pt-5 md:flex md:flex-row md:items-center md:justify-between md:pt-[10rem]">
-          <div className="flex flex-1 flex-col px-5 md:px-[20rem] lg:px-6">
+        <div className="flex flex-col-reverse pt-5 md:items-center md:justify-between md:pt-[10rem] lg:flex-row">
+          <div className="flex flex-1 flex-col px-5  lg:px-6">
             <p className="nft_site mb-[2rem] text-[45px] font-[800]">
               THE JOURNEY OF THE
               <br /> NFT SITES

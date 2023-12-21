@@ -58,15 +58,15 @@ const road_map_lists: IRoadMap[] = [
 export const Sixth = () => {
   return (
     <section
-      className="roadMap__area roadMap-bg py-[150px]"
+      className="roadMap__area roadMap-bg section-pt-150 section-pb-150"
       style={{ backgroundImage: `url(${bg.src})` }}
     >
       <div className="container mx-auto">
-        <div className="justify-content mx-[60px] flex">
-          <div className="mx-10">
+        <div className="row justify-center">
+          <div className="col-xl-10">
             <div className="roadMap__inner">
-              <div className="flex ">
-                <div className="mx-5 basis-[40%]">
+              <div className="row">
+                <div className="col-xl-5 col-lg-6">
                   <div className="roadMap__content">
                     <h2 className="title">a look into roadmaps seasons</h2>
                     <p>
@@ -88,7 +88,7 @@ export const Sixth = () => {
                     />
                   </div>
                 </div>
-                <div className="flex-1">
+                <div className="col-xl-7 col-lg-6">
                   <div className="roadMap__steps-wrap">
                     {road_map_lists.map((item) => (
                       <div

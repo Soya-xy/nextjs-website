@@ -31,9 +31,9 @@ export const Forth = () => {
             <Hero />
           </div>
         </section>
-        <div className="swiper-scrollbar">
+        {/* <div className="swiper-scrollbar">
           <div className="swiper-scrollbar-drag" />
-        </div>
+        </div> */}
       </div>
     </div>
   )
