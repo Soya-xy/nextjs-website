@@ -40,11 +40,7 @@ export const Content = () => {
           <div className="flex flex-col items-center justify-center md:flex-row md:items-start ">
             <div className="w-[100%] md:w-[60%]">
               <div className="about__img">
-                <img
-                  decoding="async"
-                  src="https://themedox.com/mykd/wp-content/uploads/2023/10/about_img01.jpg"
-                  alt="Image"
-                />
+                <video src="/music/video.mp4" autoPlay muted />
               </div>
             </div>
             <div className="w-full px-10 md:ml-[4rem] md:px-0">

@@ -7,7 +7,7 @@ import { motion } from 'framer-motion'
 
 export const Seven = () => {
   const img_list = [1, 1, 1, 1, 1, 1]
-  const [active, setActive] = useState(0)
+  const [active, setActive] = useState(1)
 
   return (
     <>

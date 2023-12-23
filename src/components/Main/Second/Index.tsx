@@ -38,7 +38,7 @@ export const Second = () => {
             </p>
             <div className="flex flex-col-reverse items-center justify-between md:flex-row">
               <div className="flex flex-col items-center justify-center md:block">
-                <div className="flex items-center justify-start gap-[3.3rem]">
+                {/* <div className="flex items-center justify-start gap-[3.3rem]">
                   <div>
                     <p className="text-[30px] font-[700]">40K</p>
                     <p className="text-base font-[500] text-[#adb0bc]">
@@ -57,7 +57,7 @@ export const Second = () => {
                       Member
                     </p>
                   </div>
-                </div>
+                </div> */}
                 <div className="mt-10 flex items-center justify-start">
                   <div className="relative h-full  min-w-[158px] text-center text-[14px]  font-bold leading-[48px]">
                     <div className="absolute left-0 top-0">
