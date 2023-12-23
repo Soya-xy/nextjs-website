@@ -420,3 +420,19 @@
 .about__btn-wrap ul li a:hover {
   color: #45f882;
 }
+
+.gp-img.active img {
+  -webkit-animation: activeInset 0.8s forwards ease;
+  animation: activeInset 0.8s forwards ease;
+}
+
+@keyframes activeInset {
+  0% {
+    -webkit-clip-path: inset(0 100% 0 0);
+    clip-path: inset(0 100% 0 0);
+  }
+  100% {
+    -webkit-clip-path: inset(0 0 0 0);
+    clip-path: inset(0 0 0 0);
+  }
+}

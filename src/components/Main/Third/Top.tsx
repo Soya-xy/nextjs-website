@@ -33,7 +33,7 @@ export const Top = () => {
         >
           TOP RATED STEAMERS
         </p>
-
+        {/* 
         <div className="my-10 flex gap-10">
           <MusicButton once className="svg_btn">
             <svg preserveAspectRatio="none" viewBox="0 0 167 53" fill="none">
@@ -68,7 +68,7 @@ export const Top = () => {
             </svg>
             BUY NFTS
           </MusicButton>
-        </div>
+        </div> */}
 
         <div className="w-full px-10  md:px-[150px]">
           <div className="nav-tabs relative w-full items-center">

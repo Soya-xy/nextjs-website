@@ -114,7 +114,7 @@ export const Second = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-col items-center md:items-end lg:w-[620px]">
+          <div className="flex flex-col items-center md:items-end md:justify-center lg:w-[620px]">
             <motion.div ref={spineRef} className="relative">
               <Animation play={spine} />
             </motion.div>

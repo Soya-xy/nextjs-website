@@ -10,7 +10,7 @@ export const Fifth = () => {
         style={{ backgroundImage: `url(${bg.src})` }}
       >
         <div className="container mx-auto">
-          <div className="row justify-content-center">
+          <div className="row justify-center">
             <div className="col-xl-6 col-lg-8 col-md-11">
               <div className="video__content text-center">
                 <div className="popup-video cursor-pointer">
