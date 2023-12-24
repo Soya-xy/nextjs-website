@@ -37,13 +37,18 @@ export const Content = () => {
           }}
           className="tab-pane show active"
         >
-          <div className="flex flex-col items-center justify-center md:flex-row md:items-start ">
-            <div className="w-[100%] md:w-[60%]">
-              <div className="about__img">
-                <video src="/music/video.mp4" autoPlay muted />
+          <div className="flex flex-col md:flex-row">
+            <div className="flex w-[100%]  flex-[0_0_auto] items-end px-10 md:w-[44%]">
+              <div className="md:h-full">
+                <video
+                  src="/music/video.mp4"
+                  className="object-fill wh-full"
+                  autoPlay
+                  muted
+                />
               </div>
             </div>
-            <div className="w-full px-10 md:ml-[4rem] md:px-0">
+            <div className="mt-3 w-full px-10 md:mt-0 md:px-0">
               <div className="about__flex-wrap">
                 <div className="about__content-wrap">
                   <div className="about__content">

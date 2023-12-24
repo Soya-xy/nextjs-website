@@ -8,7 +8,7 @@ import './index.css'
 export const Third = () => {
   return (
     <div className="third">
-      <div className="container mx-auto py-20 md:max-w-[1300px] md:py-[130px]">
+      <div className="container mx-auto py-20 md:py-[130px]">
         <Top />
         <Content />
       </div>

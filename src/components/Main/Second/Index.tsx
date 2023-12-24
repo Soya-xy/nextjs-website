@@ -30,7 +30,7 @@ export const Second = () => {
               THE JOURNEY OF THE
               <br /> NFT SITES
             </p>
-            <p className="sub mb-[3rem] tracking-wider">
+            <p className="sub mb-[3rem] break-all tracking-wider">
               Gorem npsum dolor sit amet consectetur adipiscing elit. Duis
               elementum sollici tudin augue euismod. Nulla ullamcorper nunc.
               Morbi pharetra mi tellus mollis tincidunt massa venenatis. Etiam
