@@ -45,7 +45,7 @@ export const Seven = () => {
                     }}
                     onHoverStart={() => setActive(_v)}
                   >
-                    <div className="gp-item-top md:flex-row-reverse">
+                    <div className="gp-item-top  justify-start">
                       <img
                         decoding="async"
                         src="https://themebeyond.com/demo/haldalive/wp-content/uploads/2022/04/gp_icon01.png"
@@ -53,7 +53,7 @@ export const Seven = () => {
                       />
                       <h4 className="title">VR Development</h4>
                     </div>
-                    <div className="gp-content text-end">
+                    <div className="gp-content text-start">
                       <p>
                         Nullam quis ante. Maecenas ullamcorper, dui et placerat
                         feugiat, eros pede varius nisi, condimentum

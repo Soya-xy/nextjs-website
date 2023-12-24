@@ -24,13 +24,13 @@ export const Second = () => {
   return (
     <div className="second">
       <div className="container mx-auto py-20 lg:max-w-[1300px]">
-        <div className="flex flex-col-reverse pt-5 md:items-center md:justify-between md:pt-[10rem] lg:flex-row">
-          <div className="flex flex-1 flex-col px-5  lg:px-6">
+        <div className="flex flex-col-reverse items-start pt-5 md:items-center md:justify-between md:pt-[10rem] lg:flex-row">
+          <div className="flex flex-1 flex-col justify-start px-5 md:mb-[5rem] lg:px-6">
             <p className="nft_site mb-[2rem] text-[45px] font-[800]">
               THE JOURNEY OF THE
               <br /> NFT SITES
             </p>
-            <p className="sub mb-[3rem] break-all tracking-wider">
+            <p className="sub break-all tracking-wider">
               Gorem npsum dolor sit amet consectetur adipiscing elit. Duis
               elementum sollici tudin augue euismod. Nulla ullamcorper nunc.
               Morbi pharetra mi tellus mollis tincidunt massa venenatis. Etiam
@@ -58,7 +58,7 @@ export const Second = () => {
                     </p>
                   </div>
                 </div> */}
-                <div className="mt-10 flex items-center justify-start">
+                <div className="mb-[3rem] mt-10 flex items-center  justify-start">
                   <div className="relative h-full  min-w-[158px] text-center text-[14px]  font-bold leading-[48px]">
                     <div className="absolute left-0 top-0">
                       <svg

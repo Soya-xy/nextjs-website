@@ -69,7 +69,7 @@ export const Sixth = () => {
                 <div className="col-xl-5 col-lg-6">
                   <div className="roadMap__content">
                     <h2 className="title">a look into roadmaps seasons</h2>
-                    <p>
+                    <p className=" break-all">
                       With Season 1 Ending with our play and Duis elementum
                       sollicitudin is yaugue euismods Nulla ulla Player-focused
                       updates games from Mobile App and Enjoy.
