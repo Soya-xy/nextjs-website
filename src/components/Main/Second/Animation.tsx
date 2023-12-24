@@ -1,14 +1,12 @@
 import 'pixi-spine' // Do this once at the very start of your code. This registers the loader!
 
-import { useEffect, useRef, useState } from 'react'
+import { useRef } from 'react'
 import { useMount } from 'ahooks'
 import { Spine } from 'pixi-spine'
 import * as PIXI from 'pixi.js'
 
-export const Animation = ({ play }: any) => {
+export const Animation = () => {
   const container = useRef<any>(null)
-  const [ready, setReady] = useState<boolean>(false)
-  const [animation, setAnimation] = useState<any>(null)
   useMount(async () => {
     const app = new PIXI.Application({
       width: screen.availWidth > 750 ? 600 : 370,
@@ -29,23 +27,14 @@ export const Animation = ({ play }: any) => {
         sp.height = 443
         sp.position.set(350, 420 / 2)
       }
-      setAnimation(sp)
       app.stage.addChild(sp)
-      setReady(true)
+      if (!sp) return
+      if (sp.state.hasAnimation('animation')) {
+        sp.state.setAnimation(0, 'animation', false)
+      }
     }
   })
 
-  useEffect(() => {
-    if (play && ready) {
-      if (!animation) return
-      if (animation.state.hasAnimation('animation')) {
-        animation.state.setAnimation(0, 'animation', false)
-        setTimeout(() => {
-          animation.state.tracks[0].animationEnd = 1.8
-        }, 1800)
-      }
-    }
-  }, [play, ready])
   return (
     <>
       <div className="h-[300px] w-[370px] md:relative md:h-[500px] md:w-[500px]">

@@ -27,14 +27,16 @@ export const Second = () => {
         <div className="flex flex-col-reverse items-start pt-5 md:items-center md:justify-between md:pt-[10rem] lg:flex-row">
           <div className="flex flex-1 flex-col justify-start px-5 md:mb-[5rem] lg:px-6">
             <p className="nft_site mb-[2rem] text-[45px] font-[800]">
-              THE JOURNEY OF THE
-              <br /> NFT SITES
+              BRANDING CONCEPT
+              <br /> MYERLY
             </p>
             <p className="sub break-all tracking-wider">
-              Gorem npsum dolor sit amet consectetur adipiscing elit. Duis
-              elementum sollici tudin augue euismod. Nulla ullamcorper nunc.
-              Morbi pharetra mi tellus mollis tincidunt massa venenatis. Etiam
-              lacinia ipsumultrices.
+              MYERLY (abbreviated as MY) has gone through years of industry
+              practice, understanding market demand and daring to try.
+              Regardless of the game style, operation interface, and topic
+              themes, it uses the latest H5 technology to provide a rich and
+              diverse gaming experience, making players enjoy it tirelessly and
+              becoming the focus of the industry`s attention.
             </p>
             <div className="flex flex-col-reverse items-center justify-between md:flex-row">
               <div className="flex flex-col items-center justify-center md:block">
@@ -102,7 +104,7 @@ export const Second = () => {
                   </div>
                 </div>
               </div>
-              <div className="rotats hover:animation-pause relative h-[137px] w-[137px]">
+              <div className="rotats hover:animation-pause relative h-[137px] w-[137px] md:top-[-20px] md:mr-[50px]">
                 <Image
                   width={137}
                   height={137}
