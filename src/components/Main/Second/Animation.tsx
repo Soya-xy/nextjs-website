@@ -30,7 +30,7 @@ export const Animation = () => {
       app.stage.addChild(sp)
       if (!sp) return
       if (sp.state.hasAnimation('animation')) {
-        sp.state.setAnimation(0, 'animation', false)
+        sp.state.setAnimation(0, 'animation', true)
       }
     }
   })
