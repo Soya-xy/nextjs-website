@@ -43,8 +43,8 @@ export const Content = () => {
                 <video
                   src="/music/video.mp4"
                   className="object-fill wh-full"
-                  autoPlay
-                  muted
+                  controls
+                  poster="/images/poster.jpg"
                 />
               </div>
             </div>
