@@ -23,10 +23,7 @@ export function Video() {
       <div>
         <div className="absolute inset-0">
           <video className="h-full w-full object-cover" autoPlay muted loop>
-            <source
-              src="https://api.jdbgaming.com/assets/upload/images/banner/banner-c81e728d9d4c2f636f067f89cc14862c-video-desktop.mp4?a1c0077740c5177b3b3ef441"
-              type="video/mp4"
-            />
+            <source src="/music/bg.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
