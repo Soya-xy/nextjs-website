@@ -107,12 +107,12 @@ export const Content = () => {
                         href="https://themedox.com/mykd/shop/"
                         target="_blank"
                       >
-                        Dragon Ball
+                        Try Now
                       </Link>
                     </li>
                     <li>
                       <Link href="https://opensea.io/" target="_blank">
-                        Nft market
+                        Details
                       </Link>
                     </li>
                     <li>
@@ -120,7 +120,7 @@ export const Content = () => {
                         href="https://themedox.com/mykd/contact-us/"
                         target="_blank"
                       >
-                        Support
+                        More
                       </Link>
                     </li>
                   </ul>
