@@ -6,7 +6,7 @@
   --site-margin:0 0;
 
   background-color: #10181F;
-  min-height: 850px;
+  /* min-height: 850px; */
 }
 #spine_container canvas{
   touch-action: auto !important;

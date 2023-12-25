@@ -23,7 +23,7 @@ export const Second = () => {
   })
   return (
     <div className="second">
-      <div className="container mx-auto py-20 lg:max-w-[1300px]">
+      <div className="container mx-auto lg:max-w-[1300px]">
         <div className="flex flex-col-reverse items-start pt-5 md:items-center md:justify-between md:pt-[10rem] lg:flex-row">
           <div className="flex flex-1 flex-col justify-start px-5 md:mb-[5rem] lg:px-6">
             <p className="nft_site mb-[2rem] text-[45px] font-[800]">

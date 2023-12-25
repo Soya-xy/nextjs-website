@@ -22,7 +22,7 @@ export const Top = () => {
   return (
     <>
       <div className="flex flex-col items-center justify-center">
-        <AnimationText text="KNOW ABOUT US" />
+        <AnimationText text="The latest" />
         <p
           className="nft_site text-center text-[45px] font-bold tracking-[2px] md:text-start"
           style={
@@ -31,7 +31,7 @@ export const Top = () => {
             } as any
           }
         >
-          TOP RATED STEAMERS
+          NEW GAMES RELEASE
         </p>
         {/* 
         <div className="my-10 flex gap-10">
@@ -70,38 +70,44 @@ export const Top = () => {
           </MusicButton>
         </div> */}
 
-        <div className="w-full px-10  md:px-[150px]">
-          <div className="nav-tabs relative w-full items-center">
-            <div
-              className="flex h-[120px] items-center justify-start gap-10 overflow-y-hidden overflow-x-scroll  md:justify-center "
-              id="myTab"
-              role="tablist"
-            >
-              {[1, 1, 1, 1, 1, 1].map((_v, k) => (
+        <div className="w-full">
+          <div className="nav-tabs w-full">
+            <div className="flex items-center justify-start gap-5 overflow-y-hidden overflow-x-scroll wh-full  md:justify-center ">
+              {[
+                'pic_caisheng',
+                'pic_tanxian',
+                'pic_laohu',
+                'pic_majiang',
+                'pic_puke',
+                'pci_yaoqianshu',
+              ].map((_v, k) => (
                 <MusicButton
                   once
                   src="/music/tab.mp3"
-                  className={`nav-link ${k === active ? 'active' : ''}`}
+                  className={`${k === active ? 'active' : ''}`}
                   onClick={() => setActive(k)}
                   key={k}
                 >
                   <div
-                    className={`wealthgod relative ${
-                      k === active && 'wealthgod-active'
+                    className={`h-[137px] w-[191px] ${
+                      k === active
+                        ? 'wealthgod-active'
+                        : 'grayscale transition-all duration-75  hover:scale-[1.2] hover:grayscale-0'
                     }`}
                   >
-                    <span
+                    {/* <span
                       className={`semicircle absolute left-[4px] top-[2px] h-[90px] w-[90px] ${
                         k === active && 'semicircle-active'
                       }`}
-                    />
+                    /> */}
 
                     <Image
                       decoding="async"
                       className="relative z-[2]"
-                      src="/images/wealthgod.png"
+                      src={`/images/${_v}.png`}
                       alt="Image"
-                      fill
+                      width={191}
+                      height={137}
                     />
                   </div>
                 </MusicButton>

@@ -52,43 +52,50 @@ export const Content = () => {
               <div className="about__flex-wrap">
                 <div className="about__content-wrap">
                   <div className="about__content">
-                    <h4 className="title">Human game</h4>
+                    <h4 className="title">CAISHEN-LUCKY SPREAD</h4>
                     <span className="rate">Rate 50%</span>
                     <p>
-                      Lorem ipsum dolor sit amet, consteur adipiscing Duis
-                      elementum sollicitudin is yaugue euismods Nulla
-                      ullamcorper. Morbi pharetra tellus miolslis, tincidunt
-                      massa venenatis.
+                      CAISEN in the house, win a big prize! Going up to 100,000X
+                      with WILD symbol upgraded. Exclusive SPREAD respin &
+                      multiplier scroll feature make you win easily! Multiplier
+                      accumulation brings unlimited prize in bonus games!
                     </p>
                   </div>
                   <div className="about__content-list">
                     <ul className="list-wrap">
-                      <li>
+                      <li className="flex !bg-[#253028]">
                         <img
                           decoding="async"
-                          src="https://themedox.com/mykd/wp-content/uploads/2023/10/features_icon01.png"
+                          src="/images/game_name3.png"
                           width="45"
                           alt="Image"
                         />{' '}
-                        Chichi Dragon Ball
+                        <p>Game Volatility：</p>
+                        <p className="flex-1 text-sm">
+                          <i className="icon-[mingcute--star-fill]" />
+                          <i className="icon-[mingcute--star-fill]" />
+                          <i className="icon-[mingcute--star-fill]" />
+                          <i className="icon-[mingcute--star-half-fill]" />
+                          <i className="icon-[mingcute--star-line]" />
+                        </p>
                       </li>
-                      <li>
+                      <li className="!bg-[#423022]">
                         <img
                           decoding="async"
-                          src="https://themedox.com/mykd/wp-content/uploads/2023/10/features_icon02.png"
+                          src="/images/game_name2.png"
                           width="45"
                           alt="Image"
                         />{' '}
-                        Space Babe Night
+                        Max multiples：16200
                       </li>
-                      <li>
+                      <li className="bg-[#4A3F28]">
                         <img
                           decoding="async"
-                          src="https://themedox.com/mykd/wp-content/uploads/2023/10/features_icon03.png"
+                          src="/images/game_name1.png"
                           width="45"
                           alt="Image"
                         />{' '}
-                        Dragon Ball
+                        Specification lines： 243
                       </li>
                     </ul>
                   </div>
