@@ -23,7 +23,10 @@ export function Video() {
       <div>
         <div className="absolute inset-0">
           <video className="h-full w-full object-cover" autoPlay muted loop>
-            <source src="/music/bg.mp4" type="video/mp4" />
+            <source
+              src="https://anjituhemawu.oss-cn-hongkong.aliyuncs.com/12%E6%9C%8824%E6%97%A5%282%29.mp4"
+              type="video/mp4"
+            />
             Your browser does not support the video tag.
           </video>
         </div>
