@@ -9,7 +9,7 @@ export const Animation = () => {
   const container = useRef<any>(null)
   useMount(async () => {
     const app = new PIXI.Application({
-      width: screen.availWidth > 750 ? 600 : 370,
+      width: screen.availWidth > 750 ? 700 : 370,
       height: screen.availWidth > 750 ? 443 : 300,
       backgroundColor: '#000', // 背景颜色，这里是黑色
       backgroundAlpha: 0, // 背景透明度，0 表示完全透明
@@ -23,9 +23,9 @@ export const Animation = () => {
         sp.height = 300
         sp.position.set(220, 150)
       } else {
-        sp.width = 511
+        sp.width = 600
         sp.height = 443
-        sp.position.set(350, 420 / 2)
+        sp.position.set(450, 420 / 2)
       }
       app.stage.addChild(sp)
       if (!sp) return
@@ -37,11 +37,11 @@ export const Animation = () => {
 
   return (
     <>
-      <div className="h-[300px] w-[370px] md:relative md:h-[500px] md:w-[500px]">
+      <div className="w-[300px] md:relative md:h-[500px] md:w-[500px]">
         <div
           ref={container}
           id="spine_container"
-          className="right-[15px] aspect-video md:absolute"
+          className="right-[-5px] aspect-video md:absolute"
         />
       </div>
     </>
