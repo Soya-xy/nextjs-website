@@ -63,7 +63,7 @@ export const Sixth = () => {
     >
       <div className="container mx-auto">
         <div className="row justify-center">
-          <div className="col-xl-10">
+          <div className="w-full">
             <div className="roadMap__inner">
               <div className="row">
                 <div className="col-xl-5 col-lg-6">

@@ -19,7 +19,7 @@ export const Forth = () => {
       <div className="relative w-full overflow-hidden py-[130px]">
         <section className="md:mx-[180px] ">
           <div className="flex flex-col md:flex-row">
-            <div className="!ml-[30px] w-[430px] flex-initial flex-shrink-0 text-start md:flex md:flex-col md:justify-center">
+            <div className=" w-[430px] flex-initial flex-shrink-0 text-start md:flex md:flex-col md:justify-center">
               <h2 className="text-[45px]">PROJECTS MYKD</h2>
               <AnimationText text="OUR LATEST GALLERY" />
               <div className="mt-3">

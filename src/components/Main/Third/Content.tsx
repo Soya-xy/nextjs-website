@@ -38,7 +38,7 @@ export const Content = () => {
           className="tab-pane show active"
         >
           <div className="flex flex-col md:flex-row">
-            <div className="flex w-[100%]  flex-[0_0_auto] items-end px-10 md:w-[44%]">
+            <div className="flex w-[100%]  flex-[0_0_auto] items-end px-5 md:w-[44%]">
               <div className="md:h-full">
                 <video
                   src="/music/video.mp4"

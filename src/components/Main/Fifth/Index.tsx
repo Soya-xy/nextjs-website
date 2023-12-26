@@ -20,9 +20,9 @@ export const Fifth = () => {
                   JOIN THE <span>COMMUNITY</span>
                 </h2>
                 <p>Join our Discord community and choosec onsteur</p>
-                <a href="#" target="_blank" className="video__btn tg-btn-1">
-                  <span>join discord</span>
-                </a>
+                <button className="rounded-md bg-[#45f882] px-7 py-3 text-start font-bold text-black hover:bg-[#C6923D] hover:text-white">
+                  JOIN DISCORD
+                </button>
               </div>
             </div>
           </div>

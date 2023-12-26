@@ -4,6 +4,7 @@
 
 *::-webkit-scrollbar{
   width: 0;
+  display: none;
 }
 
 @layer utilities {

@@ -72,7 +72,7 @@ export const Top = () => {
 
         <div className="w-full">
           <div className="nav-tabs w-full">
-            <div className="flex items-center justify-start gap-5 overflow-y-hidden overflow-x-scroll wh-full  md:justify-center ">
+            <div className="flex items-center justify-start gap-5 overflow-y-hidden overflow-x-scroll pl-[20px]  wh-full md:justify-center">
               {[
                 'pic_caisheng',
                 'pic_tanxian',
@@ -89,7 +89,7 @@ export const Top = () => {
                   key={k}
                 >
                   <div
-                    className={`h-[137px] w-[191px] ${
+                    className={`h-[137px] w-[191px] md:wh-full ${
                       k === active
                         ? 'wealthgod-active'
                         : 'grayscale transition-all duration-75  hover:scale-[1.2] hover:grayscale-0'

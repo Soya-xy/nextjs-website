@@ -23,7 +23,7 @@ export const Second = () => {
   })
   return (
     <div className="second">
-      <div className="container mx-auto lg:max-w-[1300px]">
+      <div className="container mx-auto pb-10 lg:max-w-[1300px]">
         <div className="flex flex-col-reverse items-start pt-5 md:items-center md:justify-between md:pt-[10rem] lg:flex-row">
           <div className="flex flex-1 flex-col justify-start px-5 md:mb-[5rem] lg:px-6">
             <p className="nft_site mb-[2rem] text-[45px] font-[800]">
@@ -61,7 +61,7 @@ export const Second = () => {
                   </div>
                 </div> */}
                 <div className="mb-[3rem] mt-10 flex items-center  justify-start">
-                  <div className="relative h-full  min-w-[158px] text-center text-[14px]  font-bold leading-[48px]">
+                  {/* <div className="relative h-full  min-w-[158px] text-center text-[14px]  font-bold leading-[48px]">
                     <div className="absolute left-0 top-0">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -92,7 +92,10 @@ export const Second = () => {
                       </svg>
                     </div>
                     READ MORE
-                  </div>
+                  </div> */}
+                  <button className="rounded-md bg-[#45f882] px-7 py-3 text-start font-bold text-black hover:bg-[#C6923D] hover:text-white">
+                    READ MORE
+                  </button>
                   <div className="ml-10 flex items-center gap-4 text-[14px] font-bold">
                     <div
                       className=" flex h-[46px] w-[46px] items-center justify-center rounded-full border border-solid text-[24px] text-green-500 hover:border-green-500 hover:bg-green-500
