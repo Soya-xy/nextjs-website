@@ -1,6 +1,7 @@
 import { Eight } from '~/components/Main/Eight'
 import { Fifth } from '~/components/Main/Fifth/Index'
 import { Forth } from '~/components/Main/Forth/Index'
+import { News } from '~/components/Main/News'
 import { Second } from '~/components/Main/Second/Index'
 import { Seven } from '~/components/Main/Seven/Index'
 import { Sixth } from '~/components/Main/Sixth'
@@ -20,6 +21,7 @@ export default function Home() {
       <Seven />
       <Sixth />
       <Eight />
+      <News />
     </>
   )
 }
