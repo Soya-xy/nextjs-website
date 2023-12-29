@@ -32,6 +32,39 @@ export const Seven = () => {
       }
     }
   })
+
+  const data = [
+    {
+      title: 'Random Number Generator RNG',
+      content:
+        'GLI / BMM approved, best reliable and safeguarded gaming experience',
+    },
+    {
+      title: 'Diversified equipment',
+      content:
+        'Supports iOS, Android, Windows, HTML5, supports any browser, no download or installation, and fully enjoys a comprehensive entertainment system.',
+    },
+    {
+      title: 'Diversified design',
+      content:
+        'Refined graphic, multiple mathematical model, lines and ways gaming, medium to high volatility and exclusive PS lobby for loyal players',
+    },
+    {
+      title: 'Big Data Analysis System',
+      content:
+        'Regularly tracking and analyzing player behavior, exclusive to branded loyal players: MY Challenge Reward Medal and PS Coins',
+    },
+    {
+      title: 'Multilingual API interface',
+      content:
+        'Meet the needs of users from different regions and language backgrounds around the world, with secure and reliable API fast docking services, seamless cross platform integration, download free, and fast switching.',
+    },
+    {
+      title: 'International Certification Interface',
+      content:
+        "MY RNG is certified by the professional organization BMM Compliance, abbreviated as BMM, and the world's most credible research organization Gaming Laboratories International, abbreviated as GLI certification.",
+    },
+  ]
   return (
     <>
       <section
@@ -41,7 +74,7 @@ export const Seven = () => {
             'url(https://themebeyond.com/demo/haldalive/wp-content/uploads/2022/04/give_player_bg.png);',
         }}
       >
-        <div className="container mx-auto">
+        <div className="mx-[15vw]">
           <div className="row justify-center">
             <div className="col-lg-8">
               <div className="section-title title-style-two title-style-three mb-[70px] text-center">
@@ -49,9 +82,9 @@ export const Seven = () => {
               </div>
             </div>
           </div>
-          <div className="row items-center justify-center md:justify-between lg:justify-around">
-            <div className="col-xl-3 col-lg-5 col-md-6">
-              {[1, 2, 3].map((_v, k) => {
+          <div className="row items-start justify-center md:justify-between lg:justify-around">
+            <div className="col-xl-4 col-lg-5 col-md-6">
+              {data.splice(0, 3).map((v, k) => {
                 return (
                   <motion.div
                     key={k}
@@ -70,28 +103,26 @@ export const Seven = () => {
                     <div className="gp-item-top  justify-start">
                       <img
                         decoding="async"
-                        src={`/images/people/${_v}.png`}
+                        src={`/images/people/${k + 1}.png`}
                         alt="img"
+                        className="mr-3"
                       />
-                      <h4 className="title">VR Development</h4>
+                      <h4 className="title">{v.title}</h4>
                     </div>
                     <div className="gp-content text-start">
-                      <p>
-                        Nullam quis ante. Maecenas ullamcorper, dui et placerat
-                        feugiat, eros pede varius nisi, condimentum
-                      </p>
+                      <p className="break-all">{v.content}</p>
                     </div>
                   </motion.div>
                 )
               })}
             </div>
 
-            <div className="col-lg-6 d-none d-xl-block">
-              <div className="gp-img" ref={container} />
+            <div className="col-lg-4 d-none d-xl-block">
+              <div className="gp-img flex justify-center" ref={container} />
             </div>
 
-            <div className="col-xl-3 col-lg-5 col-md-6">
-              {[4, 5, 6].map((_v, k) => {
+            <div className="col-xl-4 col-lg-5 col-md-6">
+              {data.splice(0, 3).map((v, k) => {
                 return (
                   <motion.div
                     key={k}
@@ -107,19 +138,16 @@ export const Seven = () => {
                       ease: 'easeInOut',
                     }}
                   >
-                    <div className="gp-item-top md:flex-row-reverse">
+                    <div className="gp-item-top text-end md:flex-row-reverse">
                       <img
                         decoding="async"
-                        src={`/images/people/${_v}.png`}
+                        src={`/images/people/${k + 4}.png`}
                         alt="img"
                       />
-                      <h4 className="title">VR Development</h4>
+                      <h4 className="title">{v.title}</h4>
                     </div>
                     <div className="gp-content text-end">
-                      <p>
-                        Nullam quis ante. Maecenas ullamcorper, dui et placerat
-                        feugiat, eros pede varius nisi, condimentum
-                      </p>
+                      <p className="break-all">{v.content}</p>
                     </div>
                   </motion.div>
                 )
