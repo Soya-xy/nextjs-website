@@ -20,8 +20,8 @@ export const Navbar = () => {
   return (
     <div className="navbar relative z-[2]  h-[100px] min-h-20 w-full">
       <div className="h-100px container mx-auto flex items-center justify-between gap-3 py-6">
-        <Link href="/" className="w-[120px]">
-          <button className="cursor-pointer">
+        <Link href="/" className="w-[90px]">
+          <button className="cursor-pointer wh-full">
             <Logo />
           </button>
         </Link>

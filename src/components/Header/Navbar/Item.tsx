@@ -11,7 +11,7 @@ export function Item({ menuList }: { menuList: string[] }) {
         return (
           <div
             className={clsx(
-              `mx-7 flex items-center gap-12 font-sans text-xl font-medium hover:text-green-500 sm:gap-0`,
+              `mx-7 flex items-center gap-12 font-sans text-2xl font-medium hover:text-green-500 sm:gap-0`,
               active === idx && `text-green-500 `,
             )}
             onClick={() => setActive(idx)}

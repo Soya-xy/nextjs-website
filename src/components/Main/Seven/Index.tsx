@@ -57,12 +57,12 @@ export const Seven = () => {
     {
       title: 'Multilingual API interface',
       content:
-        'Meet the needs of users from different regions and language backgrounds around the world, with secure and reliable API fast docking services, seamless cross platform integration, download free, and fast switching.',
+        'Meet the needs of users from different regions and language backgrounds worldwide, and provide secure and reliable API fast docking services,',
     },
     {
       title: 'International Certification Interface',
       content:
-        "MY RNG is certified by the professional organization BMM Compliance, abbreviated as BMM, and the world's most credible research organization Gaming Laboratories International, abbreviated as GLI certification.",
+        'MILEY Professional Organization Certification, BMM (abbreviated as BMM) Gaming (abbreviated as GLI)',
     },
   ]
   return (
@@ -74,7 +74,7 @@ export const Seven = () => {
             'url(https://themebeyond.com/demo/haldalive/wp-content/uploads/2022/04/give_player_bg.png);',
         }}
       >
-        <div className="mx-[15vw]">
+        <div className="container mx-auto">
           <div className="row justify-center">
             <div className="col-lg-8">
               <div className="section-title title-style-two title-style-three mb-[70px] text-center">
@@ -83,7 +83,7 @@ export const Seven = () => {
             </div>
           </div>
           <div className="row items-start justify-center md:justify-between lg:justify-around">
-            <div className="col-xl-4 col-lg-5 col-md-6">
+            <div className="col-xl-3 col-lg-5 col-md-6">
               {data.splice(0, 3).map((v, k) => {
                 return (
                   <motion.div
@@ -117,11 +117,11 @@ export const Seven = () => {
               })}
             </div>
 
-            <div className="col-lg-4 d-none d-xl-block">
-              <div className="gp-img flex justify-center" ref={container} />
+            <div className="col-lg-6 d-none d-xl-block">
+              <div className="gp-img" ref={container} />
             </div>
 
-            <div className="col-xl-4 col-lg-5 col-md-6">
+            <div className="col-xl-3 col-lg-5 col-md-6">
               {data.splice(0, 3).map((v, k) => {
                 return (
                   <motion.div
