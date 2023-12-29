@@ -2,13 +2,36 @@
 
 import './index.css'
 
-import { useState } from 'react'
+import { useRef } from 'react'
+import { useMount } from 'ahooks'
 import { motion } from 'framer-motion'
+import { Spine } from 'pixi-spine'
+import * as PIXI from 'pixi.js'
 
 export const Seven = () => {
-  const img_list = [1, 1, 1, 1, 1, 1]
-  const [active, setActive] = useState(1)
+  const container = useRef<any>(null)
+  useMount(async () => {
+    const app = new PIXI.Application({
+      width: 600,
+      height: 750,
+      backgroundColor: '#000', // 背景颜色，这里是黑色
+      backgroundAlpha: 0, // 背景透明度，0 表示完全透明
+    })
+    if (container.current) {
+      container.current.appendChild(app.view)
+      const res = await PIXI.Assets.load('/images/people/racoon.json')
+      const sp = new Spine(res.spineData)
+      sp.width = 527
+      sp.height = 619
+      sp.position.set(320, 200)
 
+      app.stage.addChild(sp)
+      if (!sp) return
+      if (sp.state.hasAnimation('animation')) {
+        sp.state.setAnimation(0, 'animation', true)
+      }
+    }
+  })
   return (
     <>
       <section
@@ -21,13 +44,13 @@ export const Seven = () => {
         <div className="container mx-auto">
           <div className="row justify-center">
             <div className="col-lg-8">
-              <div className="section-title title-style-two mb-[70px] text-center">
+              <div className="section-title title-style-two title-style-three mb-[70px] text-center">
                 <h2 className="mb-0 text-[40px]">What we give players</h2>
               </div>
             </div>
           </div>
           <div className="row items-center justify-center md:justify-between lg:justify-around">
-            <div className="col-xl-4 col-lg-5 col-md-6">
+            <div className="col-xl-3 col-lg-5 col-md-6">
               {[1, 2, 3].map((_v, k) => {
                 return (
                   <motion.div
@@ -43,12 +66,11 @@ export const Seven = () => {
                       duration: 0.5,
                       ease: 'easeInOut',
                     }}
-                    onHoverStart={() => setActive(_v)}
                   >
                     <div className="gp-item-top  justify-start">
                       <img
                         decoding="async"
-                        src="https://themebeyond.com/demo/haldalive/wp-content/uploads/2022/04/gp_icon01.png"
+                        src={`/images/people/${_v}.png`}
                         alt="img"
                       />
                       <h4 className="title">VR Development</h4>
@@ -64,21 +86,11 @@ export const Seven = () => {
               })}
             </div>
 
-            <div className="col-lg-4 d-none d-xl-block">
-              {[1, 2, 3, 4, 5, 6].map((_v, k) => (
-                <div
-                  className={`gp-img ${active === _v ? 'active' : 'hidden'}`}
-                  key={k}
-                >
-                  <img
-                    decoding="async"
-                    src="https://themebeyond.com/demo/haldalive/wp-content/uploads/2022/04/give_player.png"
-                    alt="img"
-                  />
-                </div>
-              ))}
+            <div className="col-lg-6 d-none d-xl-block">
+              <div className="gp-img" ref={container} />
             </div>
-            <div className="col-xl-4 col-lg-5 col-md-6">
+
+            <div className="col-xl-3 col-lg-5 col-md-6">
               {[4, 5, 6].map((_v, k) => {
                 return (
                   <motion.div
@@ -94,12 +106,11 @@ export const Seven = () => {
                       duration: 0.5,
                       ease: 'easeInOut',
                     }}
-                    onHoverStart={() => setActive(_v)}
                   >
                     <div className="gp-item-top md:flex-row-reverse">
                       <img
                         decoding="async"
-                        src="https://themebeyond.com/demo/haldalive/wp-content/uploads/2022/04/gp_icon01.png"
+                        src={`/images/people/${_v}.png`}
                         alt="img"
                       />
                       <h4 className="title">VR Development</h4>
