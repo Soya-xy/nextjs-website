@@ -1,3 +1,4 @@
+import { Chat } from '~/components/Main/Chat'
 import { Eight } from '~/components/Main/Eight'
 import { Fifth } from '~/components/Main/Fifth/Index'
 import { Forth } from '~/components/Main/Forth/Index'
@@ -21,8 +22,8 @@ export default function Home() {
       <Seven />
       {/* <Sixth /> */}
       <News />
-
       <Eight />
+      <Chat />
     </>
   )
 }

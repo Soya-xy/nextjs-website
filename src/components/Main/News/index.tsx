@@ -59,23 +59,21 @@ export const News = () => {
                 <div className="business-news-active slick-initialized slick-slider">
                   <div className="slick-list">
                     <div className="slick-track">
-                      <div className="business-news-item slick-slide slick-cloned w-[380px]">
+                      <div className="business-news-item slick-slide slick-cloned w-full">
                         <div className="business-news-post">
-                          <a href="#">
-                            <img
-                              src="https://themebeyond.com/html/geco/Geco/img/blog/business_blog02.jpg"
-                              alt=""
-                            />
-                          </a>
+                          <img
+                            src="https://themebeyond.com/html/geco/Geco/img/blog/business_blog02.jpg"
+                            alt=""
+                            className="w-full"
+                          />
                         </div>
                         <div className="trending-news-item horizontal-item blue">
                           <div className="trend-news-thumb">
-                            <a href="#">
-                              <img
-                                src="https://themebeyond.com/html/geco/Geco/img/blog/trand_news_thumb02.jpg"
-                                alt=""
-                              />
-                            </a>
+                            <img
+                              src="https://themebeyond.com/html/geco/Geco/img/blog/trand_news_thumb02.jpg"
+                              alt=""
+                              className="w-full"
+                            />
                           </div>
                           <div className="trend-news-content">
                             <div className="tags">
@@ -89,12 +87,11 @@ export const News = () => {
                         </div>
                         <div className="trending-news-item horizontal-item">
                           <div className="trend-news-thumb">
-                            <a href="#">
-                              <img
-                                src="https://themebeyond.com/html/geco/Geco/img/blog/trand_news_thumb05.jpg"
-                                alt=""
-                              />
-                            </a>
+                            <img
+                              src="https://themebeyond.com/html/geco/Geco/img/blog/trand_news_thumb05.jpg"
+                              alt=""
+                              className="w-full"
+                            />
                           </div>
                           <div className="trend-news-content">
                             <div className="tags">
