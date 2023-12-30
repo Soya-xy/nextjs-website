@@ -14,7 +14,7 @@ const Footer = () => {
       <div className="footer__top-wrap">
         <div className="container mx-auto">
           <div className="row">
-            <div className="col-xl-3 col-lg-5 col-md-7">
+            <div className="!w-[20%] flex-[0_0_auto]">
               <div className="footer-widget">
                 <div className="footer-logo logo">
                   <Link href="/contact">
@@ -26,13 +26,13 @@ const Footer = () => {
                     Lorem ipsum dolor sitamet consectur adipiscing Duis esollici
                     tudin augue euismod. Nulla ullam dolor sitamet consectetur
                   </p>
-                  <p className="social-title">
+                  {/* <p className="social-title">
                     Active{' '}
                     <span>
                       With Us{' '}
                       <i className="icon-[mingcute--right-fill] text-[14px]" />
                     </span>
-                  </p>
+                  </p> */}
                   <div className="footer-social">
                     <Link href="#">
                       <Image src={icon_1} alt="iocn" width={30} height={30} />
@@ -50,71 +50,52 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="col-xl-3 col-lg-3 col-md-5 col-sm-6">
+            <div className="col-xl-2 col-lg-2 col-md-5 col-sm-6 ml-[1%]">
               <div className="footer-widget widget_nav_menu">
-                <h4 className="fw-title">latest news</h4>
-                <ul className="list-wrap menu">
-                  {[1, 1].map((_v, k) => {
-                    return (
-                      <>
-                        <div className="blog_wrapper1" key={k}>
-                          <div className="blog_image">
-                            <img
-                              src="https://webstrot.com/html/domex/html/images/ft_blog1.png"
-                              className="img-responsive"
-                              alt="blog-img1_img"
-                            />
-                          </div>
-                          <div className="blog_text">
-                            <h5>
-                              <a href="#">Lorem Night club and Beer bar </a>
-                            </h5>
-                            <div className="blog_date">June 28, 2019</div>
-                          </div>
-                        </div>
-                      </>
-                    )
-                  })}
-                </ul>
+                <h4 className="fw-title qr-title text-center">TELEGRAM</h4>
+                <img
+                  src="https://gstatic.clewm.net/caoliao-resource/231117/a44fa42f_4b16ec36_1666157560.png"
+                  alt=""
+                />
               </div>
             </div>
-            <div className="col-xl-3 col-lg-3 col-md-5 col-sm-6">
+            <div className="col-xl-2 col-lg-2 col-md-5 col-sm-6">
+              <div className="footer-widget widget_nav_menu ">
+                <h4 className="fw-title qr-title text-center">SKYPE</h4>
+                <img
+                  src="https://gstatic.clewm.net/caoliao-resource/231117/a44fa42f_4b16ec36_1666157560.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div className="col-xl-2 col-lg-2 col-md-5 col-sm-6 mr-[4%]">
               <div className="footer-widget widget_nav_menu">
-                <h4 className="fw-title">gallery</h4>
-                <ul className="list-wrap menu flex flex-wrap gap-2">
-                  {[1, 1, 1, 1, 1, 1].map((_v, k) => {
-                    return (
-                      <li className="basis-[31%]" key={k}>
-                        <img
-                          src="https://webstrot.com/html/domex/html/images/ft_blog1.png"
-                          className="img-responsive"
-                          alt="blog-img1_img"
-                        />
-                      </li>
-                    )
-                  })}
-                </ul>
+                <h4 className="fw-title qr-title text-center">WhatsApp</h4>
+                <img
+                  src="https://gstatic.clewm.net/caoliao-resource/231117/a44fa42f_4b16ec36_1666157560.png"
+                  alt=""
+                />
               </div>
             </div>
             <div className="col-xl-3 col-lg-3 col-md-5 col-sm-6">
               <div className="footer-widget widget_nav_menu">
                 <h4 className="fw-title">CONTACT US</h4>
                 <ul>
-                  <li className="!mb-[1.5rem] flex hover:text-green-500">
+                  <li className="!mb-[2rem] flex hover:text-green-500">
                     <i className="icon-[material-symbols--location-on] mr-2 text-2xl text-green-500" />
-                    512 - omexcity, California
+                    142 - omexcity, New york
                   </li>
-                  <li className="!mb-[1.5rem] flex hover:text-green-500">
+                  <li className="!mb-[2rem] flex hover:text-green-500">
                     <i className="icon-[mingcute--earth-2-line] mr-2 text-2xl text-green-500" />
-                    www.example.com
+                    www.baidu.com
                   </li>
-                  <li className="!mb-[1.5rem] flex hover:text-green-500">
+                  <li className="!mb-[2rem] flex hover:text-green-500">
                     <i className="icon-[mingcute--phone-fill] mr-2 text-2xl text-green-500" />
-                    +65 1800-123-145
+                    +852 374648273
                   </li>
                   <li className="!mb-[1.5rem] flex hover:text-green-500">
                     <i className="icon-[mingcute--mail-fill] mr-2 text-2xl text-green-500" />
-                    domex@example.com
+                    my@qq.com
                   </li>
                 </ul>
               </div>
@@ -124,14 +105,14 @@ const Footer = () => {
       </div>
       <div className="copyright__wrap">
         <div className="container mx-auto">
-          <div className="row align-items-center">
-            <div className="col-md-7">
-              <div className="copyright__text">
-                <p>
-                  Copyright © {new Date().getFullYear()} - All Rights Reserved
-                  By <span>Mykd</span>
-                </p>
-              </div>
+          <div className="copyright__text flex w-full items-center justify-between">
+            <p>
+              Copyright © {new Date().getFullYear()} - All Rights Reserved By{' '}
+              <span>Mykd</span>
+            </p>
+            <div className="flex h-[30px]">
+              <img src="/images/footer_1.png" className="mr-[20px]" alt="" />
+              <img src="/images/footer_2.png" alt="" />
             </div>
           </div>
         </div>

@@ -253,11 +253,11 @@
   opacity: .8
 }
 
-.pq-client-box a:hover .pq-client-img {
+.pq-client-box:hover .pq-client-img {
   transform: translateY(100%)
 }
 
-.pq-client-box a:hover .pq-client-hover-img {
+.pq-client-box:hover .pq-client-hover-img {
   transform: translate(-50%, 0)
 }
 

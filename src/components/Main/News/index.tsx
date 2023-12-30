@@ -8,16 +8,17 @@ export const News = () => {
               <div className="hf-section-title mb-[40px] text-3xl">
                 <h4 className="title">WORLD NEWS</h4>
               </div>
-              <div className="row">
-                <div className="col-lg-6 col-md-6">
+              <div className="row w-full">
+                <div className="basis-[50%]">
                   <div className="world-news-item mb-[30px]">
                     <div className="banner-magazine-thumb">
                       <div className="tags">
                         <a href="#">sports</a>
                       </div>
                       <img
-                        src="https://themebeyond.com/html/geco/Geco/img/blog/world_news_thumb01.jpg"
+                        src="/images/people/people1.png"
                         alt=""
+                        className="wh-full"
                       />
                     </div>
                     <div className="banner-magazine-content">
@@ -28,15 +29,16 @@ export const News = () => {
                     </div>
                   </div>
                 </div>
-                <div className="col-lg-6 col-md-6">
+                <div className="basis-[50%]">
                   <div className="world-news-item mb-[30px]">
                     <div className="banner-magazine-thumb">
                       <div className="tags">
                         <a href="#">sports</a>
                       </div>
                       <img
-                        src="https://themebeyond.com/html/geco/Geco/img/blog/world_news_thumb02.jpg"
+                        src="/images/people/people2.png"
                         alt=""
+                        className="wh-full"
                       />
                     </div>
                     <div className="banner-magazine-content">
@@ -49,7 +51,7 @@ export const News = () => {
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 col-md-6">
+            <div className="col-lg-4 col-md-6 h-full">
               <aside className="home-sidebar-news">
                 <div className="business-news-head mb-[45px]">
                   <div className="hf-section-title text-3xl">
@@ -59,18 +61,24 @@ export const News = () => {
                 <div className="business-news-active slick-initialized slick-slider">
                   <div className="slick-list">
                     <div className="slick-track">
-                      <div className="business-news-item slick-slide slick-cloned w-full">
-                        <div className="business-news-post">
+                      <div className="business-news-item slick-slide slick-cloned w-[400px]">
+                        <div className="business-news-post relative">
                           <img
-                            src="https://themebeyond.com/html/geco/Geco/img/blog/business_blog02.jpg"
+                            src="/images/people/top1.png"
                             alt=""
-                            className="w-full"
+                            className="wh-full"
                           />
+                          <div className="trend-news-content absolute bottom-5 left-5">
+                            <span className="date">December 19, 2021</span>
+                            <h4 className="title w-[70%]">
+                              <a href="#">House Girls AND MORE Money</a>
+                            </h4>
+                          </div>
                         </div>
                         <div className="trending-news-item horizontal-item blue">
                           <div className="trend-news-thumb">
                             <img
-                              src="https://themebeyond.com/html/geco/Geco/img/blog/trand_news_thumb02.jpg"
+                              src="/images/people/top2.png"
                               alt=""
                               className="w-full"
                             />
@@ -88,7 +96,7 @@ export const News = () => {
                         <div className="trending-news-item horizontal-item">
                           <div className="trend-news-thumb">
                             <img
-                              src="https://themebeyond.com/html/geco/Geco/img/blog/trand_news_thumb05.jpg"
+                              src="/images/people/top3.png"
                               alt=""
                               className="w-full"
                             />

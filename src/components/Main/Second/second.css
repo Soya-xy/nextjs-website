@@ -160,11 +160,24 @@
 }
 
 .world-news-item .banner-magazine-thumb {
+  overflow: hidden;
   position: relative;
+}
+
+img {
+  transition: transform 0.3s ease;
+  /* 平滑过渡效果 */
 }
 
 .world-news-item .banner-magazine-thumb img {
   border-radius: 4px;
+}
+
+
+.trend-news-thumb:hover img,
+.business-news-post:hover img,
+.world-news-item .banner-magazine-thumb:hover img {
+  transform: scale(1.4);
 }
 
 .world-news-item .banner-magazine-thumb::before {
@@ -198,7 +211,8 @@
 }
 
 .business-news-post {
-  margin-bottom: 40px;
+  overflow: hidden;
+  margin-bottom: 50px;
 }
 
 .business-news-post img {
@@ -307,10 +321,11 @@
 .trend-news-thumb,
 .trending-news-item {
   position: relative;
+  overflow: hidden;
 }
 
 .trending-news-item {
-  margin-bottom: 20px;
+  margin-bottom: 50px;
 }
 
 .trending-news-item.overlay-item .trend-news-thumb::before {

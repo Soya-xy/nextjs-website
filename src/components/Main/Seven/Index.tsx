@@ -70,8 +70,7 @@ export const Seven = () => {
       <section
         className="give-player-area give-player-bg pt-[110px]"
         style={{
-          backgroundImage:
-            'url(https://themebeyond.com/demo/haldalive/wp-content/uploads/2022/04/give_player_bg.png);',
+          backgroundImage: 'url(/images/seven_bg.jpg);',
         }}
       >
         <div className="container mx-auto">

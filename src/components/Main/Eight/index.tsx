@@ -1,11 +1,11 @@
-import bg from '~/assets/img/5.jpg'
+// import bg from '~/assets/img/5.jpg'
 
 export const Eight = () => {
   return (
     <>
       <section
-        className=" flex min-h-[450px] bg-cover bg-center"
-        style={{ backgroundImage: `url(${bg.src})` }}
+        className=" flex min-h-[450px] bg-black bg-cover bg-center"
+        // style={{ backgroundImage: `url(${bg.src})` }}
       >
         <div className="container mx-auto">
           <div className="row h-full items-center py-[130px]">
@@ -14,230 +14,29 @@ export const Eight = () => {
                 <h2 className="pq-section-main-title">our trusted clients</h2>
               </div>
             </div>
-            <div className="col-xl-2 col-lg-4 col-md-4">
-              <div className="pq-client-box pq-client-style-1">
-                <div className="pq-client-box">
-                  <a>
-                    <img
-                      decoding="async"
-                      src="/images/1.png"
-                      alt="pq-client-img"
-                      className="pq-client-img"
-                    />
-                    <img
-                      decoding="async"
-                      src="/images/h1.png"
-                      alt="pq-client-img"
-                      className="pq-client-hover-img"
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-2 col-lg-4 col-md-4 !mt-4 md:!mt-0">
-              <div className="pq-client-box pq-client-style-1">
-                <div className="pq-client-box">
-                  <a>
-                    <img
-                      decoding="async"
-                      src="/images/1.png"
-                      alt="pq-client-img"
-                      className="pq-client-img"
-                    />
-                    <img
-                      decoding="async"
-                      src="/images/h1.png"
-                      alt="pq-client-img"
-                      className="pq-client-hover-img"
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-2 col-lg-4 col-md-4 mt-lg-0 !mt-4">
-              <div className="pq-client-box pq-client-style-1">
-                <div className="pq-client-box">
-                  <a>
-                    <img
-                      decoding="async"
-                      src="/images/1.png"
-                      alt="pq-client-img"
-                      className="pq-client-img"
-                    />
-                    <img
-                      decoding="async"
-                      src="/images/h1.png"
-                      alt="pq-client-img"
-                      className="pq-client-hover-img"
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-2 col-lg-4 col-md-4 mt-xl-0 !mt-4">
-              <div className="pq-client-box pq-client-style-1">
-                <div className="pq-client-box">
-                  <a>
-                    <img
-                      decoding="async"
-                      src="/images/1.png"
-                      alt="pq-client-img"
-                      className="pq-client-img"
-                    />
-                    <img
-                      decoding="async"
-                      src="/images/h1.png"
-                      alt="pq-client-img"
-                      className="pq-client-hover-img"
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-2 col-lg-4 col-md-4 mt-xl-0 !mt-4">
-              <div className="pq-client-box pq-client-style-1">
-                <div className="pq-client-box">
-                  <a>
-                    <img
-                      decoding="async"
-                      src="/images/1.png"
-                      alt="pq-client-img"
-                      className="pq-client-img"
-                    />
-                    <img
-                      decoding="async"
-                      src="/images/h1.png"
-                      alt="pq-client-img"
-                      className="pq-client-hover-img"
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-2 col-lg-4 col-md-4 mt-xl-0 !mt-4">
-              <div className="pq-client-box pq-client-style-1">
-                <div className="pq-client-box">
-                  <a>
-                    <img
-                      decoding="async"
-                      src="/images/1.png"
-                      alt="pq-client-img"
-                      className="pq-client-img"
-                    />
-                    <img
-                      decoding="async"
-                      src="/images/h1.png"
-                      alt="pq-client-img"
-                      className="pq-client-hover-img"
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-2 col-lg-4 col-md-4 !mt-4">
-              <div className="pq-client-box pq-client-style-1">
-                <div className="pq-client-box">
-                  <a>
-                    <img
-                      decoding="async"
-                      src="/images/1.png"
-                      alt="pq-client-img"
-                      className="pq-client-img"
-                    />
-                    <img
-                      decoding="async"
-                      src="/images/h1.png"
-                      alt="pq-client-img"
-                      className="pq-client-hover-img"
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-2 col-lg-4 col-md-4 !mt-4">
-              <div className="pq-client-box pq-client-style-1">
-                <div className="pq-client-box">
-                  <a>
-                    <img
-                      decoding="async"
-                      src="/images/1.png"
-                      alt="pq-client-img"
-                      className="pq-client-img"
-                    />
-                    <img
-                      decoding="async"
-                      src="/images/h1.png"
-                      alt="pq-client-img"
-                      className="pq-client-hover-img"
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-2 col-lg-4 col-md-4 !mt-4">
-              <div className="pq-client-box pq-client-style-1">
-                <div className="pq-client-box">
-                  <a>
-                    <img
-                      decoding="async"
-                      src="/images/1.png"
-                      alt="pq-client-img"
-                      className="pq-client-img"
-                    />
-                    <img
-                      decoding="async"
-                      src="/images/h1.png"
-                      alt="pq-client-img"
-                      className="pq-client-hover-img"
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-2 col-lg-4 col-md-4 !mt-4">
-              <div className="pq-client-box pq-client-style-1">
-                <div className="pq-client-box">
-                  <a>
-                    <img
-                      decoding="async"
-                      src="/images/1.png"
-                      alt="pq-client-img"
-                      className="pq-client-img"
-                    />
-                    <img
-                      decoding="async"
-                      src="/images/h1.png"
-                      alt="pq-client-img"
-                      className="pq-client-hover-img"
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-2 col-lg-4 col-md-4 !mt-4">
-              <div className="pq-client-box pq-client-style-1">
-                <div className="pq-client-box">
-                  <a>
-                    <img
-                      decoding="async"
-                      src="/images/1.png"
-                      alt="pq-client-img"
-                      className="pq-client-img"
-                    />
-                    <img
-                      decoding="async"
-                      src="/images/h1.png"
-                      alt="pq-client-img"
-                      className="pq-client-hover-img"
-                    />
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-2 col-lg-4 col-md-4 !mt-4">
-              <h6 className="text-center  text-[20px]">
-                <a href="games.html">15 more</a>
-              </h6>
+            <div className="mx-auto flex flex-wrap justify-start">
+              {[2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((v) => {
+                return (
+                  <>
+                    <div className="flex h-[180px] w-[180px] items-center justify-center">
+                      <div className="pq-client-box relative h-[120px] w-[120px] overflow-hidden">
+                        <img
+                          decoding="async"
+                          src={`/images/logos/${v}.png`}
+                          alt="pq-client-img"
+                          className="pq-client-img wh-full"
+                        />
+                        <img
+                          decoding="async"
+                          src={`/images/logos/h${v}.png`}
+                          alt="pq-client-img"
+                          className="pq-client-hover-img wh-full"
+                        />
+                      </div>
+                    </div>
+                  </>
+                )
+              })}
             </div>
           </div>
         </div>
