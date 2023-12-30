@@ -14,7 +14,7 @@ const Footer = () => {
       <div className="footer__top-wrap">
         <div className="container mx-auto">
           <div className="row">
-            <div className="col-xl-4 col-lg-5 col-md-7">
+            <div className="col-xl-3 col-lg-5 col-md-7">
               <div className="footer-widget">
                 <div className="footer-logo logo">
                   <Link href="/contact">
@@ -50,71 +50,73 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="col-xl-2 col-lg-3 col-md-5 col-sm-6">
+            <div className="col-xl-3 col-lg-3 col-md-5 col-sm-6">
               <div className="footer-widget widget_nav_menu">
-                <h4 className="fw-title">quick link</h4>
+                <h4 className="fw-title">latest news</h4>
                 <ul className="list-wrap menu">
-                  <li>
-                    <Link href="#">Gaming</Link>
-                  </li>
-                  <li>
-                    <Link href="#">Product</Link>
-                  </li>
-                  <li>
-                    <Link href="#">All NFTs</Link>
-                  </li>
-                  <li>
-                    <Link href="#">Social Network</Link>
-                  </li>
-                  <li>
-                    <Link href="#">Domain Names</Link>
-                  </li>
-                  <li>
-                    <Link href="#">Collectibles</Link>
-                  </li>
+                  {[1, 1].map((_v, k) => {
+                    return (
+                      <>
+                        <div className="blog_wrapper1" key={k}>
+                          <div className="blog_image">
+                            <img
+                              src="https://webstrot.com/html/domex/html/images/ft_blog1.png"
+                              className="img-responsive"
+                              alt="blog-img1_img"
+                            />
+                          </div>
+                          <div className="blog_text">
+                            <h5>
+                              <a href="#">Lorem Night club and Beer bar </a>
+                            </h5>
+                            <div className="blog_date">June 28, 2019</div>
+                          </div>
+                        </div>
+                      </>
+                    )
+                  })}
                 </ul>
               </div>
             </div>
-            <div className="col-xl-2 col-lg-3 col-md-5 col-sm-6">
+            <div className="col-xl-3 col-lg-3 col-md-5 col-sm-6">
               <div className="footer-widget widget_nav_menu">
-                <h4 className="fw-title">Supports</h4>
-                <ul className="list-wrap menu">
-                  <li>
-                    <Link href="#">Setting & Privacy</Link>
-                  </li>
-                  <li>
-                    <Link href="#">Help & Support</Link>
-                  </li>
-                  <li>
-                    <Link href="#">Live Auctions</Link>
-                  </li>
-                  <li>
-                    <Link href="#">Item Details</Link>
-                  </li>
-                  <li>
-                    <Link href="#">24/7 Supports</Link>
-                  </li>
-                  <li>
-                    <Link href="#">Our News</Link>
-                  </li>
+                <h4 className="fw-title">gallery</h4>
+                <ul className="list-wrap menu flex flex-wrap gap-2">
+                  {[1, 1, 1, 1, 1, 1].map((_v, k) => {
+                    return (
+                      <li className="basis-[31%]" key={k}>
+                        <img
+                          src="https://webstrot.com/html/domex/html/images/ft_blog1.png"
+                          className="img-responsive"
+                          alt="blog-img1_img"
+                        />
+                      </li>
+                    )
+                  })}
                 </ul>
               </div>
             </div>
-            <div className="col-xl-4 col-lg-3 col-md-5 col-sm-6">
+            <div className="col-xl-3 col-lg-3 col-md-5 col-sm-6">
               <div className="footer-widget widget_nav_menu">
-                <h4 className="fw-title">NEWSLETTER</h4>
-                <p className="desc">
-                  Subscribe our newsletter to get our latest update &
-                  newsconsectetur
-                </p>
-                <div className="footer-newsletter mt-4">
-                  <form action="#" className="footer-newsletter-form">
-                    <input type="email" placeholder="Get News & Updates" />
-                    <button type="submit">
-                      <i className="icon-[mingcute--send-fill]" />
-                    </button>
-                  </form>
-                </div>
+                <h4 className="fw-title">CONTACT US</h4>
+                <ul>
+                  <li className="!mb-[1.5rem] flex hover:text-green-500">
+                    <i className="icon-[material-symbols--location-on] mr-2 text-2xl text-green-500" />
+                    512 - omexcity, California
+                  </li>
+                  <li className="!mb-[1.5rem] flex hover:text-green-500">
+                    <i className="icon-[mingcute--earth-2-line] mr-2 text-2xl text-green-500" />
+                    www.example.com
+                  </li>
+                  <li className="!mb-[1.5rem] flex hover:text-green-500">
+                    <i className="icon-[mingcute--phone-fill] mr-2 text-2xl text-green-500" />
+                    +65 1800-123-145
+                  </li>
+                  <li className="!mb-[1.5rem] flex hover:text-green-500">
+                    <i className="icon-[mingcute--mail-fill] mr-2 text-2xl text-green-500" />
+                    domex@example.com
+                  </li>
+                </ul>
               </div>
             </div>
           </div>

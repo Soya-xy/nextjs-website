@@ -472,7 +472,7 @@
   background-size: 100% 100%;
 }
 
-.booking_table_wrapper .form-group textarea{
+.booking_table_wrapper .form-group textarea {
   height: 200px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 5px;
@@ -581,7 +581,8 @@
   transition: all 0.3s ease 0s;
   background-color: transparent;
 }
-.form-group i{
+
+.form-group i {
   font-size: 32px;
 }
 
@@ -643,9 +644,9 @@
   transition: all .5s;
 }
 
-.dm_cover{
-	float:left;
-	width:100%;
+.dm_cover {
+  float: left;
+  width: 100%;
 }
 
 .booking_table_wrapper .form-group {
@@ -661,4 +662,57 @@
   -ms-transition: all 0.5s;
   -moz-transition: all 0.5s;
   transition: all 0.5s;
+}
+
+
+.blog_wrapper1,
+.blog_wrapper2 {
+  float: left;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.blog_date i {
+  color: #45f882;
+  margin-right: 10px;
+}
+
+.blog_date {
+  font-size: 14px;
+  color: #45f882;
+  padding-top: 10px;
+}
+
+.blog_image {
+  float: left;
+  width: 80px;
+}
+
+.blog_text {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  float: left;
+  width: calc(100% - 80px);
+  padding-left: 10px;
+}
+
+.blog_text h5 a {
+  font-size: 16px;
+  color: #fff;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -ms-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
+}
+
+.blog_text h5 a:hover,
+.wrapper_second_contact ul li a:hover {
+  color: #45f882;
+  -webkit-transition: all .5s;
+  -moz-transition: all .5s;
+  -ms-transition: all .5s;
+  -o-transition: all .5s;
+  transition: all .5s;
 }
