@@ -4,7 +4,7 @@ import { Forth } from '~/components/Main/Forth/Index'
 import { News } from '~/components/Main/News'
 import { Second } from '~/components/Main/Second/Index'
 import { Seven } from '~/components/Main/Seven/Index'
-import { Sixth } from '~/components/Main/Sixth'
+// import { Sixth } from '~/components/Main/Sixth'
 import { Third } from '~/components/Main/Third/Index'
 import { Video } from '~/components/Main/Video'
 
@@ -19,9 +19,10 @@ export default function Home() {
       <Forth />
       <Fifth />
       <Seven />
-      <Sixth />
-      <Eight />
+      {/* <Sixth /> */}
       <News />
+
+      <Eight />
     </>
   )
 }
