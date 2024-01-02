@@ -1,3 +1,4 @@
+import { ModalRead } from '~/components/common/ModalRead'
 import { Chat } from '~/components/Main/Chat'
 import { Eight } from '~/components/Main/Eight'
 import { Fifth } from '~/components/Main/Fifth/Index'
@@ -24,6 +25,7 @@ export default function Home() {
       <News />
       <Eight />
       <Chat />
+      <ModalRead />
     </>
   )
 }

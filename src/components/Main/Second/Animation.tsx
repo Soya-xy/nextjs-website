@@ -9,7 +9,7 @@ export const Animation = () => {
   const container = useRef<any>(null)
   useMount(async () => {
     const app = new PIXI.Application({
-      width: screen.availWidth > 750 ? 700 : 370,
+      width: screen.availWidth > 750 ? 700 : screen.availWidth - 30,
       height: screen.availWidth > 750 ? 443 : 300,
       backgroundColor: '#000', // 背景颜色，这里是黑色
       backgroundAlpha: 0, // 背景透明度，0 表示完全透明

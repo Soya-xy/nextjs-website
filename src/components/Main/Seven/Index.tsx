@@ -12,8 +12,8 @@ export const Seven = () => {
   const container = useRef<any>(null)
   useMount(async () => {
     const app = new PIXI.Application({
-      width: 600,
-      height: 750,
+      width: screen.availWidth > 750 ? 600 : screen.availWidth - 30,
+      height: screen.availWidth > 750 ? 750 : 550,
       backgroundColor: '#000', // 背景颜色，这里是黑色
       backgroundAlpha: 0, // 背景透明度，0 表示完全透明
     })
@@ -21,9 +21,14 @@ export const Seven = () => {
       container.current.appendChild(app.view)
       const res = await PIXI.Assets.load('/images/people/racoon.json')
       const sp = new Spine(res.spineData)
-      sp.width = 527
-      sp.height = 619
-      sp.position.set(320, 200)
+      sp.width = screen.availWidth > 750 ? 527 : screen.availWidth - 60
+      sp.height = screen.availWidth > 750 ? 619 : screen.availWidth
+
+      if (screen.availWidth > 750) {
+        sp.position.set(320, 200)
+      } else {
+        sp.position.set(screen.availWidth / 2, 200)
+      }
 
       app.stage.addChild(sp)
       if (!sp) return
