@@ -1,3 +1,5 @@
+'use client'
+
 import { ModalRead } from '~/components/common/ModalRead'
 import { Chat } from '~/components/Main/Chat'
 import { Eight } from '~/components/Main/Eight'
@@ -9,11 +11,12 @@ import { Seven } from '~/components/Main/Seven/Index'
 // import { Sixth } from '~/components/Main/Sixth'
 import { Third } from '~/components/Main/Third/Index'
 import { Video } from '~/components/Main/Video'
+import { isClientSide } from '~/lib/env'
 
 export default function Home() {
   return (
     <>
-      <div className="w-100vw h-[calc(100vh-100px)]">
+      <div className="h-[calc(100vh-100px)] w-[100vw]">
         <Video />
       </div>
       <Second />
@@ -25,7 +28,7 @@ export default function Home() {
       <News />
       <Eight />
       <Chat />
-      <ModalRead />
+      {isClientSide && !localStorage.getItem('isRead') && <ModalRead />}
     </>
   )
 }

@@ -295,9 +295,6 @@
     padding: 25px 120px 18px 65px;
   }
 
-  .booking_form_field {
-    padding: 50px;
-  }
 
   .domex_newsletter_field {
     width: 80%;
@@ -585,7 +582,6 @@
 
   .booking_form_field {
     border-radius: 20px;
-    padding: 35px;
     position: relative;
   }
   .bars2 {

@@ -50,7 +50,7 @@ const twConfig: Config = {
 
     typography,
 
-    require('tailwind-scrollbar'),
+    // require('tailwind-scrollbar-hide'),
     createPlugin({
       colors: radxiColors,
     }).plugin,

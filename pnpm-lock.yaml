@@ -131,6 +131,9 @@ dependencies:
   tailwind-merge:
     specifier: 2.1.0
     version: 2.1.0
+  tailwind-scrollbar-hide:
+    specifier: ^1.1.7
+    version: 1.1.7
   vaul:
     specifier: 0.8.0
     version: 0.8.0(@types/react-dom@18.2.18)(@types/react@18.2.45)(react-dom@18.2.0)(react@18.2.0)
@@ -6049,6 +6052,10 @@ packages:
     resolution: {integrity: sha512-l11VvI4nSwW7MtLSLYT4ldidDEUwQAMWuSHk7l4zcXZDgnCRa0V3OdCwFfM7DCzakVXMNRwAeje9maFFXT71dQ==}
     dependencies:
       '@babel/runtime': 7.23.6
+    dev: false
+
+  /tailwind-scrollbar-hide@1.1.7:
+    resolution: {integrity: sha512-X324n9OtpTmOMqEgDUEA/RgLrNfBF/jwJdctaPZDzB3mppxJk7TLIDmOreEDm1Bq4R9LSPu4Epf8VSdovNU+iA==}
     dev: false
 
   /tailwind-scrollbar@3.0.5(tailwindcss@3.4.0):

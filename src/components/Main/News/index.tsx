@@ -8,7 +8,7 @@ export const News = () => {
               <div className="hf-section-title mb-[40px] text-3xl">
                 <h4 className="title">WORLD NEWS</h4>
               </div>
-              <div className="row w-full">
+              <div className="flex w-full gap-4 md:gap-[4rem]">
                 <div className="basis-[50%]">
                   <div className="world-news-item mb-[30px]">
                     <div className="banner-magazine-thumb">
@@ -61,7 +61,7 @@ export const News = () => {
                 <div className="business-news-active slick-initialized slick-slider">
                   <div className="slick-list">
                     <div className="slick-track">
-                      <div className="business-news-item slick-slide slick-cloned w-[400px]">
+                      <div className="business-news-item slick-slide slick-cloned md:w-[400px]">
                         <div className="business-news-post relative">
                           <img
                             src="/images/people/top1.png"

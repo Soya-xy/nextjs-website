@@ -37,7 +37,7 @@ export function Chat() {
               </div>
             </div>
             <div className="col-lg-10 offset-lg-1 col-md-12 col-sm-12 col-12 relative">
-              <div className="booking_form_field">
+              <div className="booking_form_field p-0 md:p-[70px]">
                 <form>
                   <div className="row">
                     <div className="col-lg-6 col-md-6">

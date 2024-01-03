@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-*::-webkit-scrollbar{
+*::-webkit-scrollbar {
   width: 0;
   display: none;
 }
@@ -37,9 +37,11 @@ html {
   font-family: var(--font-sans);
 }
 
-*:not(input):not(textarea):not([contenteditable='true']):not(
-    .no-focus-visible
-  ):focus-visible {
+* {
+  box-sizing: border-box;
+}
+
+*:not(input):not(textarea):not([contenteditable='true']):not(.no-focus-visible):focus-visible {
   outline: 0 !important;
   /* box-shadow: theme(colors.primary) 0px 0px 0px 2px !important; */
 }
@@ -47,14 +49,26 @@ html {
 ::view-transition-new(root) {
   animation: turnOff 800ms ease-in-out;
 }
+
 ::view-transition-old(root) {
   animation: none;
+}
+
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  -webkit-overflow-style: none;
+}
+
+.scrollbar-hide ::-webkit-scrollbar {
+  display: none;
 }
 
 @keyframes turnOn {
   0% {
     clip-path: polygon(0% 0%, 100% 0, 100% 0, 0 0);
   }
+
   100% {
     clip-path: polygon(0% 0%, 100% 0, 100% 100%, 0 100%);
   }
@@ -63,6 +77,7 @@ html {
 [data-theme='dark']::view-transition-new(root) {
   animation: turnOn 800ms ease-in-out;
 }
+
 ::view-transition-old(root) {
   animation: none;
 }
@@ -71,6 +86,7 @@ html {
   0% {
     clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
   }
+
   100% {
     clip-path: polygon(0 100%, 100% 100%, 100% 0, 0 0);
   }

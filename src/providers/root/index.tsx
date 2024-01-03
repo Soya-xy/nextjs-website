@@ -19,6 +19,7 @@ const contexts: JSX.Element[] = [
   <JotaiStoreProvider key="jotaiStoreProvider" />,
   <MouseFollower key="mouseFollowerProvider" />,
 ]
+
 export function Providers({ children }: PropsWithChildren) {
   return (
     <>

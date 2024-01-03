@@ -14,9 +14,9 @@ const Footer = () => {
       <div className="footer__top-wrap">
         <div className="container mx-auto">
           <div className="row">
-            <div className="!w-[20%] flex-[0_0_auto]">
+            <div className="flex-[0_0_auto] md:!w-[20%]">
               <div className="footer-widget">
-                <div className="footer-logo logo">
+                <div className="footer-logo logo text-center md:text-start">
                   <Link href="/contact">
                     <Image src={logo} alt="Logo" width={177} height={40} />
                   </Link>
@@ -33,7 +33,7 @@ const Footer = () => {
                       <i className="icon-[mingcute--right-fill] text-[14px]" />
                     </span>
                   </p> */}
-                  <div className="footer-social">
+                  <div className="footer-social justify-center md:justify-start">
                     <Link href="#">
                       <Image src={icon_1} alt="iocn" width={30} height={30} />
                     </Link>
@@ -52,8 +52,11 @@ const Footer = () => {
             </div>
             <div className="col-xl-2 col-lg-2 col-md-5 col-sm-6 ml-[1%]">
               <div className="footer-widget widget_nav_menu">
-                <h4 className="fw-title qr-title text-center">TELEGRAM</h4>
+                <h4 className="fw-title qr-title text-center after:!content-[unset]  md:after:!content-['']">
+                  TELEGRAM
+                </h4>
                 <img
+                  className="mx-auto md:mx-0"
                   src="https://gstatic.clewm.net/caoliao-resource/231117/a44fa42f_4b16ec36_1666157560.png"
                   alt=""
                 />
@@ -61,25 +64,33 @@ const Footer = () => {
             </div>
             <div className="col-xl-2 col-lg-2 col-md-5 col-sm-6">
               <div className="footer-widget widget_nav_menu ">
-                <h4 className="fw-title qr-title text-center">SKYPE</h4>
+                <h4 className="fw-title qr-title text-center after:!content-[unset]  md:after:!content-['']">
+                  SKYPE
+                </h4>
                 <img
+                  className="mx-auto md:mx-0"
                   src="https://gstatic.clewm.net/caoliao-resource/231117/a44fa42f_4b16ec36_1666157560.png"
                   alt=""
                 />
               </div>
             </div>
-            <div className="col-xl-2 col-lg-2 col-md-5 col-sm-6 mr-[4%]">
+            <div className="col-xl-2 col-lg-2 col-md-5 col-sm-6 md:mr-[4%]">
               <div className="footer-widget widget_nav_menu">
-                <h4 className="fw-title qr-title text-center">WhatsApp</h4>
+                <h4 className="fw-title qr-title text-center after:!content-[unset]  md:after:!content-['']">
+                  WhatsApp
+                </h4>
                 <img
+                  className="mx-auto md:mx-0"
                   src="https://gstatic.clewm.net/caoliao-resource/231117/a44fa42f_4b16ec36_1666157560.png"
                   alt=""
                 />
               </div>
             </div>
             <div className="col-xl-3 col-lg-3 col-md-5 col-sm-6">
-              <div className="footer-widget widget_nav_menu">
-                <h4 className="fw-title">CONTACT US</h4>
+              <div className="footer-widget widget_nav_menu  text-center">
+                <h4 className="fw-title  after:!content-[unset] md:after:content-['']">
+                  CONTACT US
+                </h4>
                 <ul>
                   <li className="!mb-[2rem] flex hover:text-green-500">
                     <i className="icon-[material-symbols--location-on] mr-2 text-2xl text-green-500" />
@@ -105,14 +116,22 @@ const Footer = () => {
       </div>
       <div className="copyright__wrap">
         <div className="container mx-auto">
-          <div className="copyright__text flex w-full items-center justify-between">
+          <div className="copyright__text flex w-full flex-col items-center justify-between md:flex-row">
             <p>
               Copyright © {new Date().getFullYear()} - All Rights Reserved By{' '}
               <span>Mykd</span>
             </p>
-            <div className="flex h-[30px]">
-              <img src="/images/footer_1.png" className="mr-[20px]" alt="" />
-              <img src="/images/footer_2.png" alt="" />
+            <div className="flex h-[30px] w-full overflow-hidden md:w-[unset]">
+              <img
+                src="/images/footer_1.png"
+                className="mr-[20px] w-[50%] md:w-auto"
+                alt=""
+              />
+              <img
+                src="/images/footer_2.png"
+                className="w-[50%] md:w-auto"
+                alt=""
+              />
             </div>
           </div>
         </div>

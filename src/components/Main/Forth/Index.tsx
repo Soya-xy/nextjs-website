@@ -16,14 +16,14 @@ export const Forth = () => {
   }
   return (
     <div className="forth">
-      <div className="relative w-full overflow-hidden py-[130px]">
+      <div className="relative w-full overflow-hidden py-20 md:py-[130px]">
         <section className="md:mx-[180px] ">
           <div className="flex flex-col md:flex-row">
             <div className=" w-[430px] flex-initial flex-shrink-0 text-center md:flex md:flex-col md:justify-center md:text-start">
               <h2 className="text-[45px]">PROJECTS MYKD</h2>
               <AnimationText text="OUR LATEST GALLERY" />
               <div className="mt-3">
-                <button className="rounded-md bg-[#45f882] px-7 py-3 text-start text-black hover:bg-[#C6923D] hover:text-white">
+                <button className="mb-3 rounded-md bg-[#45f882] px-7 py-3 text-start text-black hover:bg-[#C6923D] hover:text-white md:mb-0">
                   ADD TO
                 </button>
               </div>

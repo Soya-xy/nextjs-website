@@ -117,7 +117,7 @@ export default async function RootLayout({
           <HydrationEndDetector />
         </head>
         <body
-          className={`${sansFont.variable} ${serifFont.variable} m-0 h-full p-0 font-sans`}
+          className={`${sansFont.variable} ${serifFont.variable} m-0 h-full p-0 font-sans  scrollbar-hide`}
         >
           <Providers>
             <NextIntlClientProvider messages={messages}>
