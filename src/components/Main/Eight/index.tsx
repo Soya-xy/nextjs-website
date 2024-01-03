@@ -18,8 +18,8 @@ export const Eight = () => {
               {[2, 3, 4, 5, 6, 7, 8, 9, 10, 11].map((v) => {
                 return (
                   <>
-                    <div className="flex h-[180px] w-[180px] items-center justify-center">
-                      <div className="pq-client-box relative h-[120px] w-[120px] overflow-hidden">
+                    <div className="flex basis-[20%] items-center justify-center">
+                      <div className="pq-client-box relative h-[100px] w-[200px] overflow-hidden">
                         <img
                           decoding="async"
                           src={`/images/logos/${v}.png`}
