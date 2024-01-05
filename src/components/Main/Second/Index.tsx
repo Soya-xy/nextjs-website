@@ -28,15 +28,15 @@ export const Second = () => {
       <div className="container mx-auto pb-10 lg:max-w-[1300px]">
         <div className="flex flex-col-reverse items-start pt-5 md:items-center md:justify-between md:pt-[10rem] lg:flex-row">
           <div className="flex flex-1 flex-col justify-start px-5 md:mb-[5rem] lg:px-6">
-            <p className="nft_site my-[2rem] text-center text-3xl font-[800] after:!content-[unset] md:mb-[2rem] md:mt-0 md:text-start md:text-[45px]  md:after:!content-['']">
+            <div className="nft_site my-[2rem] text-center text-3xl font-[800] after:!content-[unset] md:mb-[2rem] md:mt-0 md:text-start md:text-[45px]  md:after:!content-['']">
               <AnimationText text="BRANDING CONCEPT" color="white" />
               <br />
               <AnimationText text="MYERLY" color="white" />
-            </p>
+            </div>
             <motion.div ref={spineRef} className="relative block md:hidden">
               <Animation />
             </motion.div>
-            <p className="sub break-all tracking-wider">
+            <div className="sub break-all tracking-wider">
               <AnimationText
                 text="MYERLY (abbreviated as MY) has gone through years of industry
               practice, understanding market demand and daring to try.
@@ -47,62 +47,10 @@ export const Second = () => {
                 speed={0.001}
                 color="#ADB0BC"
               />
-            </p>
+            </div>
             <div className="flex flex-col-reverse items-center justify-between md:flex-row">
               <div className="flex flex-col items-center justify-center md:block">
-                {/* <div className="flex items-center justify-start gap-[3.3rem]">
-                  <div>
-                    <p className="text-[30px] font-[700]">40K</p>
-                    <p className="text-base font-[500] text-[#adb0bc]">
-                      Member
-                    </p>
-                  </div>
-                  <div>
-                    <p className="text-[30px] font-[700]">40K</p>
-                    <p className="text-base font-[500] text-[#adb0bc]">
-                      Member
-                    </p>
-                  </div>
-                  <div>
-                    <p className="text-[30px] font-[700]">40K</p>
-                    <p className="text-base font-[500] text-[#adb0bc]">
-                      Member
-                    </p>
-                  </div>
-                </div> */}
                 <div className="mb-[3rem] mt-10 flex items-center  justify-start">
-                  {/* <div className="relative h-full  min-w-[158px] text-center text-[14px]  font-bold leading-[48px]">
-                    <div className="absolute left-0 top-0">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        preserveAspectRatio="none"
-                        viewBox="0 0 188 61"
-                        className="block h-full w-full"
-                        style={{
-                          fill: '#02010100',
-                          stroke: '#45F882',
-                          fillRule: 'evenodd',
-                        }}
-                      >
-                        <motion.path
-                          d="M874,554.154L893.08,524h146.67L1060,552.843,1039.75,583H893.08Z"
-                          transform="translate(-873 -523)"
-                          initial={{
-                            strokeDashoffset: 0,
-                          }}
-                          whileHover={{
-                            strokeDashoffset: [436, 0],
-                          }}
-                          style={{
-                            strokeDasharray: '436, 438',
-                            strokeWidth: '3px',
-                          }}
-                          transition={{ duration: 1 }} // 可选：定义动画的持续时间和其他属性
-                        />
-                      </svg>
-                    </div>
-                    READ MORE
-                  </div> */}
                   <button className="rounded-md bg-[#45f882] px-7 py-3 text-start font-bold text-black hover:bg-[#C6923D] hover:text-white">
                     READ MORE
                   </button>
@@ -133,23 +81,6 @@ export const Second = () => {
             <motion.div ref={spineRef} className="relative hidden md:block">
               <Animation />
             </motion.div>
-            {/* <div className="relative mt-5 flex items-center justify-end">
-              <div className="mr-2 text-end">
-                <p className="text-[22px] font-bold text-white">TOURNAMENT</p>
-                <p className="text-[14px] text-[#ADB0BC]">DEVELOPMENT</p>
-              </div>
-              <div className="relative">
-                <div className="about-icon">
-                  <Image
-                    alt=""
-                    className="relative z-[2]"
-                    width={38}
-                    height={38}
-                    src="https://themedox.com/mykd/wp-content/uploads/2023/10/trophy.png"
-                  />
-                </div>
-              </div>
-            </div> */}
           </div>
         </div>
       </div>

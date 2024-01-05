@@ -2,11 +2,14 @@ import { useState } from 'react'
 import clsx from 'clsx'
 
 import { useRouter } from '~/i18n'
-import { jotaiStore } from '~/lib/store'
 
-import { absoluteTop } from '.'
-
-export function Item({ menuList }: { menuList: Record<string, any>[] }) {
+export function Item({
+  menuList,
+  onChange,
+}: {
+  menuList: Record<string, any>[]
+  onChange: (e: any) => void
+}) {
   const [active, setActive] = useState(0)
   const router = useRouter()
 
@@ -21,8 +24,8 @@ export function Item({ menuList }: { menuList: Record<string, any>[] }) {
               active === idx && `text-green-500 `,
             )}
             onClick={() => {
+              onChange(item)
               setActive(idx)
-              jotaiStore.set(absoluteTop, false)
               router.replace(item.url)
             }}
             key={idx}

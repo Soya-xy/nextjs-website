@@ -20,9 +20,9 @@ export const Forth = () => {
         <section className="md:mx-[180px] ">
           <div className="flex flex-col md:flex-row">
             <div className=" mb-10 flex-initial flex-shrink-0 text-center md:mb-0 md:flex md:w-[430px] md:flex-col md:justify-center md:text-start">
-              <h2 className="text-[45px]">
+              <div className="text-[45px]">
                 <AnimationText text="PROJECTS MYKD" color="white" />
-              </h2>
+              </div>
               <AnimationText text="OUR LATEST GALLERY" />
               <div className="mt-3">
                 <button className="mb-3 rounded-md bg-[#45f882] px-7 py-3 text-start font-bold text-black hover:bg-[#C6923D] hover:text-white md:mb-0">

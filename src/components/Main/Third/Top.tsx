@@ -98,7 +98,7 @@ export const Top = () => {
     <>
       <div className="flex flex-col items-center justify-center">
         <AnimationText text="The latest" />
-        <p
+        <div
           className="nft_site text-center text-[45px] font-bold tracking-[2px] md:text-start"
           style={
             {
@@ -107,7 +107,7 @@ export const Top = () => {
           }
         >
           <AnimationText text="NEW GAMES RELEASE" color="white" />
-        </p>
+        </div>
         <div className="w-full">
           <div className="nav-tabs w-full">
             <Card />
