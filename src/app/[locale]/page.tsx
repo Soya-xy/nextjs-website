@@ -1,5 +1,7 @@
 'use client'
 
+import { motion } from 'framer-motion'
+
 import { ModalRead } from '~/components/common/ModalRead'
 import { Chat } from '~/components/Main/Chat'
 import { Eight } from '~/components/Main/Eight'
@@ -20,14 +22,113 @@ export default function Home() {
         <Video />
       </div>
       <Second />
-      <Third />
-      <Forth />
-      <Fifth />
-      <Seven />
+      <motion.div
+        initial={{
+          opacity: 0,
+        }}
+        whileInView={{
+          opacity: 1,
+        }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 0.5,
+          ease: 'easeInOut',
+        }}
+      >
+        <Third />
+      </motion.div>
+      <motion.div
+        initial={{
+          opacity: 0,
+        }}
+        whileInView={{
+          opacity: 1,
+        }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 1,
+          ease: 'easeInOut',
+        }}
+      >
+        <Forth />
+      </motion.div>
+      <motion.div
+        initial={{
+          opacity: 0,
+        }}
+        whileInView={{
+          opacity: 1,
+        }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 1,
+          ease: 'easeInOut',
+        }}
+      >
+        <Fifth />
+      </motion.div>
+
+      <motion.div
+        initial={{
+          opacity: 0,
+        }}
+        whileInView={{
+          opacity: 1,
+        }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 1,
+          ease: 'easeInOut',
+        }}
+      >
+        <Seven />
+      </motion.div>
       {/* <Sixth /> */}
-      <News />
-      <Eight />
-      <Chat />
+      <motion.div
+        initial={{
+          opacity: 0,
+        }}
+        whileInView={{
+          opacity: 1,
+        }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 1,
+          ease: 'easeInOut',
+        }}
+      >
+        <News />
+      </motion.div>
+      <motion.div
+        initial={{
+          opacity: 0,
+        }}
+        whileInView={{
+          opacity: 1,
+        }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 1,
+          ease: 'easeInOut',
+        }}
+      >
+        <Eight />
+      </motion.div>
+      <motion.div
+        initial={{
+          opacity: 0,
+        }}
+        whileInView={{
+          opacity: 1,
+        }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 1,
+          ease: 'easeInOut',
+        }}
+      >
+        <Chat />
+      </motion.div>
       {isClientSide && !localStorage.getItem('isRead') && <ModalRead />}
     </>
   )

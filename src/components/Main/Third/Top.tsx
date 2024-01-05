@@ -106,7 +106,7 @@ export const Top = () => {
             } as any
           }
         >
-          NEW GAMES RELEASE
+          <AnimationText text="NEW GAMES RELEASE" color="white" />
         </p>
         <div className="w-full">
           <div className="nav-tabs w-full">

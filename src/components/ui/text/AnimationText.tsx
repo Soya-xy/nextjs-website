@@ -3,9 +3,11 @@ import { motion } from 'framer-motion'
 export const AnimationText = ({
   text,
   color = '#45f882',
+  speed = 0.04,
 }: {
   text: string
   color?: string
+  speed?: number
 }) => {
   const item = {
     hidden: { opacity: 0 },
@@ -19,7 +21,7 @@ export const AnimationText = ({
       variants={item}
       initial="hidden"
       whileInView="show"
-      transition={{ staggerChildren: 0.04 }}
+      transition={{ staggerChildren: speed }}
       viewport={{ once: true }}
       className="tracking-[2px]"
       style={{

@@ -26,10 +26,14 @@ export const Content = () => {
       <div className="tab-content" id="myTabContent">
         <motion.div
           initial={{
-            opacity: 1,
+            opacity: 0,
             y: 0,
           }}
           animate={animation}
+          whileInView={{
+            opacity: 1,
+          }}
+          viewport={{ once: true }}
           transition={{
             ease: 'easeInOut',
             duration: 0.5,

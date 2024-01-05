@@ -7,6 +7,8 @@ import './second.css'
 import { useRef, useState } from 'react'
 import { motion, useMotionValueEvent, useScroll } from 'framer-motion'
 
+import { AnimationText } from '~/components/ui/text/AnimationText'
+
 import { Animation } from './Animation'
 
 export const Second = () => {
@@ -27,19 +29,24 @@ export const Second = () => {
         <div className="flex flex-col-reverse items-start pt-5 md:items-center md:justify-between md:pt-[10rem] lg:flex-row">
           <div className="flex flex-1 flex-col justify-start px-5 md:mb-[5rem] lg:px-6">
             <p className="nft_site my-[2rem] text-center text-3xl font-[800] after:!content-[unset] md:mb-[2rem] md:mt-0 md:text-start md:text-[45px]  md:after:!content-['']">
-              BRANDING CONCEPT
-              <br /> MYERLY
+              <AnimationText text="BRANDING CONCEPT" color="white" />
+              <br />
+              <AnimationText text="MYERLY" color="white" />
             </p>
             <motion.div ref={spineRef} className="relative block md:hidden">
               <Animation />
             </motion.div>
             <p className="sub break-all tracking-wider">
-              MYERLY (abbreviated as MY) has gone through years of industry
+              <AnimationText
+                text="MYERLY (abbreviated as MY) has gone through years of industry
               practice, understanding market demand and daring to try.
               Regardless of the game style, operation interface, and topic
               themes, it uses the latest H5 technology to provide a rich and
               diverse gaming experience, making players enjoy it tirelessly and
-              becoming the focus of the industry`s attention.
+              becoming the focus of the industry`s attention."
+                speed={0.001}
+                color="#ADB0BC"
+              />
             </p>
             <div className="flex flex-col-reverse items-center justify-between md:flex-row">
               <div className="flex flex-col items-center justify-center md:block">
