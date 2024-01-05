@@ -99,6 +99,11 @@ function addShortcutPlugin({ addUtilities }: PluginAPI) {
       width: '100%',
       height: '100%',
     },
+    '.d-center': {
+      display: 'flex',
+      'align-items': 'center',
+      'justify-content': 'center',
+    },
     '.content-auto': {
       'content-visibility': 'auto',
     },
