@@ -21,9 +21,9 @@ export function Video() {
   return (
     <>
       <div>
-        <div className="absolute inset-0">
+        <div className="md:absolute md:inset-0">
           <video
-            className="h-full w-full object-cover"
+            className="w-full object-cover md:h-full"
             autoPlay
             muted
             playsInline

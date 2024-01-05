@@ -137,7 +137,7 @@ export function Menu() {
                   <>
                     <div className="ml-[20px] flex items-center py-4">
                       <Logo />
-                      <p className="ml-2">My Game</p>
+                      <p className="ml-2 hidden md:block">My Game</p>
                     </div>
                   </>
                 )

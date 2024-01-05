@@ -13,8 +13,8 @@ const Footer = () => {
     <footer className="footer-style-one">
       <div className="footer__top-wrap">
         <div className="container mx-auto">
-          <div className="row">
-            <div className="flex-[0_0_auto] md:!w-[20%]">
+          <div className="flex w-full flex-col md:flex-row">
+            <div className="md:!w-[30%]">
               <div className="footer-widget">
                 <div className="footer-logo logo text-center md:text-start">
                   <Link href="/contact">
@@ -50,40 +50,42 @@ const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="col-xl-2 col-lg-2 col-md-5 col-sm-6 ml-[1%]">
-              <div className="footer-widget widget_nav_menu">
-                <h4 className="fw-title qr-title text-center after:!content-[unset]  md:after:!content-['']">
-                  TELEGRAM
-                </h4>
-                <img
-                  className="mx-auto md:mx-0"
-                  src="https://gstatic.clewm.net/caoliao-resource/231117/a44fa42f_4b16ec36_1666157560.png"
-                  alt=""
-                />
+            <div className="flex w-full gap-3">
+              <div className="ml-[1%] w-[33%]">
+                <div className="footer-widget widget_nav_menu">
+                  <h4 className="fw-title qr-title text-center after:!content-[unset]  md:after:!content-['']">
+                    TELEGRAM
+                  </h4>
+                  <img
+                    className="m-[0_auto]"
+                    src="https://gstatic.clewm.net/caoliao-resource/231117/a44fa42f_4b16ec36_1666157560.png"
+                    alt=""
+                  />
+                </div>
               </div>
-            </div>
-            <div className="col-xl-2 col-lg-2 col-md-5 col-sm-6">
-              <div className="footer-widget widget_nav_menu ">
-                <h4 className="fw-title qr-title text-center after:!content-[unset]  md:after:!content-['']">
-                  SKYPE
-                </h4>
-                <img
-                  className="mx-auto md:mx-0"
-                  src="https://gstatic.clewm.net/caoliao-resource/231117/a44fa42f_4b16ec36_1666157560.png"
-                  alt=""
-                />
+              <div className="w-[33%]">
+                <div className="footer-widget widget_nav_menu ">
+                  <h4 className="fw-title qr-title text-center after:!content-[unset]  md:after:!content-['']">
+                    SKYPE
+                  </h4>
+                  <img
+                    className="m-[0_auto]"
+                    src="https://gstatic.clewm.net/caoliao-resource/231117/a44fa42f_4b16ec36_1666157560.png"
+                    alt=""
+                  />
+                </div>
               </div>
-            </div>
-            <div className="col-xl-2 col-lg-2 col-md-5 col-sm-6 md:mr-[4%]">
-              <div className="footer-widget widget_nav_menu">
-                <h4 className="fw-title qr-title text-center after:!content-[unset]  md:after:!content-['']">
-                  WhatsApp
-                </h4>
-                <img
-                  className="mx-auto md:mx-0"
-                  src="https://gstatic.clewm.net/caoliao-resource/231117/a44fa42f_4b16ec36_1666157560.png"
-                  alt=""
-                />
+              <div className="w-[33%] md:mr-[4%]">
+                <div className="footer-widget widget_nav_menu">
+                  <h4 className="fw-title qr-title text-center after:!content-[unset]  md:after:!content-['']">
+                    WhatsApp
+                  </h4>
+                  <img
+                    className="m-[0_auto]"
+                    src="https://gstatic.clewm.net/caoliao-resource/231117/a44fa42f_4b16ec36_1666157560.png"
+                    alt=""
+                  />
+                </div>
               </div>
             </div>
             <div className="col-xl-3 col-lg-3 col-md-5 col-sm-6">

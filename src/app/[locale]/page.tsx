@@ -16,7 +16,7 @@ import { isClientSide } from '~/lib/env'
 export default function Home() {
   return (
     <>
-      <div className="h-[calc(100vh-100px)] w-[100vw]">
+      <div className="w-[100vw] md:h-[calc(100vh-100px)]">
         <Video />
       </div>
       <Second />

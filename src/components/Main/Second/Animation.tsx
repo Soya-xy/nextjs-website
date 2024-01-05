@@ -21,7 +21,7 @@ export const Animation = () => {
       if (innerWidth < 750) {
         sp.width = innerWidth - 40
         sp.height = 280
-        sp.position.set(200, 150)
+        sp.position.set(210, 150)
       } else {
         sp.width = 600
         sp.height = 443
@@ -37,11 +37,11 @@ export const Animation = () => {
 
   return (
     <>
-      <div className="w-[300px] md:relative md:h-[500px] md:w-[500px]">
+      <div className="h-[350px] w-[300px] md:relative md:h-[500px] md:w-[500px]">
         <div
           ref={container}
           id="spine_container"
-          className="aspect-video md:absolute md:right-[-5px]"
+          className="absolute right-[-10px] aspect-video md:right-[-5px]"
         />
       </div>
     </>

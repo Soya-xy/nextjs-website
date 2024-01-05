@@ -26,10 +26,13 @@ export const Second = () => {
       <div className="container mx-auto pb-10 lg:max-w-[1300px]">
         <div className="flex flex-col-reverse items-start pt-5 md:items-center md:justify-between md:pt-[10rem] lg:flex-row">
           <div className="flex flex-1 flex-col justify-start px-5 md:mb-[5rem] lg:px-6">
-            <p className="nft_site mb-[2rem] text-[45px] font-[800]">
+            <p className="nft_site my-[2rem] text-center text-3xl font-[800] after:!content-[unset] md:mb-[2rem] md:mt-0 md:text-start md:text-[45px]  md:after:!content-['']">
               BRANDING CONCEPT
               <br /> MYERLY
             </p>
+            <motion.div ref={spineRef} className="relative block md:hidden">
+              <Animation />
+            </motion.div>
             <p className="sub break-all tracking-wider">
               MYERLY (abbreviated as MY) has gone through years of industry
               practice, understanding market demand and daring to try.
@@ -120,7 +123,7 @@ export const Second = () => {
             </div>
           </div>
           <div className="flex flex-col items-center md:items-end md:justify-center lg:w-[620px]">
-            <motion.div ref={spineRef} className="relative">
+            <motion.div ref={spineRef} className="relative hidden md:block">
               <Animation />
             </motion.div>
             {/* <div className="relative mt-5 flex items-center justify-end">

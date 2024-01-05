@@ -22,7 +22,7 @@ export function Search({ active, onClose }: any) {
             <div className="container mx-auto">
               <div className="row">
                 <div className="col-12">
-                  <h2 className="title">
+                  <h2 className="title text-3xl md:text-[47px]">
                     ... <span>Search Here</span> ...
                   </h2>
                   <div className="search__form">
