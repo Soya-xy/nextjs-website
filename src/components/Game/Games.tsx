@@ -7,8 +7,9 @@ export const Games = () => {
         {[1, 2, 3, 4, 1, 2, 3, 4, 1, 2, 3, 4].map((v, k) => (
           <div className="relative h-full select-none" key={k}>
             <div className="absolute left-2 top-2 flex">
-              <p className="global-tag mx-2 bg-red-500">123</p>
-              <p className="global-tag mx-2 bg-red-500">123</p>
+              <p className="global-tag mx-2 bg-[red]">HOT</p>
+              <p className="global-tag mx-2 bg-yellow-500">NEW</p>
+              <p className="global-tag mx-2 bg-[#ffb800]">FEATURE BUY</p>
             </div>
             <img src={`/images/card/${v}.png`} alt="" className="rounded-2xl" />
             <motion.div

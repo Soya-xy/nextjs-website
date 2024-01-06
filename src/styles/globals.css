@@ -94,15 +94,20 @@ html {
 
 
 .global-tag {
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #fff;
+  --bs-badge-padding-x: .65em;
+  --bs-badge-padding-y: .35em;
+  --bs-badge-font-size: .75em;
+  --bs-badge-font-weight: 700;
+  --bs-badge-color: #fff;
+  --bs-badge-border-radius: 5px;
   display: inline-block;
-  padding: 3px 11px;
-  border-radius: 4px;
-  box-shadow: 0px 3px 10px 0px rgba(39, 39, 40, 0.36);
-  margin-right: 5px;
-  min-width: 70px;
+  padding: var(--bs-badge-padding-y) var(--bs-badge-padding-x);
+  font-size: 12px;
+  font-weight: var(--bs-badge-font-weight);
+  line-height: 1;
+  color: var(--bs-badge-color);
   text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: var(--bs-badge-border-radius)
 }

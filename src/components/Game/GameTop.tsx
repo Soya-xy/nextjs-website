@@ -21,7 +21,7 @@ export const GameTop = () => {
                 </a>
               </div>
               <div className="info-area relative p-3 lg:p-5">
-                <div className="flex items-end gap-4 sm:gap-8">
+                <div className="flex items-end gap-4">
                   <div className="img-area">
                     <img
                       decoding="async"
@@ -34,7 +34,7 @@ export const GameTop = () => {
                       <p className="global-tag bg-[red]">Nick</p>
                       <p className="global-tag bg-yellow-500">Good</p>
                     </div>
-                    <h3 className="visible-slowly-bottom mb-4  text-3xl">
+                    <h3 className="visible-slowly-bottom text-3xl">
                       King Of Jungle
                     </h3>
                   </div>
