@@ -43,12 +43,12 @@ export const GameTop = () => {
                   <p>很长的一段介绍</p>
                 </div>
                 <div className="flex items-center justify-around gap-4">
-                  <button className="rounded-[8px] border px-10 py-2 text-center text-2xl  text-white">
+                  <div className="cursor-pointer rounded-[8px] border px-10 py-2 text-center text-2xl  text-white hover:bg-black hover:text-white hover:shadow-[0_0_16px_#efefef]">
                     View More
-                  </button>
-                  <button className="rounded-[8px] bg-green-500 px-10 py-2 text-center text-2xl text-black">
+                  </div>
+                  <div className="rounded-[8px] bg-green-500 px-10 py-2 text-center text-2xl text-black hover:shadow-[0_0_16px_#09926a]">
                     Play Now
-                  </button>
+                  </div>
                 </div>
               </div>
             </div>

@@ -73,12 +73,10 @@
 
 .slide-pag {
   display: block;
-  max-width: 1200px;
-  width: 100%;
   position: absolute;
   z-index: 1;
   top: calc(576px - 60px - 40px);
-  left: 25%;
+  left: 50%;
   transform: translateX(-50%)
 }
 
@@ -107,8 +105,8 @@
 .slide-pag .pag-cover .pagbox {
   display: block;
   float: left;
-  width: 36px;
-  height: 36px;
+  width: 56px;
+  height: 56px;
   margin: 0 12px 0 0;
   cursor: pointer;
   opacity: .4;

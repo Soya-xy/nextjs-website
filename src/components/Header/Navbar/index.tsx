@@ -12,6 +12,7 @@ import { Menu } from './Menu'
 
 export const Navbar = () => {
   const [top, setTop] = useState(false)
+  const [active, setActive] = useState(0)
   const path = usePathname()
   useEffect(() => {
     if (path === '/game') {
@@ -19,6 +20,11 @@ export const Navbar = () => {
     } else {
       setTop(false)
     }
+    menuList.forEach((v, k) => {
+      if (v.url === path) {
+        setActive(k)
+      }
+    })
   }, [path])
 
   const menuList = [
@@ -44,6 +50,7 @@ export const Navbar = () => {
         {/* LINK */}
         <div className="ml-20 hidden flex-1 items-center justify-center lg:flex">
           <Item
+            active={active}
             menuList={menuList}
             onChange={(e) => {
               if (e.url === '/game') {

@@ -1,16 +1,16 @@
-import { useState } from 'react'
 import clsx from 'clsx'
 
 import { useRouter } from '~/i18n'
 
 export function Item({
+  active = 0,
   menuList,
   onChange,
 }: {
+  active: number
   menuList: Record<string, any>[]
   onChange: (e: any) => void
 }) {
-  const [active, setActive] = useState(0)
   const router = useRouter()
 
   if (menuList.length <= 0) return undefined
@@ -25,7 +25,6 @@ export function Item({
             )}
             onClick={() => {
               onChange(item)
-              setActive(idx)
               router.replace(item.url)
             }}
             key={idx}

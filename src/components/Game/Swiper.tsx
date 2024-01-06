@@ -9,6 +9,7 @@ import { Autoplay } from 'swiper/modules'
 
 export const SwiperTop = () => {
   const [active, setActive] = useState(0)
+  const [swiperRef, setSwiper] = useState<any>()
   return (
     <>
       <div className="swiper-container">
@@ -20,6 +21,7 @@ export const SwiperTop = () => {
             disableOnInteraction: false,
           }}
           loop={true}
+          onSwiper={(swiper) => setSwiper(swiper)}
           modules={[Autoplay]}
         >
           {[1, 2, 3, 4, 5, 6].map((v) => {
@@ -43,7 +45,13 @@ export const SwiperTop = () => {
           <div className="pag-bg" />
           {[1, 2, 3, 4, 5, 6].map((v, k) => {
             return (
-              <div className={`pagbox ${active === k ? 'active' : ''}`} key={v}>
+              <div
+                className={`pagbox ${active === k ? 'active' : ''}`}
+                key={v}
+                onClick={() => {
+                  swiperRef && swiperRef.slideTo(k)
+                }}
+              >
                 <img src="https://www.pgsoft.com/uploads/Games/Images/2e54b0dc-718b-47f2-9895-24b3808ed73b.png" />
               </div>
             )
