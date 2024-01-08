@@ -101,7 +101,7 @@ export function Card({ grayscale = true, customClass = '' }) {
   )
 }
 
-export const Top = ({ grayscale = true }: { grayscale: boolean }) => {
+export const Top = ({ grayscale = true }: { grayscale?: boolean }) => {
   const item = {
     hidden: { opacity: 0 },
     show: {
