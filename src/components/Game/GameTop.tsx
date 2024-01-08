@@ -39,14 +39,14 @@ export const GameTop = () => {
                     </h3>
                   </div>
                 </div>
-                <div className="mb-6 w-full justify-between gap-3 rounded bg-[#4c4d5a] p-2 d-center sm:p-4 md:mb-10 md:mt-8">
+                <div className="mb-6 mt-4 w-full justify-between gap-3 rounded bg-[#4c4d5a] p-2 d-center sm:p-4 md:mb-10 md:mt-8">
                   <p>很长的一段介绍</p>
                 </div>
                 <div className="flex items-center justify-around gap-4">
-                  <div className="cursor-pointer rounded-[8px] border px-10 py-2 text-center text-2xl  text-white hover:bg-black hover:text-white hover:shadow-[0_0_16px_#efefef]">
+                  <div className="cursor-pointer rounded-[8px] border px-5 py-2 text-center text-2xl text-white  hover:bg-black hover:text-white hover:shadow-[0_0_16px_#efefef] md:px-10">
                     View More
                   </div>
-                  <div className="rounded-[8px] bg-green-500 px-10 py-2 text-center text-2xl text-black hover:shadow-[0_0_16px_#09926a]">
+                  <div className="rounded-[8px] bg-green-500 px-5 py-2 text-center text-2xl text-black hover:shadow-[0_0_16px_#09926a] md:px-10">
                     Play Now
                   </div>
                 </div>

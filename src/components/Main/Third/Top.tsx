@@ -11,7 +11,7 @@ import { AnimationText } from '~/components/ui/text/AnimationText'
 
 export const tabActive = atom(0)
 
-export function Card() {
+export function Card({ grayscale = true }) {
   const isMobile = useIsMobile()
   const divRef = useRef<HTMLDivElement>(null)
   const [active, setActive] = useAtom(tabActive)
@@ -61,15 +61,11 @@ export function Card() {
             className={`h-[137px] w-[191px] md:wh-full ${
               k === active
                 ? 'wealthgod-active'
-                : 'grayscale transition-all duration-75  hover:scale-[1.2] hover:grayscale-0'
-            }`}
+                : 'transition-all duration-75  hover:scale-[1.2]'
+            }
+              ${grayscale ? 'grayscale hover:grayscale-0' : ''}
+              `}
           >
-            {/* <span
-          className={`semicircle absolute left-[4px] top-[2px] h-[90px] w-[90px] ${
-            k === active && 'semicircle-active'
-          }`}
-        /> */}
-
             <Image
               decoding="async"
               className="relative z-[2]"
@@ -85,7 +81,7 @@ export function Card() {
   )
 }
 
-export const Top = () => {
+export const Top = ({ grayscale = true }: { grayscale: boolean }) => {
   const item = {
     hidden: { opacity: 0 },
     show: {
@@ -110,7 +106,7 @@ export const Top = () => {
         </div>
         <div className="w-full">
           <div className="nav-tabs w-full">
-            <Card />
+            <Card grayscale={grayscale} />
           </div>
         </div>
       </div>

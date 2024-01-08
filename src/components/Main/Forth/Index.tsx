@@ -3,10 +3,12 @@
 import './index.css'
 
 import { AnimationText } from '~/components/ui/text/AnimationText'
+import { useRouter } from '~/i18n'
 
 import Hero from './Hero'
 
 export const Forth = () => {
+  const router = useRouter()
   const item = {
     hidden: { opacity: 0 },
     show: {
@@ -25,8 +27,11 @@ export const Forth = () => {
               </div>
               <AnimationText text="OUR LATEST GALLERY" />
               <div className="mt-3">
-                <button className="mb-3 rounded-md bg-[#45f882] px-7 py-3 text-start font-bold text-black hover:bg-[#C6923D] hover:text-white md:mb-0">
-                  ADD TO
+                <button
+                  className="mb-3 rounded-md bg-[#45f882] px-7 py-3 text-start font-bold text-black hover:bg-[#C6923D] hover:text-white md:mb-0"
+                  onClick={() => router.push('/game')}
+                >
+                  More Game
                 </button>
               </div>
             </div>
