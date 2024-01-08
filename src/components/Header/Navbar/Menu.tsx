@@ -5,12 +5,15 @@ import { forwardRef, useEffect, useRef, useState } from 'react'
 import clsx from 'clsx'
 import { useParams } from 'next/navigation'
 
+import { useIsMobile } from '~/atoms'
 import { MusicButton } from '~/components/common/MusicButton'
 import { useAudioPlayer } from '~/hooks/shared/use-audio'
 import { usePathname, useRouter } from '~/i18n'
 import { useDrawerStack } from '~/providers/root/drawer-stack-provider'
 
+import { menuList } from '.'
 import { Canvas } from './Canvas'
+import { Item } from './Item'
 import { Logo } from './Logo'
 import { Search } from './Search'
 
@@ -42,6 +45,7 @@ export function Menu() {
   const router = useRouter()
   const param = useParams()
   const pathname = usePathname()
+  const isMobile = useIsMobile()
 
   const language = [
     { value: 'en', label: 'EN' },
@@ -67,7 +71,11 @@ export function Menu() {
 
   return (
     <div className="flex items-center">
-      <MusicButton once={true} onClick={() => setShowSearch(!showSearch)}>
+      <MusicButton
+        once={true}
+        className="flex items-center"
+        onClick={() => setShowSearch(!showSearch)}
+      >
         <i className="icon-[mingcute--search-2-line] text-3xl" />
       </MusicButton>
       <Search
@@ -135,15 +143,24 @@ export function Menu() {
               title: () => {
                 return (
                   <>
-                    <div className="ml-[20px] flex items-center py-4">
-                      <Logo />
-                      <p className="ml-2 hidden md:block">My Game</p>
+                    <div className="ml-[20px] hidden items-center py-4 md:flex">
+                      <Logo width={200} height={100} />
                     </div>
                   </>
                 )
               },
               modalClassName: 'w-[485px]',
-              content: () => <Canvas />,
+              content: () => {
+                if (isMobile) {
+                  return (
+                    <div className="min-h-[50vh]">
+                      <Item active={0} menuList={menuList} />
+                    </div>
+                  )
+                } else {
+                  return <Canvas />
+                }
+              },
               position: 'right',
               onClose: () => {
                 setIsOpen(false)

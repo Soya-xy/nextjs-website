@@ -1,7 +1,6 @@
 'use client'
 
-import { useRef } from 'react'
-import { useMount } from 'ahooks'
+import { useEffect, useRef, useState } from 'react'
 import { atom, useAtom } from 'jotai'
 import Image from 'next/image'
 
@@ -11,35 +10,55 @@ import { AnimationText } from '~/components/ui/text/AnimationText'
 
 export const tabActive = atom(0)
 
-export function Card({ grayscale = true }) {
+export function Card({ grayscale = true, customClass = '' }) {
   const isMobile = useIsMobile()
   const divRef = useRef<HTMLDivElement>(null)
   const [active, setActive] = useAtom(tabActive)
-  let timer: any = null
+  const timer: any = null
   let index = 0
-  useMount(() => {
-    startScroll()
-  })
+  const [isPaused, setIsPaused] = useState(false)
+  const [animationFrameId, setAnimationFrameId] = useState<number>()
 
-  function startScroll(countWidth = divRef.current?.scrollWidth) {
-    if (!isMobile) return
-    timer = setInterval(() => {
-      index++
-      if (divRef.current) {
-        if (index >= countWidth! - 300) index = 0
-        divRef.current.scrollLeft = index
-      }
-    }, 10)
+  function scrollAnimation() {
+    if (isPaused) return
+
+    index++
+
+    if (divRef.current) {
+      if (index >= divRef.current!.scrollWidth! - 300) index = 0
+      divRef.current.scrollLeft = index
+    }
+
+    setAnimationFrameId(requestAnimationFrame(scrollAnimation))
   }
+
+  function startScrolls() {
+    if (!isMobile || isPaused) return
+
+    setAnimationFrameId(requestAnimationFrame(scrollAnimation))
+  }
+
+  useEffect(() => {
+    console.log('🚀 ~ file: Top.tsx:51 ~ Card ~ isPaused:', isPaused)
+
+    if (isMobile) {
+      startScrolls()
+    }
+
+    return () => {
+      if (animationFrameId) cancelAnimationFrame(animationFrameId)
+    }
+  }, [isMobile, isPaused])
 
   return (
     <div
       ref={divRef}
       className="flex items-center justify-start gap-5 overflow-y-hidden overflow-x-scroll pl-[20px]  wh-full md:justify-center"
-      onTouchMove={() => clearInterval(timer)}
+      onTouchMove={() => setIsPaused(true)}
       onTouchEnd={() => {
+        clearInterval(timer)
         index = divRef.current?.scrollLeft || 0
-        startScroll()
+        setIsPaused(false)
       }}
     >
       {[
@@ -64,6 +83,7 @@ export function Card({ grayscale = true }) {
                 : 'transition-all duration-75  hover:scale-[1.2]'
             }
               ${grayscale ? 'grayscale hover:grayscale-0' : ''}
+              ${customClass}
               `}
           >
             <Image

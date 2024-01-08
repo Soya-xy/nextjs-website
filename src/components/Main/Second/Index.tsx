@@ -56,7 +56,7 @@ export const Second = () => {
                   </button>
                   <div className="ml-10 flex items-center gap-4 text-[14px] font-bold">
                     <div
-                      className=" flex h-[46px] w-[46px] items-center justify-center rounded-full border border-solid text-[24px] text-green-500 hover:border-green-500 hover:bg-green-500
+                      className=" flex h-[46px] w-[46px] items-center justify-center rounded-full border border-solid text-[24px] text-[#45f882] hover:border-green-500 hover:bg-[#45f882]
                        hover:text-black"
                     >
                       <i className="icon-[mingcute--play-fill] " />

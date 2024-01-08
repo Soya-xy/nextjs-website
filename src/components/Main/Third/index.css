@@ -176,6 +176,7 @@
 .wealthgod-active {
   --wealthgod-color: #44f881;
   transform: scale(1.4);
+  filter: grayscale(0) !important;
 }
 
 .semicircle {

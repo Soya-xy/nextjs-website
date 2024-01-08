@@ -5,7 +5,7 @@ import { Card } from '~/components/Main/Third/Top'
 export const Details = () => {
   return (
     <>
-      <div className="w-full bg-[#151829] py-[10rem]">
+      <div className="w-full bg-[#151829] py-[5rem]">
         <div className="container mx-auto md:!w-[1000px]">
           <div className="bg-[#222434] p-10 sm:p-[3rem]">
             <div className="flex flex-col-reverse justify-between gap-2 md:flex-row">
@@ -15,7 +15,7 @@ export const Details = () => {
                     <p className="global-tag bg-red-500">HOT</p>
                     <p className="global-tag bg-yellow-500">NEW</p>
                   </div>
-                  <h2 className="my-[2rem] text-[40px] leading-[48px]">
+                  <h2 className="my-[2rem] text-[32px] md:text-[40px] md:leading-[48px]">
                     Mahjong Ways
                   </h2>
                   <p className="info relative my-4 flex gap-2 indent-4">
@@ -124,9 +124,11 @@ export const Details = () => {
                       className="mx-3 h-[40px] w-[40px]"
                       alt=""
                     />
-                    <div className="w-full !justify-between px-2 d-center md:block md:w-[auto] md:p-0">
-                      <p className="fs-seven">Game Volatility</p>
-                      <p className="text-sm">
+                    <div className="w-full !justify-between pr-2 d-center md:block md:w-[auto] md:p-0 md:pl-2">
+                      <p className="fs-seven !text-[12px] md:text-[16px]">
+                        Game Volatility
+                      </p>
+                      <p className="flex items-center text-sm">
                         <i className="icon-[mingcute--star-fill]" />
                         <i className="icon-[mingcute--star-fill]" />
                         <i className="icon-[mingcute--star-fill]" />
@@ -141,8 +143,10 @@ export const Details = () => {
                       className="mx-3 h-[40px] w-[40px]"
                       alt=""
                     />
-                    <div className="w-full !justify-between px-2 d-center md:block md:w-[auto] md:p-0">
-                      <p className="fs-seven">Max multiples</p>
+                    <div className="w-full !justify-between pr-2 d-center md:block md:w-[auto] md:p-0 md:pl-2">
+                      <p className="fs-seven !text-[14px] md:text-[16px]">
+                        Max multiples
+                      </p>
                       <p className="fs-seven">16200</p>
                     </div>
                   </div>
@@ -153,7 +157,7 @@ export const Details = () => {
                       alt=""
                     />
                     <div className="w-full !justify-between px-2 d-center md:block md:w-[auto] md:p-0">
-                      <p className="fs-seven !text-[15px]">
+                      <p className="fs-seven !text-[14px]">
                         Specification lines
                       </p>
                       <p className="fs-seven">243</p>
@@ -165,7 +169,7 @@ export const Details = () => {
                       className="mx-3 h-[40px] w-[40px]"
                       alt=""
                     />
-                    <div className="w-full !justify-between px-2 d-center md:block md:w-[auto] md:p-0">
+                    <div className="w-full !justify-between px-2 d-center md:block md:w-[auto] md:p-0 md:pl-2 ">
                       <p className="fs-seven">Volatility</p>
                       <p className="fs-seven">2023 Q4</p>
                     </div>
@@ -187,7 +191,7 @@ export const Details = () => {
           }}
           viewport={{ once: true }}
         >
-          <Card grayscale={false} />
+          <Card grayscale={false} customClass="!scale-[1.2] " />
         </motion.div>
       </div>
     </>

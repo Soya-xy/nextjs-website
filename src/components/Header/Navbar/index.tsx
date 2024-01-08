@@ -10,6 +10,11 @@ import { Item } from './Item'
 import { Logo } from './Logo'
 import { Menu } from './Menu'
 
+export const menuList = [
+  { name: 'HOME', url: '/' },
+  { name: 'GAMES', url: '/game' },
+]
+
 export const Navbar = () => {
   const [top, setTop] = useState(true)
   const [active, setActive] = useState(0)
@@ -27,14 +32,6 @@ export const Navbar = () => {
     })
   }, [path])
 
-  const menuList = [
-    { name: 'HOME', url: '/' },
-    { name: 'GAMES', url: '/game' },
-    { name: 'TOURNAMENT', url: '' },
-    { name: 'PAGES', url: '' },
-    { name: 'NEWS', url: '' },
-    { name: 'ABOUT US', url: '/about' },
-  ]
   return (
     <div
       className={`navbar relative z-[2]  h-[100px] min-h-20 w-full ${

@@ -107,23 +107,17 @@ export const Content = () => {
                 <div className="about__btn-wrap">
                   <ul className="list-wrap">
                     <li>
-                      <Link
-                        href="https://themedox.com/mykd/shop/"
-                        target="_blank"
-                      >
+                      <Link href="#" target="_blank">
                         Try Now
                       </Link>
                     </li>
                     <li>
-                      <Link href="https://opensea.io/" target="_blank">
+                      <Link href="#" target="_blank">
                         Details
                       </Link>
                     </li>
                     <li>
-                      <Link
-                        href="https://themedox.com/mykd/contact-us/"
-                        target="_blank"
-                      >
+                      <Link href="#" target="_blank">
                         More
                       </Link>
                     </li>

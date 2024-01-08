@@ -1,7 +1,10 @@
 import Marquee from 'react-fast-marquee'
 import { motion } from 'framer-motion'
 
+import { useRouter } from '~/i18n'
+
 export default ({ direction = 'left' }: { direction?: any }) => {
+  const router = useRouter()
   return (
     <>
       <div className="overflow-hidden md:ml-[10px]  ">
@@ -30,7 +33,16 @@ export default ({ direction = 'left' }: { direction?: any }) => {
                   alt=""
                   className="rounded-2xl"
                 />
-                <button className="rounded-md bg-[#45f882] px-7 py-3 text-start font-bold text-black hover:bg-[#C6923D] hover:text-white">
+                <button
+                  className="white rounded-md border px-7 py-3 text-start font-bold hover:bg-[#45f882] hover:text-black"
+                  onClick={(e) => {
+                    e.stopPropagation()
+                    router.push(`/game/detail?id=${v}`)
+                  }}
+                >
+                  &nbsp;&nbsp;Details&nbsp;&nbsp;
+                </button>
+                <button className="mt-4 rounded-md bg-[#45f882] px-7 py-3 text-start font-bold text-black hover:bg-[#C6923D] hover:text-white">
                   Try Now!
                 </button>
               </motion.div>
