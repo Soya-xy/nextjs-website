@@ -1,6 +1,9 @@
 import { motion } from 'framer-motion'
 
+import { useRouter } from '~/i18n'
+
 export const Games = () => {
+  const router = useRouter()
   return (
     <>
       <div className="flex flex-wrap items-center justify-center gap-5 md:justify-between">
@@ -29,7 +32,10 @@ export const Games = () => {
                 alt=""
                 className="rounded-2xl"
               />
-              <button className="rounded-md bg-[#45f882] px-7 py-3 text-start font-bold text-black hover:bg-[#C6923D] hover:text-white">
+              <button
+                className="rounded-md bg-[#45f882] px-7 py-3 text-start font-bold text-black hover:bg-[#C6923D] hover:text-white"
+                onClick={() => router.push(`/game/detail?id=${v}`)}
+              >
                 Try Now!
               </button>
             </motion.div>

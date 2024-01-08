@@ -74,6 +74,7 @@
   },
   "devDependencies": {
     "@iconify-json/material-symbols": "1.1.69",
+    "@iconify-json/mdi": "^1.1.64",
     "@iconify-json/mingcute": "1.1.15",
     "@iconify/tailwind": "0.1.4",
     "@innei/eslint-config-react-ts": "0.12.0",

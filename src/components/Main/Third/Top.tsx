@@ -11,7 +11,7 @@ import { AnimationText } from '~/components/ui/text/AnimationText'
 
 export const tabActive = atom(0)
 
-function Card() {
+export function Card() {
   const isMobile = useIsMobile()
   const divRef = useRef<HTMLDivElement>(null)
   const [active, setActive] = useAtom(tabActive)

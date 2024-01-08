@@ -11,15 +11,15 @@ import { Logo } from './Logo'
 import { Menu } from './Menu'
 
 export const Navbar = () => {
-  const [top, setTop] = useState(false)
+  const [top, setTop] = useState(true)
   const [active, setActive] = useState(0)
   const path = usePathname()
   useEffect(() => {
-    if (path === '/game') {
-      setTop(true)
-    } else {
-      setTop(false)
-    }
+    // if (path === '/game') {
+    //   setTop(true)
+    // } else {
+    //   setTop(false)
+    // }
     menuList.forEach((v, k) => {
       if (v.url === path) {
         setActive(k)
