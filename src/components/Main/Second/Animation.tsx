@@ -19,8 +19,8 @@ export const Animation = () => {
       const res = await PIXI.Assets.load('/spine/skeleton.json')
       const sp = new Spine(res.spineData)
       if (innerWidth < 750) {
-        sp.width = innerWidth - 40
-        sp.height = 280
+        sp.width = innerWidth - 80
+        sp.height = 240
         sp.position.set(210, 150)
       } else {
         sp.width = 600
@@ -37,7 +37,7 @@ export const Animation = () => {
 
   return (
     <>
-      <div className="h-[350px] w-[300px] md:relative md:h-[500px] md:w-[500px]">
+      <div className="h-[300px] w-[300px] md:relative md:h-[500px] md:w-[500px]">
         <div
           ref={container}
           id="spine_container"
