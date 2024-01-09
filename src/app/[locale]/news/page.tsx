@@ -1,11 +1,11 @@
 'use client'
 
-import { SwiperTop } from '~/components/Game/Swiper'
+import { List } from '~/components/News/List'
 
 export default function Home() {
   return (
     <>
-      <SwiperTop />
+      <List />
     </>
   )
 }

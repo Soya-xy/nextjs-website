@@ -28,10 +28,14 @@ export const Details = () => {
                   </p>
                 </div>
                 <div className="social-items">
-                  <button className="play mt-[1rem] w-full items-center justify-center md:w-[auto]">
+                  <a
+                    className="play mt-[1rem] w-full items-center justify-center md:w-[auto]"
+                    href="http://8.217.104.5:8886/"
+                    target="_black"
+                  >
                     <i className="icon-[mingcute--play-fill] mr-2 text-[18px]" />
                     Try Now
-                  </button>
+                  </a>
                 </div>
               </div>
               <div className="col-lg-5 mb-5 flex items-center md:mb-0">

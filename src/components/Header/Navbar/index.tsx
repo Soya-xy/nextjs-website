@@ -13,6 +13,7 @@ import { Menu } from './Menu'
 export const menuList = [
   { name: 'HOME', url: '/' },
   { name: 'GAMES', url: '/game' },
+  { name: 'NEWS', url: '/news' },
 ]
 
 export const Navbar = () => {
@@ -20,11 +21,9 @@ export const Navbar = () => {
   const [active, setActive] = useState(0)
   const path = usePathname()
   useEffect(() => {
-    // if (path === '/game') {
-    //   setTop(true)
-    // } else {
-    //   setTop(false)
-    // }
+    if (path === '/news') {
+      setTop(false)
+    }
     menuList.forEach((v, k) => {
       if (v.url === path) {
         setActive(k)
