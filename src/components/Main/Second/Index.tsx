@@ -29,9 +29,13 @@ export const Second = () => {
         <div className="flex flex-col-reverse items-start pt-5 md:items-center md:justify-between md:pt-[10rem] lg:flex-row">
           <div className="flex flex-1 flex-col justify-start px-5 md:mb-[5rem] lg:px-6">
             <div className="nft_site my-[2rem] text-center text-3xl font-[800] after:!content-[unset] md:mb-[2rem] md:mt-0 md:text-start md:text-[45px]  md:after:!content-['']">
-              <AnimationText text="BRANDING CONCEPT" color="white" />
+              <AnimationText
+                text="BRANDING CONCEPT"
+                color="white"
+                isShadow={false}
+              />
               <br />
-              <AnimationText text="MYERLY" color="white" />
+              <AnimationText text="MYERLY" color="white" isShadow={false} />
             </div>
             <motion.div ref={spineRef} className="relative block md:hidden">
               <Animation />

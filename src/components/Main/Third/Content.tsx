@@ -58,7 +58,7 @@ export const Content = () => {
                   <div className="about__content">
                     <h4 className="title">CAISHEN-LUCKY SPREAD</h4>
                     <span className="rate">Rate 50%</span>
-                    <p>
+                    <p className="text-[#ADB0BC]">
                       CAISEN in the house, win a big prize! Going up to 100,000X
                       with WILD symbol upgraded. Exclusive SPREAD respin &
                       multiplier scroll feature make you win easily! Multiplier

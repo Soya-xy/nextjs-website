@@ -4,16 +4,20 @@ export const AnimationText = ({
   text,
   color = '#45f882',
   speed = 0.04,
+  isShadow = true,
 }: {
   text: string
   color?: string
   speed?: number
+  isShadow?: boolean
 }) => {
   const item = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
-      textShadow: ['none', `${color} 0px 0px 25px`, 'none', 'none'],
+      textShadow: isShadow
+        ? ['none', `${color} 0px 0px 25px`, 'none', 'none']
+        : 'none',
     },
   }
   return (
